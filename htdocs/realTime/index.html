@@ -1,0 +1,24 @@
+﻿<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" charset="UTF-8">
+	<title>地震計データグラフ化</title>
+	<link rel="stylesheet" href="../css/speed.css" type="text/css">
+	<script src="../js/lib/d3.v3.min.js" charset="utf-8"></script>
+    <script src="../js/lib/jquery.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+	<script src="../js/realTime/getRealData.js"></script>
+</head>
+<body>
+<h1>波形表示 - デバイスID：<span id="device_id"></span></h1>
+データ更新時刻：<span id="result_time"></span>
+    <h3>グラフ - X</h3>
+	    <div id="result"><div id="result_x"></div></div>
+    <h3>グラフ - Y</h3>
+	    <div id="result"><div id="result_y"></div></div>
+    <h3>グラフ - Z</h3>
+	    <div id="result"><div id="result_z"></div></div>
+	
+<script src="../js/realTime/draw.js"></script>
+</body>
+</html>

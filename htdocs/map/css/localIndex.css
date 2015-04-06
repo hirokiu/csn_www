@@ -1,0 +1,43 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+#wrapper{
+  text-align: left;
+  width: 95%;
+  margin: 0 auto;
+}
+
+#header{
+  height: 75px;
+}
+
+#container{
+  width: 100%;
+  float: right;
+  margin-left: -180px;
+}
+
+#localmap-canvas{
+  position: relative;
+  margin: 0 30px 0 210px;
+  widht: 800px;
+  height: 800px;
+}
+
+#date{
+  width: 180px;
+  float: left;
+}
+
+#footer{
+  clear: both;
+  width: 100%;
+  text-align: center;
+}
+
+#footer p{
+  padding: 0.5em 0;
+}
+

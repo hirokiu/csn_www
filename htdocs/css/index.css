@@ -1,0 +1,67 @@
+body {
+	background-color: #EEE;
+    width: 100%;
+    min-width: 1350px;
+}
+
+a {
+	font-size: 14px;
+	color: #3874e3;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#map-canvas {
+	position: relative;
+    float: right;
+	width: 800px;
+	height: 500px;
+	margin-top: 20px;
+}
+
+#result {
+	position: relative;
+	width: 1500px;
+	height: 450px;
+	margin-top: 20px;
+	background-color: #FFF;
+}
+#result svg {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#result svg circle {
+	margin: 10px 0 0 0;
+	font-size: 11px;
+}
+
+#result .axis path,
+#result .axis line {
+	fill: none;
+	stroke: #666;
+	shape-rendering: crispEdges;
+}
+#result .axis text {
+	font-size: 11px;
+}
+
+.tooltip {
+  border: 1px solid black;
+  background-color: white;
+  padding: 5px 8px 4px 8px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+
+#carInfo {
+    float: left;
+}
+#info {
+	position: relative;
+	width: 500px;
+	height: 150px;
+	margin-top: 20px;
+	background-color: #FFF;
+}

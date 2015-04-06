@@ -1,0 +1,7 @@
+{"Marker":[
+  {"lat":"35.455129","lon":"139.630865","name":"ランドマークタワー","content":"device=1","url":"../realTime/?device=1"},
+  {"lat":"35.459764","lon":"139.635301","name":"パシフィコ横浜","content":"device=2","url":"../realTime/?device=2"},
+  {"lat":"35.452057","lon":"139.643286","name":"赤レンガ倉庫","content":"device=3","url":"../realTime/?device=3"},
+  {"lat":"35.447733","lon":"139.642528","name":"神奈川県庁","content":"device=4","url":"../realTime/?device=4"},
+  {"lat":"35.446617","lon":"139.622637","name":"野毛山動物園","content":"device=5","url":"../realTime/?device=5"}
+]}
