@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" charset="UTF-8">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <title>地震波形</title>
+    <!--<link rel="stylesheet" href="../css/speed.css" type="text/css">-->
+    <link rel="stylesheet" href="/css/styles-site.css" type="text/css">
+    <script src="../js/lib/d3.v3.min.js" charset="utf-8"></script>
+    <script src="../js/lib/jquery.min.js"></script>
+    <script src="../js/static/getStaticData.js"></script>
+</head>
+<body>
+<div id="top-banner"></div>
+<header>地震情報</header>
+<div id="container">
+  <div id="map-banner"></div>
+  <h2>波形表示 - デバイスID：<span id="device_id"></span></h1>
+  データ更新時刻：<span id="result_time"></span>
+    <h3>グラフ - X</h3>
+        <div id="result"><div id="result_x"></div></div>
+    <h3>グラフ - Y</h3>
+        <div id="result"><div id="result_y"></div></div>
+    <h3>グラフ - Z</h3>
+        <div id="result"><div id="result_z"></div></div>
+</div><!-- /container -->
+
+<script src="../js/static/draw.js"></script>
+</body>
+
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache">
+</head>
+</html>
