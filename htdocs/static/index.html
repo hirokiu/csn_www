@@ -4,26 +4,56 @@
     <meta http-equiv="Content-Type" charset="UTF-8">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Cache-Control" content="no-cache">
-    <title>地震波形</title>
+    <title>観測された波形</title>
     <!--<link rel="stylesheet" href="../css/speed.css" type="text/css">-->
-    <link rel="stylesheet" href="/css/styles-site.css" type="text/css">
+    <link rel="stylesheet" href="../css/styles-site.css" type="text/css">
+    <link rel="stylesheet" href="../css/graph.css" type="text/css">
     <script src="../js/lib/d3.v3.min.js" charset="utf-8"></script>
     <script src="../js/lib/jquery.min.js"></script>
     <script src="../js/static/getStaticData.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh55-tyqYN-d8Y60AkfcJUizEtzCMLixg"></script>
+    <script type="text/javascript">
+$(function() {
+  //-----GoogleMapsの基本設定
+  var mapOptions = {
+    zoom: 15,
+    scaleControl: true,
+    // 中心座標の設定
+    // @35.33385,139.618239
+    center: new google.maps.LatLng(35.33385, 139.618239),
+  };
+  map = new google.maps.Map(document.getElementById('map-banner'), mapOptions);
+});
+  </script>
 </head>
 <body>
 <div id="top-banner"></div>
-<header>地震情報</header>
+<header>
+    <h1>地震動観測情報</h1>
+</header>
 <div id="container">
   <div id="map-banner"></div>
-  <h2>波形表示 - デバイスID：<span id="device_id"></span></h1>
-  データ更新時刻：<span id="result_time"></span>
-    <h3>グラフ - X</h3>
+  <h2>環境データ</h2>
+  <ul>
+    <li>デバイスID：<span id="device_id"></span></li>
+    <li>観測時刻：<span id="result_time"></span></li>
+    <li>計測震度：<span id="result_shindo"></span></li>
+　</ul>
+  <h2>観測された波形</h2>
+    <h3>X成分（南北）</h3>
         <div id="result"><div id="result_x"></div></div>
-    <h3>グラフ - Y</h3>
+    <h3>Y成分（東西）</h3>
         <div id="result"><div id="result_y"></div></div>
-    <h3>グラフ - Z</h3>
+    <h3>Z成分（垂直）</h3>
         <div id="result"><div id="result_z"></div></div>
+  <h2>波形ダウンロード</h2>
+  <ul>
+      <li><a href="../data/earthquake/">CSV形式</a></li>
+      <li><a href="../data/earthquake/">JSON形式</a></li>
+  </ul>
+  <h2>震源情報</h2>
+  <h3>震源地</h3>
+    <div class="" name=""></div>
 </div><!-- /container -->
 
 <script src="../js/static/draw.js"></script>

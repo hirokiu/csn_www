@@ -1,10 +1,10 @@
 // グラフ描画領域の初期設定
-var w = 800;
+var w = 1280;
 var h = 200;
 
-var padding = 10; // グラフの余白
-var xAxisPadding = 40; // x軸表示余白
-var yAxisPadding = 50; // y軸表示余白
+var padding = 0; // グラフの余白
+var xAxisPadding = 50; // x軸表示余白
+var yAxisPadding = 10; // y軸表示余白
 
 // 描画用変数
 var lineX,lineY,lineZ;
@@ -78,10 +78,12 @@ function draw(data) {
 	    .scale(yScale)
 	    .orient("left");
 
-    var yAxisLeft = d3.svg.axis().scale(yScale) 
+    var yAxisLeft = d3.svg.axis().scale(yScale)
 	    .orient("left");
-    var yAxisRight = d3.svg.axis().scale(yScale) 
+	/*
+    var yAxisRight = d3.svg.axis().scale(yScale)
 	    .orient("right");
+	*/
 
 /*
  * X方向の加速度表示
@@ -106,7 +108,7 @@ function draw(data) {
                         .attr("transform", "rotate(90, " + xAxisPadding + ", 0)")
                         .attr("x", 50)
                         .attr("y", 30);
-    svgX.append("g")
+/*    svgX.append("g")
 	    .attr("class", "yRightAxis")
 	    .attr("transform", "translate(" + (w - yAxisPadding) + ", 0)")
 	    .call(yAxisRight)
@@ -115,6 +117,7 @@ function draw(data) {
                         .attr("transform", "rotate(90, " + -xAxisPadding + ", 0)")
                         .attr("x", -20)
                         .attr("y", -20);
+*/
 
 /*
  * Y方向の加速度表示
@@ -139,6 +142,7 @@ function draw(data) {
                         .attr("transform", "rotate(90, " + xAxisPadding + ", 0)")
                         .attr("x", 50)
                         .attr("y", 30);
+/*
     svgY.append("g")
 	    .attr("class", "yRightAxis")
 	    .attr("transform", "translate(" + (w - yAxisPadding) + ", 0)")
@@ -148,6 +152,7 @@ function draw(data) {
                         .attr("transform", "rotate(90, " + -xAxisPadding + ", 0)")
                         .attr("x", -20)
                         .attr("y", -20);
+*/
 
 /*
  * Z方向の加速度表示
@@ -172,6 +177,7 @@ function draw(data) {
                         .attr("transform", "rotate(90, " + xAxisPadding + ", 0)")
                         .attr("x", 50)
                         .attr("y", 30);
+/*
     svgZ.append("g")
 	    .attr("class", "yRightAxis")
 	    .attr("transform", "translate(" + (w - yAxisPadding) + ", 0)")
@@ -181,6 +187,7 @@ function draw(data) {
                         .attr("transform", "rotate(90, " + -xAxisPadding + ", 0)")
                         .attr("x", -20)
                         .attr("y", -20);
+*/
 
 /*
  * X方向の折れ線グラフ

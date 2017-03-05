@@ -1,6 +1,8 @@
-body {
-	background-color: #FFF;
-    width: 100%;
+html, body, #map-canvas {
+	height: 100%;
+    margin: 0px;
+    padding: 0px;
+	background-color: #EEE;
     min-width: 1350px;
 }
 
@@ -12,10 +14,9 @@ a {
 }
 
 #top-banner {
-	  position: absolute;
     top : 0;
-		margin: 0;
-		padding: : 0;
+	margin: 0;
+	padding: : 0;
     height : 30px;
     background-color : #8dc031;
 }
@@ -27,9 +28,11 @@ a {
 }
 
 #map-banner {
-
+	width: 100%;
+	height: 200px;
 }
 
+/*
 #result {
 	position: relative;
 	width: 1500px;
@@ -76,3 +79,4 @@ a {
 	margin-top: 20px;
 	background-color: #FFF;
 }
+*/
