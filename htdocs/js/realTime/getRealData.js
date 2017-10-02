@@ -47,6 +47,10 @@ function getData(offsetNum){
             diff_y_acc = res[count].diff_y;
             diff_z_acc = res[count].diff_z;
 
+            // 震度を取得
+            shindo = res[count].shindo;
+            $("span#result_shindo").html(shindo);
+
 //UNIXをJSTにする
             //UNIXタイムをタイムスタンプに変換
             var date = new Date(res[count - 1].t0active  * 1000 );

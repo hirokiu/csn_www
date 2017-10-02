@@ -42,13 +42,17 @@
                     $count++;
                 }
 
+                // 震度をPython経由で取得
+                $shindo = exec('/usr/bin/python /home/pi/csn_www/module/tool/res_shindo.py');
+
                 if($count != 0) {
                     array_push($data, array('diff_x' => $tmp_x_sum/$count,
                                             'diff_y' => $tmp_y_sum/$count,
-                                            'diff_z' => $tmp_z_sum/$count) );
+                                            'diff_z' => $tmp_z_sum/$count,
+                                            'shindo' => $shindo) );
                 }
                 else
-                    array_push($data, array('diff_x' => 0, 'diff_y' => 0, 'diff_z' => 0) );
+                    array_push($data, array('diff_x' => 0, 'diff_y' => 0, 'diff_z' => 0, 'shindo' => $shindo) );
 
                 echo json_encode($data);
 
