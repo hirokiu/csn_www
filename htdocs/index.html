@@ -1,23 +1,98 @@
-﻿<!doctype html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" charset="UTF-8">
-	<title>地震計データグラフ化</title>
-	<link rel="stylesheet" href="css/speed.css" type="text/css">
-	<script src="js/lib/d3.v3.min.js" charset="utf-8"></script>
-    <script src="js/lib/jquery.min.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-	<script src="js/getData.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <meta name="keywords" content="地震, earthquake, archive, 地震学, アーカイブ">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/img/common/favicon.ico">
+
+    <title>地震動アーカイブプロジェクト</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//unpkg.com/jpn.css@latest/dist/bootstrap/jpn.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/css/product.css" rel="stylesheet">
+    <link href="/css/content.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/schemes.css" rel="stylesheet" type="text/css" media="all">
+
+    <link rel="stylesheet" href="css/speed.css" type="text/css">
+
+    <script src="js/lib/d3.v3.min.js" charset="utf-8"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyC9ZM3tuMkHSwolCQmqrtFym2eXHY1aAIY"></script>
+    <script src="js/getData.js"></script>
+    <script type="text/javascript">
+        $(function() {
+          //-----GoogleMapsの基本設定
+          var mapOptions = {
+            zoom: 15,
+            scaleControl: true,
+            // 中心座標の設定
+            // @35.33385,139.618239
+            center: new google.maps.LatLng(35.33385, 139.618239),
+          };
+          map = new google.maps.Map(document.getElementById('map-banner'), mapOptions);
+        });
+    </script>
 </head>
 <body>
-<h1>波形表示テスト</h1>
-    <h3>グラフ - X</h3>
-	    <div id="result"><div id="result_x"></div></div>
-    <h3>グラフ - Y</h3>
-	    <div id="result"><div id="result_y"></div></div>
-    <h3>グラフ - Z</h3>
-	    <div id="result"><div id="result_z"></div></div>
-	
-<script src="js/draw.js"></script>
+    <div id='container'>
+        <nav class="site-header sticky-top py-1">
+            <div class="container d-flex flex-column flex-md-row justify-content-between">
+                <!--<a class="py-2" href="#"><img src="/img/common/logo_glil.png" height="30"></a>-->
+                <a class="py-2 d-none d-md-inline-block" href="#">TOP</a>
+                <a class="py-2 d-none d-md-inline-block" href="#">観測波形</a>
+                <a class="py-2 d-none d-md-inline-block" href="#">地震オントロジー</a>
+                <a class="py-2 d-none d-md-inline-block" href="#">About us</a>
+            </div>
+        </nav>
+        <header>
+            <h1>Citizen Seismology Network</h1>
+        </header>
+        <div id="map-banner"></div>
+        <section>
+            <h2>information</h2>
+            <p>・LODチャレンジ2021へ地震オントロジー、および地震オントロジーを用いて記録したデータを公開しています。</p>
+            <p>・CSN(Citizen Seismology Network)の活動を記録するWebサイトをリニューアルしています。</p>
+        </section>
+        <section>
+            <h2>最新の観測データ</h2>
+            <ul>
+                <li>デバイスID : <span id="device_id"></span></li>
+                <li>観測時刻 : <span id="result_time"></span></li>
+                <li>計測震度 : <span id="result_shindo"></span></li>
+            </ul>
+            <div class="reset"></div>
+            <h2>観測された波形</h2>
+            <h3>X成分（南北）</h3>
+                <div id="result"><div id="result_x"></div></div>
+            <h3>Y成分（東西）</h3>
+                <div id="result"><div id="result_y"></div></div>
+            <h3>Z成分（垂直）</h3>
+                <div id="result"><div id="result_z"></div></div>
+            <h2>波形ダウンロード</h2>
+            <ul>
+                <li><a href="/data/earthquake/">CSV形式</a></li>
+                <li><a href="/data/earthquake/">JSON形式</a></li>
+            </ul>
+            <h2>震源情報</h2>
+            <h3>震源地</h3>
+            <div class="" name=""></div>
+        </section>
+        <footer>
+            <address>&copy; 2021 Hiroki UEMATSU</address>
+        </footer>
+    </div><!-- /container -->
+    <script src="/js/static/draw.js"></script>
+
 </body>
+
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache">
+</head>
+
 </html>

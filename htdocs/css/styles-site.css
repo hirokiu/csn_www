@@ -2,7 +2,7 @@ html, body, #map-canvas {
 	height: 100%;
     margin: 0px;
     padding: 0px;
-	background-color: #EEE;
+	background-color: #f3f3f3;
     min-width: 1350px;
 }
 

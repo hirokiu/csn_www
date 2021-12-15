@@ -1,0 +1,160 @@
+/*
+ *  * Font set
+ *   * Color shceme
+ *    */
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans+Mono);
+
+
+/* @group FontSet */
+
+.font10{
+    font-size : 10px;
+}
+.font12{
+    font-size : 12px;
+}
+.font13{
+    font-size : 13px;
+}
+.font15{
+    font-size : 16px;
+}
+.font17{
+    font-size : 17px;
+}
+.font24{
+    font-size : 24px;
+}
+.lh21 {
+    line-height : 21px;
+}
+.lh23 {
+    line-height : 23px;
+}
+.lh25 {
+    line-height : 25px;
+}
+/* @end */
+
+
+.numFont {
+    font-family: 'Droid Sans Mono', sans-serif;
+}
+
+.fontBL {
+    color : #474342;
+}
+.fontGL {
+    color : #909091;
+}
+.fontWH {
+    color : #FFFFFF;
+}
+.main {
+    border-color : #4C4948;
+    color : #4C4948;
+}
+.gray1 {
+    border-color : #939494;
+    color : #939494;
+}
+.gray2 {
+    border-color : #A4A5A5;
+    color : #A4A5A5;
+}
+.bgGL2{
+    background-color :  #A4A5A5;
+    border-color : #A4A5A5;
+}
+
+ /* @group Tags */
+
+ .sky {
+     border-color : #0BC2D9;
+     color : #0BC2D9;
+ }
+ .g01 {
+    border-color : #EE869A
+ }
+ .g02 {
+    border-color : #9170AA;
+ }
+ .g03 {
+    border-color : #4E6D9D;
+ }
+ .g04 {
+    border-color : #6497AF;
+ }
+ .g05 {
+    border-color : #5898D2;
+ }
+ .g06 {
+    border-color : #62C0B4;
+ }
+ .g07 {
+    border-color : #29B070;
+ }
+ .g08 {
+    border-color : #9BCB60;
+ }
+ .g09 {
+    border-color : #F6CC2A;
+ }
+ .g10 {
+    border-color : #C5A05A;
+ }
+ .g11 {
+    border-color : #F3994F;
+ }
+ .g12 {
+    border-color : #EBAC48;
+ /* border-color : #EBSC48 */
+ }
+ .g13 {
+    border-color : #C15858;
+ }
+
+ /* @end */
+
+ /* @group Tags */
+ .bg_g01 {
+    background-color : #EE869A
+ }
+ .bg_g02 {
+    background-color : #9170AA;
+ }
+ .bg_g03 {
+    background-color : #4E6D9D;
+ }
+ .bg_g04 {
+    background-color : #6497AF;
+ }
+ .bg_g05 {
+    background-color : #5898D2;
+ }
+ .bg_g06 {
+    background-color : #62C0B4;
+ }
+ .bg_g07 {
+    background-color : #29B070;
+ }
+ .bg_g08 {
+    background-color : #9BCB60;
+ }
+ .bg_g09 {
+    background-color : #F6CC2A;
+ }
+ .bg_g10 {
+    background-color : #C5A05A;
+ }
+ .bg_g11 {
+    background-color : #F3994F;
+ }
+ .bg_g12 {
+    background-color : #EB8C48;
+ }
+ .bg_g13 {
+    background-color : #C15858;
+ }
+
+ /* @end */
