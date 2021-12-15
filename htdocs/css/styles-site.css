@@ -29,7 +29,8 @@ a {
 
 #map-banner {
 	width: 100%;
-	height: 200px;
+	height: 300px;
+    border: solid 5px pink;
 }
 
 /*
