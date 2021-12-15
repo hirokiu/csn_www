@@ -1,0 +1,25 @@
+AddType application/x-httpd-php .php .html
+php_flag display_errors off
+
+#AuthUserFile /etc/httpd/htpasswd/da_archive.htpasswd
+#AuthGroupFile /dev/null
+#AuthName "Please enter username and password"
+#AuthType Basic
+
+#require valid-user
+
+# Rewrite Rule
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+#RewriteRule index.html - [QSA,L]
+#RewriteRule ^([^/]*)/$ /$1.html [L]
+#RewriteRule ^hajimari/([^/]*)/$ /hajimari/$1.html [L]
+
+#RewriteRule ^/$ /tumblr/index.cgi?mode=dsbd [L]
+#RewriteCond %{QUERY_STRING} (guid.*)
+#RewriteRule ^([^/]*)/$ /tumblr/index.cgi?mode=$1 [L]
+#RewriteRule ^dsbd/(\d*)/$ /tumblr/index.cgi?mode=dsbd&page=$1 [L]
+#RewriteRule ^reblog/(\d*)/$ /tumblr/index.cgi?mode=reblog&post-id=$1 [L]
+#RewriteRule ^(regist)/([^/]*)/$ /tumblr/$1.cgi?mode=$2 [QSA,L]
+#RewriteRule ^(profile)/([^/]*)/$ /tumblr/$1.cgi?mode=$2 [QSA,L]
