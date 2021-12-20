@@ -10,7 +10,7 @@ PREFIX jpe: <https://seismic.balog.jp/ontology/jp-earthquake.ttl#>
     a   owl:Ontology ;
     rdfs:label  "地震オントロジー"@ja ;
     dcterms:creator [   foaf:homepage   <https://seismic.balog.jp/> ;
-                                foaf:name       "hiroki_u"@ja
+                        foaf:name       "hiroki_u"@ja
                     ] ;
     dcterms:issued   "2021-12-20" .
 
@@ -21,4 +21,45 @@ jpe:earthquake  a   owl:Class ;
 jpe:observer    a   owl:Class ;
     skos:prefLabel  "観測点"@ja ;
     rdfs:subClassOf schema:Thing .
+
+jpe:epicenter   a   owl:Class ;
+    skos:prefLabel  "震源"@ja ;
+    skos:altLabel   "震央"@ja ;
+    rdfs:subClassOf schema:Event .
+
+jpe:seismicMotion   a   owl:Class ;
+    skos:prefLabel  "地震動"@ja ;
+    rdfs:subClassOf schema:Event .
+
+jpe:observedWave   a   owl:Class ;
+    skos:prefLabel  "観測波形"@ja ;
+    rdfs:subClassOf schema:Event .
+
+
+jpe:magnitude  a   rdf:Property ;
+    skos:prefLabel  "マグニチュード"@ja ;
+    skos:altLabel   "magnitude"@en ;
+    rdfs:subClassOf schema:value .
+
+jpe:depth  a   rdf:Property ;
+    skos:prefLabel  "震源の深さ"@ja ;
+    rdfs:subClassOf schema:value .
+
+jpe:shindo  a   rdf:Property ;
+    skos:prefLabel  "震度"@ja ;
+    skos:altLabel   "intensity"@en ;
+    rdfs:subClassOf schema:value .
+
+jpe:calcShindo  a   rdf:Property ;
+    skos:prefLabal  "計測震度"@ja ;
+    rdf:subClassOf  schema:value .
+
+jpe:detarminatedWith    a   rdf:Property ;
+    skos:prefLabal  "震源決定に利用した波形"@ja ;
+    rdfs:comment    "震源決定に利用した波形"@ja .
+
+jpe:estimatedWith    a   rdf:Property ;
+    skos:prefLabal  "震源推定に利用した波形"@ja ;
+    rdfs:comment    "震源推定に利用した波形"@ja .
+
 

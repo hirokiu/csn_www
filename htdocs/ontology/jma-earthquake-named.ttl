@@ -3,167 +3,167 @@ PREFIX schema: <http://schema.org/>
 PREFIX jpe: <https://seismic.balog.jp/ontology/jp-earthquake.ttl#>
 
 <https://seismic.balog.jp/resource/JMA-チリ地震津波> a jpe:earthquake ;
-    skos:prefLbael "チリ地震津波"@ja ;
+    skos:prefLabel "チリ地震津波"@ja ;
     schema:startDate "昭和35年5月23日" ;
     schema:about "地震の規模は観測史上最大。東北地方を中心に太平洋側で津波により大きな被害。"@ja .
 
 <https://seismic.balog.jp/resource/JMA-北美濃地震> a jpe:earthquake ;
-    skos:prefLbael "北美濃地震"@ja ;
+    skos:prefLabel "北美濃地震"@ja ;
     schema:startDate "昭和36年8月19日" ;
     schema:about "震央は石川・福井・岐阜県境。山崩れや道路損壊等。"@ja .
 
 <https://seismic.balog.jp/resource/JMA-宮城県北部地震> a jpe:earthquake ;
-    skos:prefLbael "宮城県北部地震"@ja ;
+    skos:prefLabel "宮城県北部地震"@ja ;
     schema:startDate "昭和37年4月30日" ;
     schema:about "鉄道の脱線、道路や橋梁等に被害。"@ja .
 
 <https://seismic.balog.jp/resource/JMA-越前岬沖地震> a jpe:earthquake ;
-    skos:prefLbael "越前岬沖地震"@ja ;
+    skos:prefLabel "越前岬沖地震"@ja ;
     schema:startDate "昭和38年3月27日" ;
     schema:about "山くずれや道路亀裂、墓石の転倒等の被害。"@ja .
 
 <https://seismic.balog.jp/resource/JMA-新潟地震> a jpe:earthquake ;
-    skos:prefLbael "新潟地震"@ja ;
+    skos:prefLabel "新潟地震"@ja ;
     schema:startDate "昭和39年6月16日" ;
     schema:about "石油タンクの火災、橋梁に被害。液状化現象発生。"@ja .
 
 <https://seismic.balog.jp/resource/JMA-松代群発地震> a jpe:earthquake ;
-    skos:prefLbael "松代群発地震"@ja ;
+    skos:prefLabel "松代群発地震"@ja ;
     schema:startDate "昭和４０年８月３日～" ;
     schema:about "約５年間活発な地震活動が継続。震度１以上の地震は６万回以上。"@ja .
 
 <https://seismic.balog.jp/resource/JMA-えびの地震> a jpe:earthquake ;
-    skos:prefLbael "えびの地震"@ja ;
+    skos:prefLabel "えびの地震"@ja ;
     schema:startDate "昭和43年2月21日" ;
     schema:about "被害を伴う地震が計４回発生。家屋等にも被害。"@ja .
 
 <https://seismic.balog.jp/resource/JMA-１９６８年日向灘地震> a jpe:earthquake ;
-    skos:prefLbael "１９６８年日向灘地震"@ja ;
+    skos:prefLabel "１９６８年日向灘地震"@ja ;
     schema:startDate "昭和43年4月1日" ;
     schema:about "高知・愛媛県を中心に津波による被害。水産施設等にも被害。"@ja .
 
 <https://seismic.balog.jp/resource/JMA-１９６８年十勝沖地震> a jpe:earthquake ;
-    skos:prefLbael "１９６８年十勝沖地震"@ja ;
+    skos:prefLabel "１９６８年十勝沖地震"@ja ;
     schema:startDate "昭和43年5月16日" ;
     schema:about "青森県を中心に被害。家屋や構造物に被害。山崩れ・がけ崩れ・地すべりでも被害。"@ja .
 
 <https://seismic.balog.jp/resource/JMA-１９７２年１２月４日八丈島東方沖地震> a jpe:earthquake ;
-    skos:prefLbael "１９７２年１２月４日八丈島東方沖地震"@ja ;
+    skos:prefLabel "１９７２年１２月４日八丈島東方沖地震"@ja ;
     schema:startDate "昭和47年12月4日" ;
     schema:about "八丈島で震度６。断水や道路損壊等の被害。青ヶ島でも被害。"@ja .
 
 <https://seismic.balog.jp/resource/JMA-１９７３年６月１７日根室半島沖地震> a jpe:earthquake ;
-    skos:prefLbael "１９７３年６月１７日根室半島沖地震"@ja ;
+    skos:prefLabel "１９７３年６月１７日根室半島沖地震"@ja ;
     schema:startDate "昭和48年6月17日" ;
     schema:about "津波により家屋、船舶等に被害。"@ja .
 
 <https://seismic.balog.jp/resource/JMA-１９７４年伊豆半島沖地震> a jpe:earthquake ;
-    skos:prefLbael "１９７４年伊豆半島沖地震"@ja ;
+    skos:prefLabel "１９７４年伊豆半島沖地震"@ja ;
     schema:startDate "昭和49年5月9日" ;
     schema:about "斜面の地すべりにより家屋の埋没等。"@ja .
 
 <https://seismic.balog.jp/resource/JMA-１９７８年伊豆大島近海の地震> a jpe:earthquake ;
-    skos:prefLbael "１９７８年伊豆大島近海の地震"@ja ;
+    skos:prefLabel "１９７８年伊豆大島近海の地震"@ja ;
     schema:startDate "昭和53年1月14日" ;
     schema:about "山崩れ、がけ崩れ、落石で被害。伊豆大島のほか、伊豆半島でも被害。"@ja .
 
 <https://seismic.balog.jp/resource/JMA-１９７８年宮城県沖地震> a jpe:earthquake ;
-    skos:prefLbael "１９７８年宮城県沖地震"@ja ;
+    skos:prefLabel "１９７８年宮城県沖地震"@ja ;
     schema:startDate "昭和53年6月12日" ;
     schema:about "ブロック塀の倒壊により被害多数。断水や停電等の被害。"@ja .
 
 <https://seismic.balog.jp/resource/JMA-昭和５７年(１９８２年)浦河沖地震> a jpe:earthquake ;
-    skos:prefLbael "昭和５７年(１９８２年)浦河沖地震"@ja ;
+    skos:prefLabel "昭和５７年(１９８２年)浦河沖地震"@ja ;
     schema:startDate "昭和57年3月21日" ;
     schema:about "浦河町（北海道）で震度６。道路橋脚に被害。"@ja .
 
 <https://seismic.balog.jp/resource/JMA-昭和５８年(１９８３年)日本海中部地震> a jpe:earthquake ;
-    skos:prefLbael "昭和５８年(１９８３年)日本海中部地震"@ja ;
+    skos:prefLabel "昭和５８年(１９８３年)日本海中部地震"@ja ;
     schema:startDate "昭和58年5月26日" ;
     schema:about "日本海沿岸で津波により大きな被害。液状化現象や石油タンクの被害も発生。"@ja .
 
 <https://seismic.balog.jp/resource/JMA-昭和５９年(１９８４年)長野県西部地震> a jpe:earthquake ;
-    skos:prefLbael "昭和５９年(１９８４年)長野県西部地震"@ja ;
-    skos:altLbael "御嶽崩れ"@ja ;
+    skos:prefLabel "昭和５９年(１９８４年)長野県西部地震"@ja ;
+    skos:altLabel "御嶽崩れ"@ja ;
     schema:startDate "昭和59年9月14日" ;
     schema:about "「御嶽崩れ」とも。御嶽山で大規模な山崩れ。"@ja .
 
 <https://seismic.balog.jp/resource/JMA-平成５年(１９９３年)釧路沖地震> a jpe:earthquake ;
-    skos:prefLbael "平成５年(１９９３年)釧路沖地震"@ja ;
+    skos:prefLabel "平成５年(１９９３年)釧路沖地震"@ja ;
     schema:startDate "平成5年1月15日" ;
     schema:about "震源の深さが100km以深の被害地震。家屋や構造物に被害。"@ja .
 
 <https://seismic.balog.jp/resource/JMA-平成５年(１９９３年)北海道南西沖地震> a jpe:earthquake ;
-    skos:prefLbael "平成５年(１９９３年)北海道南西沖地震"@ja ;
-    skos:altLbael "奥尻島の地震, 奥尻島の津波"@ja ;
+    skos:prefLabel "平成５年(１９９３年)北海道南西沖地震"@ja ;
+    skos:altLabel "奥尻島の地震, 奥尻島の津波"@ja ;
     schema:startDate "平成5年7月12日" ;
     schema:about "「奥尻島の地震」、「奥尻島の津波」とも。津波と火災で大きな被害。"@ja .
 
 <https://seismic.balog.jp/resource/JMA-平成６年(１９９４年)北海道東方沖地震> a jpe:earthquake ;
-    skos:prefLbael "平成６年(１９９４年)北海道東方沖地震"@ja ;
+    skos:prefLabel "平成６年(１９９４年)北海道東方沖地震"@ja ;
     schema:startDate "平成6年10月4日" ;
     schema:about "北方四島に大きな被害。東北地方でも津波により被害。"@ja .
 
 <https://seismic.balog.jp/resource/JMA-平成６年(１９９４年)三陸はるか沖地震> a jpe:earthquake ;
-    skos:prefLbael "平成６年(１９９４年)三陸はるか沖地震"@ja ;
+    skos:prefLabel "平成６年(１９９４年)三陸はるか沖地震"@ja ;
     schema:startDate "平成6年12月28日" ;
     schema:about "家屋等の建造物や道路損壊等の被害。"@ja .
 
 <https://seismic.balog.jp/resource/JMA-平成７年(１９９５年)兵庫県南部地震> a jpe:earthquake ;
-    skos:prefLbael "平成７年(１９９５年)兵庫県南部地震"@ja ;
-    skos:altLbael "阪神・淡路大震災"@ja ;
+    skos:prefLabel "平成７年(１９９５年)兵庫県南部地震"@ja ;
+    skos:altLabel "阪神・淡路大震災"@ja ;
     schema:startDate "平成7年1月17日" ;
     schema:about "「阪神・淡路大震災」。兵庫県内に震度７の地域。家屋の倒壊や火災により大きな被害。高速道路や新幹線の高架にも被害。"@ja .
 
 <https://seismic.balog.jp/resource/JMA-平成１２年(２０００年)鳥取県西部地震> a jpe:earthquake ;
-    skos:prefLbael "平成１２年(２０００年)鳥取県西部地震"@ja ;
+    skos:prefLabel "平成１２年(２０００年)鳥取県西部地震"@ja ;
     schema:startDate "平成12年10月6日" ;
     schema:about "家屋等の被害や山崩れ、液状化現象が発生。"@ja .
 
 <https://seismic.balog.jp/resource/JMA-平成１３年(２００１年)芸予地震> a jpe:earthquake ;
-    skos:prefLbael "平成１３年(２００１年)芸予地震"@ja ;
+    skos:prefLabel "平成１３年(２００１年)芸予地震"@ja ;
     schema:startDate "平成13年3月24日" ;
     schema:about "家屋等の被害や液状化現象が発生。"@ja .
 
 <https://seismic.balog.jp/resource/JMA-平成１５年(２００３年)十勝沖地震> a jpe:earthquake ;
-    skos:prefLbael "平成１５年(２００３年)十勝沖地震"@ja ;
+    skos:prefLabel "平成１５年(２００３年)十勝沖地震"@ja ;
     schema:startDate "平成15年9月26日" ;
     schema:about "津波により被害。石油タンクのスロッシングによる火災も発生。"@ja .
 
 <https://seismic.balog.jp/resource/JMA-平成１６年(２００４年)新潟県中越地震> a jpe:earthquake ;
-    skos:prefLbael "平成１６年(２００４年)新潟県中越地震"@ja ;
-    skos:altLbael "新潟県中越地震"@ja ;
+    skos:prefLabel "平成１６年(２００４年)新潟県中越地震"@ja ;
+    skos:altLabel "新潟県中越地震"@ja ;
     schema:startDate "平成16年10月23日" ;
     schema:about "「新潟県中越大震災」とも。川口町（現：長岡市）で震度７。規模の大きな山崩れや岩盤崩壊が発生し、道路が寸断。河道閉塞も発生。"@ja .
 
 <https://seismic.balog.jp/resource/JMA-平成１９年(２００７年)能登半島地震> a jpe:earthquake ;
-    skos:prefLbael "平成１９年(２００７年)能登半島地震"@ja ;
+    skos:prefLabel "平成１９年(２００７年)能登半島地震"@ja ;
     schema:startDate "平成19年3月25日" ;
     schema:about "家屋等の被害や山崩れが発生。"@ja .
 
 <https://seismic.balog.jp/resource/JMA-平成１９年(２００７年)新潟県中越沖地震> a jpe:earthquake ;
-    skos:prefLbael "平成１９年(２００７年)新潟県中越沖地震"@ja ;
+    skos:prefLabel "平成１９年(２００７年)新潟県中越沖地震"@ja ;
     schema:startDate "平成19年7月16日" ;
     schema:about "家屋等の被害のほか、山崩れにより鉄道が寸断。"@ja .
 
 <https://seismic.balog.jp/resource/JMA-平成２０年(２００８年)岩手・宮城内陸地震> a jpe:earthquake ;
-    skos:prefLbael "平成２０年(２００８年)岩手・宮城内陸地震"@ja ;
+    skos:prefLabel "平成２０年(２００８年)岩手・宮城内陸地震"@ja ;
     schema:startDate "平成20年6月14日" ;
     schema:about "家屋等の被害のほか、大規模な山崩れや河道閉塞が発生。"@ja .
 
 <https://seismic.balog.jp/resource/JMA-平成２３年(２０１１年)東北地方太平洋沖地震> a jpe:earthquake ;
-    skos:prefLbael "平成２３年(２０１１年)東北地方太平洋沖地震"@ja ;
-    skos:altLbael "東日本大震災"@ja ;
+    skos:prefLabel "平成２３年(２０１１年)東北地方太平洋沖地震"@ja ;
+    skos:altLabel "東日本大震災"@ja ;
     schema:startDate "平成23年3月11日" ;
     schema:about "「東日本大震災」。栗原市（宮城県）で震度７。東北地方を中心に津波により大きな被害。長周期地震動や液状化現象により被害も発生。"@ja .
 
 <https://seismic.balog.jp/resource/JMA-平成２８年(２０１６年)熊本地震> a jpe:earthquake ;
-    skos:prefLbael "平成２８年(２０１６年)熊本地震"@ja ;
+    skos:prefLabel "平成２８年(２０１６年)熊本地震"@ja ;
     schema:startDate "平成28年4月14日" ;
     schema:about "益城町（熊本県）（4月14日、4月16日）、西原村（熊本県）（4月16日）で震度７。家屋等の被害のほか、大規模な山崩れが発生。"@ja .
 
 <https://seismic.balog.jp/resource/JMA-平成３０年北海道胆振東部地震> a jpe:earthquake ;
-    skos:prefLbael "平成３０年北海道胆振東部地震"@ja ;
+    skos:prefLabel "平成３０年北海道胆振東部地震"@ja ;
     schema:startDate "平成30年9月6日" ;
     schema:about "厚真町（北海道）で震度７。厚真町を中心に多数の山崩れ、道内で大規模停電。"@ja .
 
