@@ -1,0 +1,24 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX schema: <http://schema.org/>
+PREFIX jpe: <https://seismic.balog.jp/ontology/jp-earthquake.ttl#>
+
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#>
+    a   owl:Ontology ;
+    rdfs:label  "地震オントロジー"@ja ;
+    dcterms:creator [   foaf:homepage   <https://seismic.balog.jp/> ;
+                                foaf:name       "hiroki_u"@ja
+                    ] ;
+    dcterms:issued   "2021-12-20" .
+
+jpe:earthquake  a   owl:Class ;
+    skos:prefLabel  "地震現象"@ja ;
+    rdfs:subClassOf schema:Event .
+
+jpe:observer    a   owl:Class ;
+    skos:prefLabel  "観測点"@ja ;
+    rdfs:subClassOf schema:Thing .
+
