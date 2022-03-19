@@ -5,7 +5,9 @@ PREFIX jpe: <https://seismic.balog.jp/ontology/jp-earthquake.ttl#>
 <https://seismic.balog.jp/resource/JMA-チリ地震津波> a jpe:earthquake ;
     skos:prefLabel "チリ地震津波"@ja ;
     schema:startDate "昭和35年5月23日" ;
-    schema:about "地震の規模は観測史上最大。東北地方を中心に太平洋側で津波により大きな被害。"@ja .
+    schema:temporal "昭和35年5月23日" ;
+    schema:about "地震の規模は観測史上最大。東北地方を中心に太平洋側で津波により大きな被害。"@ja ;
+    schema:hasPart <> ;
 
 <https://seismic.balog.jp/resource/JMA-北美濃地震> a jpe:earthquake ;
     skos:prefLabel "北美濃地震"@ja ;

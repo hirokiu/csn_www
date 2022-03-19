@@ -62,4 +62,26 @@ jpe:estimatedWith    a   rdf:Property ;
     skos:prefLabal  "震源推定に利用した波形"@ja ;
     rdfs:comment    "震源推定に利用した波形"@ja .
 
+jpe:hasEpicenter  a   rdf:Property ;
+    skos:prefLabal  "震源"@ja ;
+    rdfs:comment    "地震現象の震源"@ja .
 
+jpe:isEpicenterOf   a   rdf:Property ;
+    skos:prefLabal  "震源とする地震"@ja ;
+    rdfs:comment    "これを震源とする地震現象"@ja .
+
+jpe:mainShock   a   rdf:Property ;
+    skos:prefLabal  "本震"@ja ;
+    rdfs:comment    "地震における本震（唯一）を示す"@ja .
+
+jpe:afterShock   a   rdf:Property ;
+    skos:prefLabal  "予震"@ja ;
+    rdfs:comment    "地震における複数の予震を示す"@ja .
+
+jpe:foreShock   a   rdf:Property ;
+    skos:prefLabal  ""@ja ;
+    rdfs:comment    ""@ja .
+
+jpe:preShock   a   rdf:Property ;
+    skos:prefLabal  ""@ja ;
+    rdfs:comment    ""@ja .

@@ -1,0 +1,9 @@
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX schema: <http://schema.org/>
+PREFIX jpe: <https://seismic.balog.jp/ontology/jp-earthquake.ttl#>
+
+<https://seismic.balog.jp/resource/JMA-令和３年（2021年）2月13日_23時07_福島県沖の地震> a jpe:earthquake ;
+    skos:prefLabel "令和３年（2021年）2月13日 23時07分　福島県沖の地震"@ja ;
+    schema:startDate "令和３年（2021年）2月13日 23時07分" ;
+    schema:about "地震の規模は観測史上最大。東北地方を中心に太平洋側で津波により大きな被害。"@ja ;
+    jpe:hasEpicenter <https://seismic.balog.jp/resource/JMA-2021年2月13日 23時07分50.5秒_福島県沖> .
