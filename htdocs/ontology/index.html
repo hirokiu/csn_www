@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
@@ -25,19 +26,20 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="//maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyC9ZM3tuMkHSwolCQmqrtFym2eXHY1aAIY"></script>
     <script type="text/javascript">
-        $(function() {
-          //-----GoogleMapsの基本設定
-          var mapOptions = {
-            zoom: 15,
-            scaleControl: true,
-            // 中心座標の設定
-            // @35.33385,139.618239
-            center: new google.maps.LatLng(35.33385, 139.618239),
-          };
-          map = new google.maps.Map(document.getElementById('map-banner'), mapOptions);
+        $(function () {
+            //-----GoogleMapsの基本設定
+            var mapOptions = {
+                zoom: 15,
+                scaleControl: true,
+                // 中心座標の設定
+                // @35.33385,139.618239
+                center: new google.maps.LatLng(35.33385, 139.618239),
+            };
+            map = new google.maps.Map(document.getElementById('map-banner'), mapOptions);
         });
     </script>
 </head>
+
 <body>
     <div id='container'>
         <nav class="site-header sticky-top py-1">
@@ -55,16 +57,53 @@
         <div id="map-banner"></div>
         <section>
             <h2>地震LOD</h2>
-            <p>・LODチャレンジ2021へ地震オントロジー、および地震オントロジーを用いて記録したデータを公開しています。</p>
+            <p>・LODチャレンジ2022へ地震オントロジー、および地震オントロジーを用いて記録したデータを公開しています。</p>
         </section>
         <section>
-            <h2>データ一覧</h2>
+            <h3>概要</h3>
+            <p>
+                日本では、気象庁や防災科学技術研究所、地方自治体が設置した地震計で観測された波形や震度、波形からわかる震源やマグニチュードといった情報が公開されています。
+            </p>
+            <p>
+                しかし、古くから観測が行われているため、過去の形式に沿った固定長のデータや特定のソフトウェアで読み込むことを選定としたフォーマットが採用されていたり、1つの地震動の情報が、複数のデータに記録されているなど、専門家でないと扱いづらいデータが多くあります。
+            </p>
+            <p>
+                例えば、気象庁からある特定の地震に関する情報を探す場合、過去の地震であれば<a href="https://www.data.jma.go.jp/svd/eqev/data/bulletin/index.html" target="_blank">地震月報（カタログ編）</a>から震源データを取得します。<br>
+                しかし、震源データには震源のデータのみ含まれており、ある特定の震源の地震を観測した観測データについては記載がありません。<br>
+                代わりに、震度データを取得することで観測点についての情報が含まれますが、こちらのデータには震源の決定に利用した観測点数の情報が含まれておりません。<br>
+                さらに、こちらのデータに含まれる観測点の情報は、<a href="https://www.data.jma.go.jp/eqev/data/kyoshin/jma-shindo.html" target="_blank">気象庁震度観測点一覧表</a>に含まれる観測点と一致させることがかんたんにはできません。
+            </p>
+            <p>
+                そこで、それぞれのデータをLOD化し、複数のファイルに散らばったデータをつなぎ、観測された波形データや震源のデータなどの検索性の向上を目指します。
+            </p>
+            <p>
+                <h4>気象庁</h4>
+                <ul>
+                    <li><a href="https://www.data.jma.go.jp/svd/eqev/data/bulletin/index.html" target="_blank">地震月報</a></li>
+                    <li><a href="https://www.data.jma.go.jp/eqev/data/kyoshin/jishin/index.html" target="_blank">強震観測データ</a></li>
+                    <li><a href="https://www.data.jma.go.jp/eqev/data/kyoshin/jma-shindo.html" target="_blank">気象庁震度観測点一覧表</a></li>
+                </ul>
+                <h4>防災科学技術研究所</h4>
+                <ul>
+                    <li><a href="https://www.bosai.go.jp/activity_special/data/earthquake.html" target="_blank">地震関連情報</a></li>
+                </ul>
+            </p>
+        </section>
+        <section>
+            <h3>検索サービス</h3>
+            <p>
+                <a href="https://seismic.balog.jp/sparql">SPARQL Endpoint</a>
+            </p>
+            <h4>例</h4>
+        </section>
+        <section>
+            <h3>データ一覧</h3>
             <p>・<a href='/ontology/jp-earthquake.ttl' target="_blank">地震オントロジー</a></p>
             <p>・<a href='/ontology/jma-earthquake-named.ttl' target="_blank">気象庁が命名した地震一覧</a></p>
             <p>・<a href='/ontology/jma-observers.ttl' target="_blank">気象庁の観測点リスト</a></p>
         </section>
         <footer>
-            <address>&copy; 2021 Hiroki UEMATSU</address>
+            <address>&copy; 2022 Hiroki UEMATSU</address>
         </footer>
     </div><!-- /container -->
     <script src="/js/static/draw.js"></script>

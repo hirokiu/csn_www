@@ -4,6 +4,8 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX schema: <http://schema.org/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX jpe: <https://seismic.balog.jp/ontology/jp-earthquake.ttl#>
 
 <https://seismic.balog.jp/ontology/jp-earthquake.ttl#>
@@ -12,7 +14,7 @@ PREFIX jpe: <https://seismic.balog.jp/ontology/jp-earthquake.ttl#>
     dcterms:creator [   foaf:homepage   <https://seismic.balog.jp/> ;
                         foaf:name       "hiroki_u"@ja
                     ] ;
-    dcterms:issued   "2021-12-20" .
+    dcterms:issued   "2022-10-16" .
 
 jpe:earthquake  a   owl:Class ;
     skos:prefLabel  "地震現象"@ja ;
@@ -22,7 +24,7 @@ jpe:observer    a   owl:Class ;
     skos:prefLabel  "観測点"@ja ;
     rdfs:subClassOf schema:Thing .
 
-jpe:epicenter   a   owl:Class ;
+jpe:hypocenter   a   owl:Class ;
     skos:prefLabel  "震源"@ja ;
     skos:altLabel   "震央"@ja ;
     rdfs:subClassOf schema:Event .
@@ -36,23 +38,27 @@ jpe:observedWave   a   owl:Class ;
     rdfs:subClassOf schema:Event .
 
 
+jpe:originTime  a   rdf:Property ;
+    skos:prefLabel  "オリジンタイム"@ja ;
+    skos:altLabel   "origin time"@en .
+
 jpe:magnitude  a   rdf:Property ;
     skos:prefLabel  "マグニチュード"@ja ;
     skos:altLabel   "magnitude"@en ;
-    rdfs:subClassOf schema:value .
+    rdfs:subPropertyOf schema:value .
 
 jpe:depth  a   rdf:Property ;
     skos:prefLabel  "震源の深さ"@ja ;
-    rdfs:subClassOf schema:value .
+    rdfs:subPropertyOf schema:value .
 
 jpe:shindo  a   rdf:Property ;
     skos:prefLabel  "震度"@ja ;
     skos:altLabel   "intensity"@en ;
-    rdfs:subClassOf schema:value .
+    rdfs:subPropertyOf schema:value .
 
 jpe:calcShindo  a   rdf:Property ;
     skos:prefLabal  "計測震度"@ja ;
-    rdf:subClassOf  schema:value .
+    rdf:subPropertyOf schema:value .
 
 jpe:detarminatedWith    a   rdf:Property ;
     skos:prefLabal  "震源決定に利用した波形"@ja ;
@@ -62,11 +68,11 @@ jpe:estimatedWith    a   rdf:Property ;
     skos:prefLabal  "震源推定に利用した波形"@ja ;
     rdfs:comment    "震源推定に利用した波形"@ja .
 
-jpe:hasEpicenter  a   rdf:Property ;
+jpe:hasHypocenter  a   rdf:Property ;
     skos:prefLabal  "震源"@ja ;
     rdfs:comment    "地震現象の震源"@ja .
 
-jpe:isEpicenterOf   a   rdf:Property ;
+jpe:isHypocenterOf   a   rdf:Property ;
     skos:prefLabal  "震源とする地震"@ja ;
     rdfs:comment    "これを震源とする地震現象"@ja .
 
@@ -85,3 +91,17 @@ jpe:foreShock   a   rdf:Property ;
 jpe:preShock   a   rdf:Property ;
     skos:prefLabal  ""@ja ;
     rdfs:comment    ""@ja .
+
+jpe:stationIdentifier   a   rdf:Property ;
+    rdfs:subPropertyOf  schema:identifier ;
+    skos:prefLabal  "観測点番号"@ja ;
+    rdfs:comment    "各観測期間が定めた観測点のID"@ja .
+
+jpe:使用走時表  a   rdf:Property ;
+    rdfs:label      "使用走時表"@ja ;
+    skos:prefLabal  "使用走時表"@ja ;
+    rdfs:comment    "震源を決定するために使った走時表の種類"@ja .
+
+jpe:観測点数    a   rdf:Property ;
+    rdfs:label      "観測点数" ;
+    rdfs:comment    "震度１以上を観測した観測点の数"@ja .
