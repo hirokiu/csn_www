@@ -17,91 +17,112 @@ PREFIX jpe: <https://seismic.balog.jp/ontology/jp-earthquake.ttl#>
     dcterms:issued   "2022-10-16" .
 
 jpe:earthquake  a   owl:Class ;
+    rdfs:label  "地震現象"@ja ;
     skos:prefLabel  "地震現象"@ja ;
     rdfs:subClassOf schema:Event .
 
 jpe:observer    a   owl:Class ;
+    rdfs:label  "観測点"@ja ;
     skos:prefLabel  "観測点"@ja ;
     rdfs:subClassOf schema:Thing .
 
 jpe:hypocenter   a   owl:Class ;
+    rdfs:label  "震源"@ja ;
     skos:prefLabel  "震源"@ja ;
     skos:altLabel   "震央"@ja ;
     rdfs:subClassOf schema:Event .
 
 jpe:seismicMotion   a   owl:Class ;
+    rdfs:label  "地震動"@ja ;
     skos:prefLabel  "地震動"@ja ;
     rdfs:subClassOf schema:Event .
 
 jpe:observedWave   a   owl:Class ;
+    rdfs:label  "観測波形"@ja ;
     skos:prefLabel  "観測波形"@ja ;
     rdfs:subClassOf schema:Event .
 
 
 jpe:originTime  a   rdf:Property ;
+    rdfs:label  "オリジンタイム"@ja ;
     skos:prefLabel  "オリジンタイム"@ja ;
     skos:altLabel   "origin time"@en .
 
 jpe:magnitude  a   rdf:Property ;
+    rdfs:label  "マグニチュード"@ja ;
     skos:prefLabel  "マグニチュード"@ja ;
     skos:altLabel   "magnitude"@en ;
     rdfs:subPropertyOf schema:value .
 
 jpe:depth  a   rdf:Property ;
+    rdfs:label  "震源の深さ"@ja ;
     skos:prefLabel  "震源の深さ"@ja ;
     rdfs:subPropertyOf schema:value .
 
 jpe:shindo  a   rdf:Property ;
+    rdfs:label  "震度"@ja ;
     skos:prefLabel  "震度"@ja ;
     skos:altLabel   "intensity"@en ;
     rdfs:subPropertyOf schema:value .
 
 jpe:calcShindo  a   rdf:Property ;
-    skos:prefLabal  "計測震度"@ja ;
+    rdfs:label  "計測震度"@ja ;
+    skos:prefLabel  "計測震度"@ja ;
     rdf:subPropertyOf schema:value .
 
 jpe:detarminatedWith    a   rdf:Property ;
-    skos:prefLabal  "震源決定に利用した波形"@ja ;
+    rdfs:label  "震源決定に利用した波形"@ja ;
+    skos:prefLabel  "震源決定に利用した波形"@ja ;
     rdfs:comment    "震源決定に利用した波形"@ja .
 
 jpe:estimatedWith    a   rdf:Property ;
-    skos:prefLabal  "震源推定に利用した波形"@ja ;
+    rdfs:label  "震源推定に利用した波形"@ja ;
+    skos:prefLabel  "震源推定に利用した波形"@ja ;
     rdfs:comment    "震源推定に利用した波形"@ja .
 
 jpe:hasHypocenter  a   rdf:Property ;
-    skos:prefLabal  "震源"@ja ;
+    rdfs:label  "震源"@ja ;
+    skos:prefLabel  "震源"@ja ;
     rdfs:comment    "地震現象の震源"@ja .
 
 jpe:isHypocenterOf   a   rdf:Property ;
-    skos:prefLabal  "震源とする地震"@ja ;
+    rdfs:label  "震源とする地震"@ja ;
+    skos:prefLabel  "震源とする地震"@ja ;
     rdfs:comment    "これを震源とする地震現象"@ja .
 
 jpe:mainShock   a   rdf:Property ;
-    skos:prefLabal  "本震"@ja ;
+    rdfs:label  "本震"@ja ;
+    skos:prefLabel  "本震"@ja ;
     rdfs:comment    "地震における本震（唯一）を示す"@ja .
 
 jpe:afterShock   a   rdf:Property ;
-    skos:prefLabal  "予震"@ja ;
+    rdfs:label  "予震"@ja ;
+    skos:prefLabel  "予震"@ja ;
     rdfs:comment    "地震における複数の予震を示す"@ja .
 
 jpe:foreShock   a   rdf:Property ;
-    skos:prefLabal  ""@ja ;
+    skos:prefLabel  ""@ja ;
     rdfs:comment    ""@ja .
 
 jpe:preShock   a   rdf:Property ;
-    skos:prefLabal  ""@ja ;
+    skos:prefLabel  ""@ja ;
     rdfs:comment    ""@ja .
 
 jpe:stationIdentifier   a   rdf:Property ;
     rdfs:subPropertyOf  schema:identifier ;
-    skos:prefLabal  "観測点番号"@ja ;
+    rdfs:label  "観測点番号"@ja ;
+    skos:prefLabel  "観測点番号"@ja ;
     rdfs:comment    "各観測期間が定めた観測点のID"@ja .
 
-jpe:使用走時表  a   rdf:Property ;
+jpe:withTravelTimeTable  a   rdf:Property ;
     rdfs:label      "使用走時表"@ja ;
-    skos:prefLabal  "使用走時表"@ja ;
+    skos:prefLabel  "使用走時表"@ja ;
     rdfs:comment    "震源を決定するために使った走時表の種類"@ja .
 
-jpe:観測点数    a   rdf:Property ;
+jpe:observedStaionNum    a   rdf:Property ;
     rdfs:label      "観測点数" ;
     rdfs:comment    "震度１以上を観測した観測点の数"@ja .
+
+jpe:observedBy    a   rdf:Property ;
+    rdfs:label      "波形を観測した観測点" ;
+    rdfs:comment    "波形を観測した観測点"@ja .
