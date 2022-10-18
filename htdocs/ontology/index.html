@@ -95,6 +95,20 @@
                 <a href="https://seismic.balog.jp/sparql">SPARQL Endpoint</a>
             </p>
             <h4>例</h4>
+            <p>
+                2018年に発生した震度5強の地震を観測した観測点
+                <pre>
+                    select distinct * where { ?s a <https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter> . 
+                        ?s jpe:originTime ?origin .
+                        ?s jpe:shindo ?shindo.
+                            FILTER(xsd:dateTime(?origin) > "2018-01-01T00:00:00"^^xsd:dateTime)
+                           FILTER CONTAINS(xsd:string(?shindo), '震度5強')
+                        ?obs_wave jpe:hasHypocenter ?s ;
+                            jpe:observedBy ?sta .
+                        ?sta rdfs:labal ?name .
+                        } LIMIT 100
+                </pre>
+            </p>
         </section>
         <section>
             <h3>データ一覧</h3>

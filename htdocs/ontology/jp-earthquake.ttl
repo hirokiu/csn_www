@@ -126,3 +126,7 @@ jpe:observedStaionNum    a   rdf:Property ;
 jpe:observedBy    a   rdf:Property ;
     rdfs:label      "波形を観測した観測点" ;
     rdfs:comment    "波形を観測した観測点"@ja .
+
+jpe:observationNetwork    a   rdf:Property ;
+    rdfs:label      "観測網" ;
+    rdfs:comment    "観測点が所属する観測網の名称"@ja .
