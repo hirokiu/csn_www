@@ -96,7 +96,7 @@
             </p>
             <h4>例</h4>
             <p>
-                2018年に発生した震度5強の地震を観測した観測点
+                <a href="https://seismic.balog.jp/sparql?default-graph-uri=&query=select+distinct+*+where+%7B+%3Fs+a+%3Chttps%3A%2F%2Fseismic.balog.jp%2Fontology%2Fjp-earthquake.ttl%23hypocenter%3E+.+%0D%0A%3Fs+jpe%3AoriginTime+%3Forigin+.%0D%0A%3Fs+jpe%3Ashindo+%3Fshindo.%0D%0A++++FILTER%28xsd%3AdateTime%28%3Forigin%29+%3E+%222018-01-01T00%3A00%3A00%22%5E%5Exsd%3AdateTime%29%0D%0A+++FILTER+CONTAINS%28xsd%3Astring%28%3Fshindo%29%2C+%27%E9%9C%87%E5%BA%A65%E5%BC%B7%27%29%0D%0A%3Fobs_wave+jpe%3AhasHypocenter+%3Fs+%3B%0D%0A++++jpe%3AobservedBy+%3Fsta+.%0D%0A%3Fsta+rdfs%3Alabal+%3Fname+.%0D%0A%7D+LIMIT+100&format=text%2Fhtml&timeout=0&signal_void=on" target="_blank">2018年に発生した震度5強の地震を観測した観測点</a>
                 <pre>
                     select distinct * where { ?s a <https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter> . 
                         ?s jpe:originTime ?origin .
