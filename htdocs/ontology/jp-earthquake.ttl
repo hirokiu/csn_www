@@ -70,6 +70,11 @@ jpe:calcShindo  a   rdf:Property ;
     skos:prefLabel  "計測震度"@ja ;
     rdf:subPropertyOf schema:value .
 
+jpe:detarminatedWay    a   rdf:Property ;
+    rdfs:label  "震源決定フラグ"@ja ;
+    skos:prefLabel  "震源決定フラグ"@ja ;
+    rdfs:comment    "震源決定の方法"@ja .
+
 jpe:detarminatedWith    a   rdf:Property ;
     rdfs:label  "震源決定に利用した波形"@ja ;
     skos:prefLabel  "震源決定に利用した波形"@ja ;
@@ -89,6 +94,11 @@ jpe:isHypocenterOf   a   rdf:Property ;
     rdfs:label  "震源とする地震"@ja ;
     skos:prefLabel  "震源とする地震"@ja ;
     rdfs:comment    "これを震源とする地震現象"@ja .
+
+jpe:hypocenterKinds   a   rdf:Property ;
+    rdfs:label  "震源レコード種別"@ja ;
+    skos:prefLabel  "震源レコード種別"@ja ;
+    rdfs:comment    "震源レコードの種別"@ja .
 
 jpe:mainShock   a   rdf:Property ;
     rdfs:label  "本震"@ja ;
