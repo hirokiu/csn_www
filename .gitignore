@@ -27,3 +27,5 @@ author/
 
 # ignore data dir
 data
+data/
+htdocs/data/
