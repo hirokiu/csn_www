@@ -1,0 +1,69 @@
+<?php
+//DEBUG
+//var_dump($VALUES);
+?>
+<?php include(dirname(__FILE__) . '/common/html_head.html'); ?>
+<script src="/js/pick/getWave.js"></script>
+<script src="//cdn.plot.ly/plotly-latest.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+      //-----GoogleMapsの基本設定
+      var mapOptions = {
+        zoom: 15,
+        scaleControl: true,
+        center: new google.maps.LatLng(<?php echo $VALUES['map']['lat'];?> , <?php echo $VALUES['map']['lon'];?>),
+      };
+      map = new google.maps.Map(document.getElementById('map-banner'), mapOptions);
+    });
+</script>
+<body>
+    <div id="top-banner"></div>
+    <div id='container'>
+    <!-- Global header -->
+    <?php include(dirname(__FILE__) . '/common/header.html'); ?>
+    <!-- Global Navigation -->
+    <?php include(dirname(__FILE__) . '/common/navi.html'); ?>
+    <!-- Sub header-->
+    <header>
+        <h1>CSN::地震動観測情報</h1>
+    </header>
+    <div id="map-banner"></div>
+    <section>
+        <h2></h2>
+    </section>
+    <section>
+        <h2>最新の観測データ</h2>
+        <ul class="info_list">
+            <li>デバイスID : <span id="device_id"></span></li>
+            <li>観測時刻 : <span id="result_time"></span></li>
+            <li>計測震度 : <span id="result_shindo"></span></li>
+        </ul>
+        <div class="reset"></div>
+        <h2>観測された波形</h2>
+        <h3>X成分（南北）</h3>
+            <div id="result_x"></div>
+        <h3>Y成分（東西）</h3>
+            <div id="result_y"></div>
+        <h3>Z成分（垂直）</h3>
+            <div id="result_z"></div>
+        <h2>波形ダウンロード</h2>
+        <ul class="info_list">
+            <li><span id="csv_file"></span></li>
+            <li><span id="json_file"></span></li>
+        </ul>
+        <div class="reset"></div>
+        <h2>震源情報</h2>
+        <h3>震源地</h3>
+        <div class="" name=""></div>
+    </section>
+
+</div><!-- /container -->
+
+<!--<script src="/js/static/draw.js"></script>-->
+<?php include(dirname(__FILE__) . '/common/footer.html'); ?>
+</body>
+
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache">
+</head>
+</html>

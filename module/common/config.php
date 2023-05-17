@@ -20,7 +20,7 @@ $config['dbname'] = 'csn';
 $config['dbuser'] = 'root';
 
 
-$config['base_dir'] = '/data/www/seismic_www';
+$config['base_dir'] = '/data/www/410_seismic_www';
 $config['htdocs_dir'] = $config['base_dir'].'/htdocs';
 $config['module_dir'] = $config['base_dir'].'/module';
 $config['template_dir'] = $config['module_dir'].'/tmpl';

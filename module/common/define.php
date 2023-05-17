@@ -1,7 +1,9 @@
 <?php
-define('SITE_TITLE','CSN:市民ネットワーク');
+define('SITE_TITLE','CSN::市民ネットワーク');
 define('META_KEYWORD','');
 define('META_DESCRIPTION','');
+
+define('GOOGLE_MAP_API_KEY','AIzaSyC9ZM3tuMkHSwolCQmqrtFym2eXHY1aAIY');
 
 $common['css'] = array(
                         '/css/styles-site.css',

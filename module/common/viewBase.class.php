@@ -22,9 +22,24 @@
             $template = get_class($name);
             //$val = validate();
             $this->setCommonValues();
+            $this->activePage($_SERVER['REQUEST_URI']);
             $VALUES = $this->transrateValues();
 
             include($config['template_dir'].'/'.$template.'.html');
+
+        }
+
+        /*
+         * アクティブページ
+         */
+        private function activePage($_request_uri){
+            $this->values['activePage'] = "top";
+
+            if( preg_match('/\/([^\/]+)/', $_request_uri, $_dir_name) ){
+                if( $_dir_name[1] != 'index.html' ){
+                    $this->values['activePage'] = $_dir_name[1];
+                }
+            }
 
         }
 
@@ -92,13 +107,11 @@
         private function setCommonValues(){
             global $common;
 
-            $this->values['title'] = SITE_TITLE;
-            $this->values['meta_keyword'] = META_KEYWORD;
-            $this->values['meta_description'] = META_DESCRIPTION;
-            $this->values['css'] = $common['css'];
-            $this->values['SocialBox'] = $common['SocialBox'];
-            $this->values['TwitterID'] = $common['TwitterID'];
-            $this->values['FacebookURL'] = $common['FacebookURL'];
+            $this->values['common']['site_title'] = SITE_TITLE;
+            $this->values['common']['meta_keyword'] = META_KEYWORD;
+            $this->values['common']['meta_description'] = META_DESCRIPTION;
+            $this->values['common']['css'] = $common['css'];
+            $this->values['common']['gmap_api_key'] = GOOGLE_MAP_API_KEY;
 
         } 
 

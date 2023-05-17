@@ -1,0 +1,75 @@
+<?php
+    require(dirname(__FILE__) . '/../common/dbBase.class.php');
+    require(dirname(__FILE__) . '/../common/viewBase.class.php');
+
+    class staticPage extends viewBase{
+        // 共通変数
+        private $db;
+
+        // 初期化
+        public function __construct(){
+            global $config;
+
+            $count = 0;
+            $tmp_x_sum = 0;
+            $tmp_y_sum = 0;
+            $tmp_z_sum = 0;
+
+            // db初期化
+            // $this->db = new dbBase();
+
+            // ページ設定
+            $this->values['common']['page_title'] = "観測波形";
+
+            // データ取得
+            try {
+                /*
+                // 引数がなければ最新の1件を取得
+                if( isset($_GET['cnt']) && isset($_GET['offset']) ){
+                    $this->db->getLimit();
+                } else if( isset($_GET['maxid']) ){
+                    if($_GET['maxid'] == 0){
+                        $this->db->getNewest();
+                    } else{
+                        $this->db->getNewerThan();
+                    }
+                } else{
+                    $this->db->getNewest();
+                }
+
+                $data = $this->db->allEvent;
+
+                foreach($data AS $key => $value){
+                    $tmp_x_sum += $value['x_acc'];
+                    $tmp_y_sum += $value['y_acc'];
+                    $tmp_z_sum += $value['z_acc'];
+                    $count++;
+                }
+                */
+
+                // 震度をPython経由で取得
+                //$shindo = exec('/usr/bin/python /home/pi/csn_www/module/tool/res_shindo.py');
+
+                /*
+                if($count != 0) {
+                    array_push($data, array('diff_x' => $tmp_x_sum/$count,
+                                            'diff_y' => $tmp_y_sum/$count,
+                                            'diff_z' => $tmp_z_sum/$count,
+                                            'shindo' => $shindo) );
+                }
+                else
+                    array_push($data, array('diff_x' => 0, 'diff_y' => 0, 'diff_z' => 0, 'shindo' => $shindo) );
+
+                echo json_encode($data);
+                */
+
+                $this->values['map']['lat'] = "35.450936";
+                $this->values['map']['lon'] = "139.631108";
+
+            } catch (Exception $e) {
+                echo json_encode(array('status' => 'NG', 'error' => 'database error'));
+                exit;
+            }
+
+        }
+    }

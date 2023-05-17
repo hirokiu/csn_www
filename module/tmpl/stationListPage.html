@@ -1,0 +1,34 @@
+<?php
+//DEBUG
+//var_dump($VALUES);
+?>
+<?php include(dirname(__FILE__) . '/common/html_head.html'); ?>
+
+<script type="text/javascript" src="/js/station/getStation.js"></script>
+<body>
+    <div id="top-banner"></div>
+    <div id='container'>
+    <!-- Global header -->
+    <?php include(dirname(__FILE__) . '/common/header.html'); ?>
+    <!-- Global Navigation -->
+    <?php include(dirname(__FILE__) . '/common/navi.html'); ?>
+    <!-- Sub header-->
+    <header>
+        <h1>CSN::観測点一覧</h1>
+    </header>
+    <section>
+        <h2>稼働中の観測点</h2>
+        <ul id="station_list">
+        </ul>
+        <div class="reset"></div>
+    </section>
+
+</div><!-- /container -->
+
+<?php include(dirname(__FILE__) . '/common/footer.html'); ?>
+</body>
+
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache">
+</head>
+</html>

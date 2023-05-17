@@ -169,14 +169,14 @@ a:link img, a:visited img, a:active img, a:hover img {
  * #tabを横並び
  *
  */
-ul, #tags li {
+.info_list ul, #tags li {
     margin: 0;
     margin-left : 5px;
     margin-bottom : 5px;
     padding: 0px;
     list-style: none;
 }
-li {
+.info_list li {
     width : 180px;
     border : solid 1px;
     border-left : solid 8px;

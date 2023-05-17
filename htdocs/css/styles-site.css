@@ -1,4 +1,4 @@
-html, body, #map-canvas {
+html, body {
 	height: 100%;
     margin: 0px;
     padding: 0px;
@@ -16,21 +16,39 @@ a {
 #top-banner {
     top : 0;
 	margin: 0;
-	padding: : 0;
-    height : 30px;
+	padding: 0;
+    height: 30px;
     background-color : #8dc031;
 }
 
+#map-full {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    margin-top    : 133px;/* ヘッダーの高さ */
+    margin-bottom : 0px;/* フッターの高さ */
+}
+
 #map-canvas {
-	width: 100%;
-	height: 100%;
-	margin-top: 20px;
+    position: relative;
+    float: right;
+    width: 80%;
+    height: 100%;
+    overflow: hidden;
 }
 
 #map-banner {
-	width: 100%;
-	height: 300px;
-    border: solid 5px pink;
+    width: 100%;
+    height: 300px;
+}
+
+.point_list {
+    position: relative;
+    float: left;
+    width: 20%;
+    min-width: 200px;
+    max-width: 400px;
 }
 
 /*

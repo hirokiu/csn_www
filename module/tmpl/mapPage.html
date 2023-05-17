@@ -1,0 +1,48 @@
+<?php
+//DEBUG
+//var_dump($VALUES);
+?>
+<?php include(dirname(__FILE__) . '/common/html_head.html'); ?>
+<script type="text/javascript">
+    $(function() {
+      //-----GoogleMapsの基本設定
+      var mapOptions = {
+        zoom: 15,
+        scaleControl: true,
+        // 中心座標の設定
+        // @35.33385,139.618239
+        center: new google.maps.LatLng(35.33385, 139.618239),
+      };
+      map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+    });
+</script>
+<body>
+    <div id="top-banner"></div>
+    <div id='container'>
+    <!-- Global header -->
+    <?php include(dirname(__FILE__) . '/common/header.html'); ?>
+    <!-- Global Navigation -->
+    <?php include(dirname(__FILE__) . '/common/navi.html'); ?>
+    <!-- Sub header-->
+    <header>
+        <h1>CSN::<?php echo $VALUES['common']['page_title']; ?></h1>
+    </header>
+</div><!-- /container -->
+    <section id="map-full">
+        <div class="point_list">
+            <ul>
+                <li>201:</li>
+                <li>device=201&datetime=1647441346.735300</li>
+                <li>device=201&datetime=1647441346.735300</li>
+                <li>device=201&datetime=1647441346.735300</li>
+                <li>device=201&datetime=1647441346.735300</li>
+            </ul>
+        </div>
+        <div id="map-canvas"></div>
+    </section>
+
+</body>
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache">
+</head>
+</html>

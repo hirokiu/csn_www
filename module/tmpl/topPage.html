@@ -1,0 +1,55 @@
+<?php
+//DEBUG
+//var_dump($VALUES);
+?>
+<?php include(dirname(__FILE__) . '/common/html_head.html'); ?>
+<body>
+    <div id='container'>
+    <!-- Global header -->
+    <?php include(dirname(__FILE__) . '/common/header.html'); ?>
+    <!-- Global Navigation -->
+    <?php include(dirname(__FILE__) . '/common/navi.html'); ?>
+    <!-- Sub header-->
+    <header>
+        <h1>CSN::<?php echo $VALUES['common']['page_title']; ?></h1>
+    </header>
+        <section>
+            <h2>information</h2>
+            <p>・LODチャレンジ2021へ地震オントロジー、および地震オントロジーを用いて記録したデータを<a href="/ontology/">公開</a>しています。</p>
+            <p>・CSN(Citizen Seismology Network)の活動を記録するWebサイトをリニューアルしています。</p>
+        </section>
+        <section>
+            <h2>最新の観測データ</h2>
+            <ul>
+                <li>デバイスID : <span id="device_id"></span></li>
+                <li>観測時刻 : <span id="result_time"></span></li>
+                <li>計測震度 : <span id="result_shindo"></span></li>
+            </ul>
+            <div class="reset"></div>
+            <h2>観測された波形</h2>
+            <h3>X成分（南北）</h3>
+                <div id="result"><div id="result_x"></div></div>
+            <h3>Y成分（東西）</h3>
+                <div id="result"><div id="result_y"></div></div>
+            <h3>Z成分（垂直）</h3>
+                <div id="result"><div id="result_z"></div></div>
+            <h2>波形ダウンロード</h2>
+            <ul>
+                <li><a href="/data/earthquake/">CSV形式</a></li>
+                <li><a href="/data/earthquake/">JSON形式</a></li>
+            </ul>
+            <h2>震源情報</h2>
+            <h3>震源地</h3>
+            <div class="" name=""></div>
+        </section>
+        <?php include(dirname(__FILE__) . '/common/footer.html'); ?>
+    </div><!-- /container -->
+    <script src="/js/static/draw.js"></script>
+
+</body>
+
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache">
+</head>
+
+</html>
