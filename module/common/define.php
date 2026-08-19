@@ -1,6 +1,6 @@
 <?php
-define('SITE_TITLE','CSN::市民ネットワーク');
-define('META_KEYWORD','');
+define('SITE_TITLE','CSN::Citizen Seismology Network');
+define('META_KEYWORD','Citizen Seismology Network, CSN, Earthquake, Earthquake Ontology, Earthquake LOD, Linked Open Data');
 define('META_DESCRIPTION','');
 
 define('GOOGLE_MAP_API_KEY','AIzaSyC9ZM3tuMkHSwolCQmqrtFym2eXHY1aAIY');

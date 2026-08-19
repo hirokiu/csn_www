@@ -14,32 +14,34 @@
         <h1>CSN::<?php echo $VALUES['common']['page_title']; ?></h1>
     </header>
         <section>
-            <h2>information</h2>
-            <p>・LODチャレンジ2021へ地震オントロジー、および地震オントロジーを用いて記録したデータを<a href="/ontology/">公開</a>しています。</p>
-            <p>・CSN(Citizen Seismology Network)の活動を記録するWebサイトをリニューアルしています。</p>
+            <h2>Information</h2>
+            <p>- Got the Oracle Japan Award at the <a href='https://2022.lodc.jp/awardPressRelease2022.html' target='_blank'>LOD Challenge 2022</a>.</p>
+            <p>- Got the Open Science Award at the <a href='https://2022.lodc.jp/awardPressRelease2022.html' target='_blank'>LOD Challenge 2022</a>.</p>
+            <p>- <a href="/ontology/">Earthquake Ontology</a> are released.</p>
+            <p>- Renewal for CSN(Citizen Seismology Network) works.</p>
         </section>
         <section>
-            <h2>最新の観測データ</h2>
+            <h2>Newest seismic waveform from CSN</h2>
             <ul>
-                <li>デバイスID : <span id="device_id"></span></li>
-                <li>観測時刻 : <span id="result_time"></span></li>
-                <li>計測震度 : <span id="result_shindo"></span></li>
+                <li>Device ID : <span id="device_id"></span></li>
+                <li>Observed Time : <span id="result_time"></span></li>
+                <li>Intensity : <span id="result_shindo"></span></li>
             </ul>
             <div class="reset"></div>
-            <h2>観測された波形</h2>
-            <h3>X成分（南北）</h3>
+            <h2>Observed waveform</h2>
+            <h3>EW</h3>
                 <div id="result"><div id="result_x"></div></div>
-            <h3>Y成分（東西）</h3>
+            <h3>NS</h3>
                 <div id="result"><div id="result_y"></div></div>
-            <h3>Z成分（垂直）</h3>
+            <h3>UD</h3>
                 <div id="result"><div id="result_z"></div></div>
-            <h2>波形ダウンロード</h2>
+            <h2>Download waveform</h2>
             <ul>
-                <li><a href="/data/earthquake/">CSV形式</a></li>
-                <li><a href="/data/earthquake/">JSON形式</a></li>
+                <li><a href="/data/earthquake/">CSV</a></li>
+                <li><a href="/data/earthquake/">JSON</a></li>
             </ul>
-            <h2>震源情報</h2>
-            <h3>震源地</h3>
+            <h2>Hypocenter</h2>
+            <h3>Place</h3>
             <div class="" name=""></div>
         </section>
         <?php include(dirname(__FILE__) . '/common/footer.html'); ?>

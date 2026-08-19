@@ -14,10 +14,17 @@
     <?php include(dirname(__FILE__) . '/common/navi.html'); ?>
     <!-- Sub header-->
     <header>
-        <h1>CSN::観測点一覧</h1>
+        <h1>CSN::Stations</h1>
     </header>
-    <section>
-        <h2>稼働中の観測点</h2>
+    <section id="abstract">
+        <h2>地震計の観測点</h2>
+        <p>CSN，および気象庁やFDSNに登録されている観測点のリストを表示します．</p>
+    </section>
+    <section id="sta_map" class="station_list">
+        <h3>気象庁の観測点</h3>
+    </section>
+    <section id="csnStaList" class="station_list">
+        <h3>Active Stations in CSN</h3>
         <ul id="station_list">
         </ul>
         <div class="reset"></div>

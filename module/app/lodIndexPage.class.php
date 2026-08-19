@@ -2,7 +2,7 @@
     require(dirname(__FILE__) . '/../common/dbBase.class.php');
     require(dirname(__FILE__) . '/../common/viewBase.class.php');
 
-    class mapPage extends viewBase{
+    class lodIndexPage extends viewBase{
         // 共通変数
         private $db;
 
@@ -19,7 +19,7 @@
             // $this->db = new dbBase();
 
             // ページ設定
-            $this->values['common']['page_title'] = "Stations on map";
+            $this->values['common']['page_title'] = "Earthquake LOD";
 
             // データ取得
             try {

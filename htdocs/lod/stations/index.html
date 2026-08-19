@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>地域ごとの観測点情報</title>
+    <script>
+        let GSI = [];
+    </script>
+        <!-- Bootstrap core CSS -->
+        <link href="/css/bootstrap.min.css" rel="stylesheet">
+        <link href="//unpkg.com/jpn.css@latest/dist/bootstrap/jpn.min.css" rel="stylesheet">
+    
+        <!-- Custom styles for this template -->
+        <link href="/css/product.css" rel="stylesheet">
+        <link href="/css/content.css" rel="stylesheet" type="text/css" media="all">
+        <link href="/css/schemes.css" rel="stylesheet" type="text/css" media="all">
+    
+        <link rel="stylesheet" href="/css/styles-site.css" type="text/css">
+
+    <script src="https://maps.gsi.go.jp/js/muni.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9ZM3tuMkHSwolCQmqrtFym2eXHY1aAIY"></script>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        #app { max-width: 100%; margin: auto; padding: 20px; }
+    </style>
+        <style>
+            #map {
+                width: 100%;
+                height: 500px;
+            }
+            /* ローディング画面のスタイル */
+            #loading {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(255, 255, 255, 0.8);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 20px;
+                font-weight: bold;
+                display: none; /* 初期状態では非表示 */
+                z-index: 1000;
+            }
+            /* SVGアイコン */
+            #loading svg {
+                width: 50px;
+                height: 50px;
+                animation: spin 1s linear infinite;
+            }
+            @keyframes spin {
+                from { transform: rotate(0deg); }
+                to { transform: rotate(360deg); }
+            }
+            /* 0件のメッセージ */
+            #no-results {
+                display: none;
+                text-align: center;
+                font-size: 18px;
+                font-weight: bold;
+                margin-top: 10px;
+            }
+        </style>
+</head>
+<body>
+    <div id="top-banner"></div>
+    <div id='container'>
+        <header><h1>地震観測データ検索</h1></header>
+    <div id="app">
+        
+        <div id="loading">
+            <svg viewBox="0 0 50 50">
+                <circle cx="25" cy="25" r="20" stroke="black" stroke-width="5" fill="none" />
+            </svg>
+            <span> 検索中...</span>
+        </div>
+        
+        <!-- 都道府県選択 -->
+        <label for="pref">都道府県</label>
+        <select id="pref" v-model="selectedPref" @change="updateCities">
+            <option v-for="pref in prefectures" :value="pref.code">{{ pref.name }}</option>
+        </select>
+
+        <!-- 市区町村選択 -->
+        <label for="city">市区町村</label>
+        <select id="city" v-model="selectedCity">
+            <option v-for="city in cities" :value="city.name">{{ city.name }}</option>
+        </select>
+        
+
+        <label>年: 
+            <select v-model="selectedYear">
+                <option v-for="year in years" :key="year" :value="year">{{ year }}</option>
+            </select>
+        </label>
+    
+        <label>震度: 
+            <select v-model="selectedShindo">
+                <option v-for="shindo in shindoLevels" :key="shindo" :value="shindo">{{ shindo }}</option>
+            </select>
+        </label>
+
+        <button @click="fetchAllData">検索</button>
+        
+        <div id="map"></div>
+
+        <ul>
+            <li v-for="item in results" :key="item.hypo_name">
+                {{ item.hypo_name }} - {{ item.hypo_time }}
+                <ul><li>{{ item.sta_name }} - 計測震度：{{ item.calcShindo }}</li></ul>
+            </li>
+        </ul>
+        <p id="no-results">0件です</p>
+        
+        <div v-if="disasterFeatures.length">
+            <h3>防災情報:</h3>
+            <ul>
+                <li v-for="(feature, index) in disasterFeatures" :key="index">
+                    {{ feature.attributes.JICHITAI }} - 
+                    <a :href=`https://dstr.mhr.bosai.go.jp/saigai2016/pdf/${feature.attributes.JIREI_BANGO}.pdf` target="_blank">{{ feature.attributes.JIREI_BANGO }}</a>
+                </li>
+            </ul>
+        </div>
+        <div id="no-results" v-else>
+            <p>防災情報が見つかりませんでした。</p>
+        </div>
+        
+        <footer><p>&copy; 2025 hiroki_u</p></footer>
+    </div>
+    </div>
+
+    <script>
+        const { createApp } = Vue;
+        createApp({
+            data() {
+                return {
+                    prefectures: [],
+                    cities: [],
+                    years: Array.from({ length: 61 }, (_, i) => 1960 + i),
+                    shindoLevels: Array.from({ length: 7 }, (_, i) => 1 + i),
+                    selectedPref: "東京都",
+                    selectedCity: "千代田区",
+                    selectedYear: "2011",
+                    selectedShindo: "5",
+                    selsectedCityCode: "13101",
+                    results: [],
+                    disasterFeatures: [],
+                    map: null,
+                    muniArray: Object.values(GSI.MUNI_ARRAY).map(item => item.split(","))
+                };
+            },
+            methods: {
+                async fetchAllData() {
+                    this.fetchData();         // 震源・観測点データの取得
+                    this.fetchDisasterInfo(); // 防災情報の取得
+                },
+                loadMunicipalities() {
+                    // 都道府県リストの作成
+                    const prefectureSet = new Set();
+                    this.prefectures = [];
+
+                    // GSI.MUNI_ARRAY をオブジェクト → 配列に変換
+                    // const muniArray = Object.values(GSI.MUNI_ARRAY);
+
+                    this.muniArray.forEach(([prefCode, prefName]) => {
+                        if (!prefectureSet.has(prefCode)) {
+                            prefectureSet.add(prefCode);
+                            this.prefectures.push({ code: prefCode, name: prefName });
+                        }
+                    });
+
+                    // デフォルト値を設定
+                    this.selectedPref = this.prefectures[12].code;
+                    this.updateCities();
+                },
+
+                updateCities() {
+                    // 選択された都道府県に属する市区町村リストを作成
+                    this.cities = this.muniArray
+                        .filter(([prefCode]) => prefCode === this.selectedPref)
+                        .map(([, cityCode, , cityName]) => ({ code: cityCode, name: cityName }));
+
+                    // デフォルト値を設定
+                    if (this.cities.length > 0) {
+                        this.selectedCity = this.cities[0].name;
+                    }
+                },
+
+                async fetchData() {
+                    if (!this.selectedCity) return;
+                    //this.selectedCity = this.selectedCity.replace(/\s+/g, "");
+                    console.log("対象地域",this.selectedCity);
+
+                    const query = `
+                        SELECT DISTINCT * WHERE {
+                            GRAPH <https://sta.seismic.balog.jp> {
+                                ?_sta a jpe:observer ;
+                                    ic:市区町村 "${this.selectedCity.replace(/\s+/g, "")}"@ja ;
+                                    schema:latitude ?sta_lat ;
+                                    schema:longitude ?sta_lon ;
+                                    jpe:stationIdentifier ?sta_id ;
+                                    rdfs:label ?sta_name .
+                            } {
+                                ?sta jpe:stationIdentifier ?sta_id .
+                                ?obs_wave jpe:hasHypocenter ?q ;
+                                    jpe:observedBy ?sta ;
+                                    jpe:calcShindo ?calcShindo .
+                                FILTER(xsd:decimal(?calcShindo) >= ${this.selectedShindo})
+
+                                ?q rdfs:label ?hypo_name;
+                                    schema:latitude ?hypo_lat ;
+                                    schema:longitude ?hypo_lon ;
+                                    jpe:originTime ?hypo_time.
+                                FILTER( CONTAINS(str(?hypo_time), "${this.selectedYear}-")  )
+                            }
+                        } ORDER BY ?hypo_time DESC(?calcShindo)
+                    `;
+                    const url = `https://seismic.balog.jp/sparql?query=${encodeURIComponent(query)}&format=json`;
+
+                    console.log("SPARQL Query URL:", url); // デバッグ用に表示
+                    console.log("SPARQL Query:", query); // デバッグ用に表示
+
+                    try {
+                        const response = await fetch(url, {
+                            method: "GET",
+                            headers: { "Accept": "application/sparql-results+json" }
+                        });
+
+                        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                        const data = await response.json();
+
+                        console.log("SPARQL Response:", data); // デバッグ用に表示
+
+                        // 結果を処理してマップに表示
+                        this.results = data.results.bindings.map(b => ({
+                            sta_name: b.sta_name.value,
+                            sta_lat: parseFloat(b.sta_lat.value),
+                            sta_lon: parseFloat(b.sta_lon.value),
+                            calcShindo: parseFloat(b.calcShindo.value),
+                            hypo_name: b.hypo_name.value,
+                            hypo_lat: parseFloat(b.hypo_lat.value),
+                            hypo_lon: parseFloat(b.hypo_lon.value),
+                            hypo_time: b.hypo_time.value
+                        }));
+
+                        this.updateMap();
+                    } catch (error) {
+                        console.error("SPARQL Query Error:", error);
+                    }
+                },
+                // 地図の初期化
+                initMap() {
+                    this.map = new google.maps.Map(document.getElementById("map"), {
+                        center: { lat: 35.6895, lng: 139.6917 },
+                        zoom: 8,
+                        zoomControl: true
+                    });
+                },
+                // クエリの結果をもとに地図を更新
+                updateMap() {
+                    this.showLoading();
+
+                    setTimeout(() => {
+                    // 情報ウィンドウの作成
+                    const infoWindow = new google.maps.InfoWindow();
+                    bounds = new google.maps.LatLngBounds();
+                    let observationPoints = [];
+
+                    if (this.results.length === 0) {
+                        // 0件の場合、地図を初期化
+                        this.initMap();
+                        document.getElementById("no-results").style.display = "block";
+                        this.hideLoading();
+                        return;
+                    } else {
+                        document.getElementById("no-results").style.display = "none";
+                    }
+
+                    this.results.forEach(result => {
+                        // 観測点のピン（青）
+                        const observerPosition = new google.maps.LatLng(result.sta_lat, result.sta_lon);
+                        const observerMarker = new google.maps.Marker({
+                            position: observerPosition,
+                            map: this.map,
+                            title: result.sta_name,
+                            icon: "https://maps.google.com/mapfiles/ms/icons/blue-dot.png" // 青いピン
+                        });
+                        // 位置を記録
+                        bounds.extend(observerMarker.position);
+                        observationPoints.push({ lat: result.sta_lat, lng: result.sta_lon });
+
+                        // 観測点の情報ウィンドウ
+                        observerMarker.addListener("click", () => {
+                            infoWindow.setContent(`
+                                <div>
+                                    <strong>観測点</strong><br>
+                                    名称: ${result.sta_name} <br>
+                                    緯度: ${result.sta_lat} <br>
+                                    経度: ${result.sta_lon}
+                                </div>
+                            `);
+                            infoWindow.open(this.map, observerMarker);
+                        });
+
+                        // 震源のピン（赤）
+                        const hypoPosition = new google.maps.LatLng(result.hypo_lat, result.hypo_lon);
+                        const hypoMarker = new google.maps.Marker({
+                            position: hypoPosition,
+                            map: this.map,
+                            title: result.hypo_name,
+                            icon: "https://maps.google.com/mapfiles/ms/icons/red-dot.png" // 赤いピン
+                        });
+                        // 位置を記録
+                        bounds.extend(hypoMarker.position);
+
+                        // 震源の情報ウィンドウ
+                        hypoMarker.addListener("click", () => {
+                            infoWindow.setContent(`
+                                <div>
+                                    <strong>震源</strong><br>
+                                    名称: ${result.hypo_name} <br>
+                                    緯度: ${result.hypo_lat} <br>
+                                    経度: ${result.hypo_lon} <br>
+                                    発生時刻: ${result.hypo_time} <br>
+                                    <hr>
+                                    観測点: ${result.sta_name} <br>
+                                    計測震度: ${result.calcShindo} <br>
+                                </div>
+                            `);
+                            infoWindow.open(this.map, hypoMarker);
+                        });
+                    });
+
+                    // すべてのピンが表示されるようにズーム調整
+                    if (this.results.length > 0) {
+                        this.map.fitBounds(bounds);
+                    }
+                    // 観測点の中心を地図の中央に設定
+                    // if (observationPoints.length > 0) {
+                    //     let centerPoint = this.calculateCenter(observationPoints);
+                    //     this.map.setCenter(centerPoint);
+                    // }
+
+                        this.hideLoading(); // ローディングを非表示
+                    }, 1500); // 2秒の遅延（データ取得のシミュレーション）
+
+                },
+                calculateCenter(points) {
+                        let sumLat = 0, sumLng = 0;
+                        points.forEach(point => {
+                            sumLat += point.lat;
+                            sumLng += point.lng;
+                        });
+                        return { lat: sumLat / points.length, lng: sumLng / points.length };
+                },
+
+                // データ取得開始時にローディングを表示
+                showLoading() {
+                    document.getElementById("loading").style.display = "flex";
+                },
+
+                // データ取得完了時にローディングを非表示
+                hideLoading() {
+                    document.getElementById("loading").style.display = "none";
+                },
+
+                async fetchDisasterInfo() {
+                    // if (!this.selectedCityCode) return; // 市区町村コードが未選択なら処理しない
+
+                    let selsectedCityName = this.prefectures[this.selectedPref-1].name + this.selectedCity;
+                    console.log("対象市区町村", selsectedCityName);
+                    console.log(this.prefectures[this.selectedPref-1]);
+                    // const url = `https://agis.bosai.go.jp/webgis/rest/services/dil-db/saigai_cityPolygon/MapServer/0/query?f=json&where=JCODE%3D%27${this.selectedCityCode}%27&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*`;
+                    const url = `https://agis.bosai.go.jp/webgis/rest/services/dil-db/saigai_cityPolygon/MapServer/0/query?f=json&where=JICHITAI%3D%27${selsectedCityName.replace(/\s+/g, "")}%27&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*`;
+                    // const url = `https://agis.bosai.go.jp/webgis/rest/services/dil-db/saigai_cityPolygon/MapServer/0/query?f=json&where=JICHITAI%3D%27東京都千代田区%27&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*`
+
+                    console.log("disaster Query",url)
+                    try {
+                        const response = await fetch(url);
+                        const data = await response.json();
+                        this.disasterFeatures = data.features || []; // features 配列を保存
+                    } catch (error) {
+                        console.error("APIリクエストエラー:", error);
+                        this.disasterFeatures = []; // エラー時は空配列
+                    }
+                }
+            },
+            mounted() {
+                this.loadMunicipalities();
+                this.initMap();
+            },
+        }).mount("#app");
+    </script>
+</body>
+</html>
