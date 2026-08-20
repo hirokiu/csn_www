@@ -77,6 +77,10 @@ include(dirname(__FILE__) . '/../../../module/tmpl/common/html_head.html');
                     <h2>検索結果</h2>
                     <p v-if="searchPerformed && !loading" class="result-count">{{ results.length }}件</p>
                 </div>
+                <div class="poi-legend" aria-label="地図上の記号">
+                    <span><i class="poi-marker poi-station" aria-hidden="true"></i><strong>観測点</strong> — 選択した地域で揺れを記録した地点</span>
+                    <span><i class="poi-marker poi-hypocenter" aria-hidden="true"></i><strong>震源</strong> — 観測された地震の発生地点</span>
+                </div>
                 <div v-if="mapAvailable" id="map" aria-label="観測点と震源の地図"></div>
                 <p v-else class="status-notice"><strong>地図は表示されていません。</strong> Google Maps APIキーが設定されていない場合も、検索結果の一覧は利用できます。</p>
 
@@ -87,8 +91,8 @@ include(dirname(__FILE__) . '/../../../module/tmpl/common/html_head.html');
                         <tbody>
                             <tr v-for="(item, index) in results" :key="`${item.hypo_time}-${item.sta_name}-${index}`">
                                 <td>{{ formatTime(item.hypo_time) }}</td>
-                                <td>{{ item.hypo_name }}</td>
-                                <td>{{ item.sta_name }}</td>
+                                <td><span class="poi-label"><i class="poi-marker poi-hypocenter" aria-hidden="true"></i>{{ item.hypo_name }}</span></td>
+                                <td><span class="poi-label"><i class="poi-marker poi-station" aria-hidden="true"></i>{{ item.sta_name }}</span></td>
                                 <td><strong>{{ item.calcShindo }}</strong></td>
                             </tr>
                         </tbody>

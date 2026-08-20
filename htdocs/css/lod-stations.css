@@ -79,6 +79,30 @@
 .results-heading { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
 .results-heading h2 { flex: 1; }
 .result-count { flex: 0 0 auto; margin: 0 0 1.35rem; color: var(--color-primary); font-weight: 800; }
+.poi-legend {
+    display: flex;
+    margin-bottom: 1rem;
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background: #fafbf9;
+    flex-wrap: wrap;
+    gap: 0.65rem 1.5rem;
+}
+.poi-legend span,
+.poi-label { display: inline-flex; align-items: center; gap: 0.45rem; }
+.poi-marker {
+    display: inline-block;
+    width: 0.9rem;
+    height: 0.9rem;
+    border: 2px solid #fff;
+    border-radius: 50% 50% 50% 0;
+    box-shadow: 0 0 0 1px rgba(29, 42, 30, 0.28);
+    flex: 0 0 auto;
+    transform: rotate(-45deg);
+}
+.poi-station { background: #689f38; }
+.poi-hypocenter { background: #eb771f; }
 #map { width: 100%; height: clamp(360px, 55vh, 620px); margin-bottom: 1.25rem; border: 1px solid var(--color-border); border-radius: var(--radius-sm); }
 .result-table { margin-top: 1rem; }
 .empty-state { max-width: none; padding: 1.5rem; border: 1px dashed #aeb9aa; border-radius: var(--radius-sm); color: var(--color-muted); text-align: center; background: #fafbf9; }
