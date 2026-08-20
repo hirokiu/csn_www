@@ -34,4 +34,11 @@ docker run --rm --platform "$PLATFORM" \
 cp "$PROJECT_DIR/ontology-docs/index.html" "$OUTPUT_DIR/index.html"
 
 cmp "$SOURCE_FILE" "$PUBLISHED_FILE"
+
+WEBVOWL_ONTOLOGY="$OUTPUT_DIR/webvowl/data/ontology.json"
+if [ ! -s "$WEBVOWL_ONTOLOGY" ]; then
+    echo "WebVOWL data was not generated: $WEBVOWL_ONTOLOGY" >&2
+    exit 1
+fi
+
 echo "WIDOCO documentation generated in $OUTPUT_DIR"

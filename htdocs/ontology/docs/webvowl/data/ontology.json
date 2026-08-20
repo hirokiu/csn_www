@@ -1,0 +1,1450 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "ja", "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://schema.org", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/ns/prov", "http://www.w3.org/2001/XMLSchema", "http://www.w3.org/ns/sosa", "https://seismic.balog.jp/ontology/jp-earthquake.ttl", "http://www.w3.org/ns/dcat" ],
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#",
+    "version" : "2026-08-19",
+    "author" : [ "_:genid2147483648" ],
+    "labels" : {
+      "ja" : "地震オントロジー",
+      "en" : "Earthquake Ontology for Seismic Datasets"
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/licenses/by/4.0/",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "_:genid2147483648",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2026-08-19",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "2026-08-19",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2022-10-16",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "3",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "14",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "15",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "16",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "2",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "17",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "20",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "21",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "30",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "37",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "42",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "43",
+    "type" : "owl:Class"
+  }, {
+    "id" : "44",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "25",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "45",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "47",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "48",
+    "type" : "owl:Class"
+  }, {
+    "id" : "59",
+    "type" : "owl:Class"
+  }, {
+    "id" : "63",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "72",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "73",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "74",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "99",
+    "type" : "owl:Class"
+  }, {
+    "id" : "76",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "100",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "78",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "32",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "90",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "40",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "102",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "94",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "55",
+    "type" : "owl:Class"
+  }, {
+    "id" : "81",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "85",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "49",
+    "type" : "owl:Class"
+  }, {
+    "id" : "51",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "3",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#Entity",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Entity"
+    },
+    "subClasses" : [ "5" ],
+    "attributes" : [ "external" ],
+    "id" : "4"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "6",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/Observation",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Observation"
+    },
+    "subClasses" : [ "8", "9", "10" ],
+    "attributes" : [ "external" ],
+    "id" : "7"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "11",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "14",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#hexBinary",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "15",
+    "label" : {
+      "IRI-based" : "hexBinary"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "16",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "2",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "17",
+    "label" : {
+      "IRI-based" : "nonNegativeInteger"
+    }
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#DatasetSnapshot",
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DatasetSnapshot",
+      "ja" : "データセット・スナップショット",
+      "en" : "dataset snapshot"
+    },
+    "comment" : {
+      "ja" : "外部機関のデータセットを特定の取得時点でRDFへ変換した、不変の版。各版は独立した名前付きグラフとして管理する。",
+      "en" : "An immutable RDF rendition of an external dataset as retrieved at a specific time. Each rendition is managed as a separate named graph."
+    },
+    "id" : "5",
+    "superClasses" : [ "4", "18" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "19",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "20",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "21",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "30",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#seismicMotion",
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "seismicMotion",
+      "ja" : "地震動",
+      "en" : "seismic motion"
+    },
+    "id" : "9",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "13",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "34",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "37",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "38",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "41",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "42",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#Agent",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Agent"
+    },
+    "attributes" : [ "external" ],
+    "id" : "43"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "44",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "25",
+    "label" : {
+      "IRI-based" : "nonNegativeInteger"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "45",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#epicenter",
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "epicenter",
+      "ja" : "震央",
+      "en" : "epicenter"
+    },
+    "id" : "47",
+    "superClasses" : [ "48", "49" ]
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord",
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "StrongMotionRecord",
+      "ja" : "強震記録",
+      "en" : "strong-motion record"
+    },
+    "comment" : {
+      "ja" : "観測点で得られた強震波形またはそこから算出した主要指標を表す。"
+    },
+    "id" : "8",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://schema.org/Place",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Place"
+    },
+    "subClasses" : [ "24", "47" ],
+    "attributes" : [ "external" ],
+    "id" : "48"
+  }, {
+    "iri" : "http://schema.org/Event",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Event"
+    },
+    "subClasses" : [ "51" ],
+    "attributes" : [ "external" ],
+    "id" : "59"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "63",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "72",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "73",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "74",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#observer",
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "instances" : 0,
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "ja",
+        "value" : "観測点",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "observation station",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "observer",
+      "ja" : "観測点",
+      "en" : "observation station"
+    },
+    "comment" : {
+      "ja" : "住所が提供される場合はschema:addressとIMI共通語彙基盤（ic:住所、ic:都道府県、ic:都道府県コード、ic:市区町村、ic:市区町村コード）を併用する。"
+    },
+    "id" : "1",
+    "superClasses" : [ "55" ]
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter",
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "hypocenter",
+      "ja" : "震源",
+      "en" : "hypocenter"
+    },
+    "id" : "24",
+    "superClasses" : [ "48", "49" ]
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedWave",
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "observedWave",
+      "ja" : "観測波形",
+      "en" : "observed wave"
+    },
+    "id" : "10",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/ObservableProperty",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ObservableProperty"
+    },
+    "individuals" : [ {
+      "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#shindo",
+      "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+      "labels" : {
+        "IRI-based" : "shindo",
+        "ja" : "震度",
+        "en" : "JMA seismic intensity"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "99"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "76",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "100",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "78",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "32",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "90",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "40",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "102",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "94",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/Sensor",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Sensor"
+    },
+    "subClasses" : [ "1" ],
+    "attributes" : [ "external" ],
+    "id" : "55"
+  }, {
+    "instances" : 0,
+    "union" : [ "8", "10", "51" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "81"
+  }, {
+    "instances" : 0,
+    "union" : [ "8", "10" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "85"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FeatureOfInterest"
+    },
+    "subClasses" : [ "24", "51", "47" ],
+    "attributes" : [ "external" ],
+    "id" : "49"
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#earthquake",
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "earthquake",
+      "ja" : "地震現象",
+      "en" : "earthquake"
+    },
+    "id" : "51",
+    "superClasses" : [ "59", "49" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/dcat#Dataset",
+    "baseIri" : "http://www.w3.org/ns/dcat",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Dataset"
+    },
+    "subClasses" : [ "5" ],
+    "attributes" : [ "external" ],
+    "id" : "18"
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "12",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "22",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "23",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "27",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "29",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "31",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "35",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "39",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "46",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "50",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "36",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "52",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "53",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "54",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "56",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "57",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "58",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "60",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "61",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "62",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "65",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "66",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "67",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "68",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "69",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "70",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "71",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "75",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "64",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "77",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "79",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "80",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "83",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "84",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "87",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "89",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "91",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "92",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "93",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "95",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "96",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "28",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "97",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "98",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "101",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "103",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "88",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "82",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "26",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "104",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "33",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "105",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "106",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "86",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "107",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "108",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "109",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#stationIdentifier",
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "stationIdentifier",
+      "ja" : "観測点番号",
+      "en" : "station identifier"
+    },
+    "domain" : "1",
+    "comment" : {
+      "ja" : "観測機関または観測網が定めた観測点の識別子。"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "0"
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundVelocityEW",
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "peakGroundVelocityEW",
+      "ja" : "東西成分最大速度"
+    },
+    "domain" : "8",
+    "attributes" : [ "datatype" ],
+    "id" : "12"
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#spectrumIntensity",
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "spectrumIntensity",
+      "ja" : "SI値"
+    },
+    "domain" : "8",
+    "attributes" : [ "datatype" ],
+    "id" : "22"
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedStationNum",
+    "equivalent" : [ "26" ],
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "observedStationNum",
+      "ja" : "観測点数",
+      "en" : "number of observation stations"
+    },
+    "domain" : "24",
+    "comment" : {
+      "ja" : "震度1以上を観測した観測点の数。"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "23"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#wasRevisionOf",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "wasRevisionOf"
+    },
+    "domain" : "11",
+    "subproperty" : [ "28" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "27"
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundVelocityNS",
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "range" : "30",
+    "label" : {
+      "IRI-based" : "peakGroundVelocityNS",
+      "ja" : "南北成分最大速度"
+    },
+    "domain" : "8",
+    "attributes" : [ "datatype" ],
+    "id" : "29"
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#determinatedWay",
+    "equivalent" : [ "33" ],
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "determinatedWay",
+      "ja" : "震源決定方法",
+      "en" : "hypocenter determination method"
+    },
+    "domain" : "24",
+    "comment" : {
+      "ja" : "震源の決定方法または決定フラグ。震源を決定した機関はjpe:detarminatedByで表す。"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "31"
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#preShock",
+    "equivalent" : [ "36" ],
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "preShock",
+      "ja" : "前震（旧語彙）"
+    },
+    "domain" : "11",
+    "attributes" : [ "deprecated", "object" ],
+    "id" : "35"
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#fileBaseName",
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "range" : "40",
+    "label" : {
+      "IRI-based" : "fileBaseName",
+      "ja" : "波形ファイルベース名"
+    },
+    "domain" : "8",
+    "attributes" : [ "datatype" ],
+    "id" : "39"
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#magnitude",
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "range" : "44",
+    "label" : {
+      "IRI-based" : "magnitude",
+      "ja" : "マグニチュード",
+      "en" : "magnitude"
+    },
+    "domain" : "24",
+    "attributes" : [ "datatype" ],
+    "id" : "46"
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#originTime",
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "range" : "38",
+    "label" : {
+      "IRI-based" : "originTime",
+      "ja" : "オリジンタイム",
+      "en" : "origin time"
+    },
+    "domain" : "24",
+    "attributes" : [ "datatype" ],
+    "id" : "50"
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#foreShock",
+    "equivalent" : [ "35" ],
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "range" : "24",
+    "label" : {
+      "IRI-based" : "foreShock",
+      "ja" : "前震",
+      "en" : "foreshock"
+    },
+    "domain" : "51",
+    "attributes" : [ "object" ],
+    "id" : "36"
+  }, {
+    "range" : "18",
+    "domain" : "5",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "52"
+  }, {
+    "range" : "49",
+    "domain" : "24",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "53"
+  }, {
+    "range" : "55",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "54"
+  }, {
+    "range" : "49",
+    "domain" : "47",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "56"
+  }, {
+    "range" : "49",
+    "domain" : "51",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "57"
+  }, {
+    "range" : "59",
+    "domain" : "51",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "58"
+  }, {
+    "range" : "48",
+    "domain" : "47",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "60"
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#recordIdentifier",
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "recordIdentifier",
+      "ja" : "強震記録ID"
+    },
+    "domain" : "8",
+    "attributes" : [ "datatype" ],
+    "id" : "61"
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#seismicIntensity",
+    "equivalent" : [ "64" ],
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "range" : "63",
+    "label" : {
+      "IRI-based" : "seismicIntensity",
+      "ja" : "計測震度（旧語彙）"
+    },
+    "domain" : "11",
+    "attributes" : [ "deprecated", "datatype" ],
+    "id" : "62"
+  }, {
+    "range" : "48",
+    "domain" : "24",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "65"
+  }, {
+    "range" : "7",
+    "domain" : "8",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "66"
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#detarminatedWith",
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "detarminatedWith",
+      "ja" : "震源決定に利用した波形"
+    },
+    "domain" : "24",
+    "attributes" : [ "object" ],
+    "id" : "67"
+  }, {
+    "range" : "4",
+    "domain" : "5",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "68"
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundVelocityUD",
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "range" : "34",
+    "label" : {
+      "IRI-based" : "peakGroundVelocityUD",
+      "ja" : "上下成分最大速度"
+    },
+    "domain" : "8",
+    "attributes" : [ "datatype" ],
+    "id" : "69"
+  }, {
+    "range" : "7",
+    "domain" : "10",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "70"
+  }, {
+    "range" : "7",
+    "domain" : "9",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "71"
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#magnitudeType",
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "range" : "45",
+    "label" : {
+      "IRI-based" : "magnitudeType",
+      "ja" : "マグニチュード種別",
+      "en" : "magnitude type"
+    },
+    "domain" : "24",
+    "attributes" : [ "datatype" ],
+    "id" : "75"
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#calcShindo",
+    "equivalent" : [ "62" ],
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "range" : "76",
+    "label" : {
+      "IRI-based" : "calcShindo",
+      "ja" : "計測震度",
+      "en" : "instrumental seismic intensity"
+    },
+    "domain" : "10",
+    "attributes" : [ "datatype" ],
+    "id" : "64"
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#depth",
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "range" : "78",
+    "label" : {
+      "IRI-based" : "depth",
+      "ja" : "震源の深さ",
+      "en" : "hypocentral depth"
+    },
+    "domain" : "24",
+    "comment" : {
+      "ja" : "基準面から震源までの深さをメートル単位で表す。提供機関が基準面より上の震源を負値で表す場合は原値を保持する。"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "77"
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#mainShock",
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "range" : "24",
+    "label" : {
+      "IRI-based" : "mainShock",
+      "ja" : "本震",
+      "en" : "main shock"
+    },
+    "domain" : "51",
+    "attributes" : [ "functional", "object" ],
+    "id" : "79"
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#hasHypocenter",
+    "inverse" : "82",
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "range" : "24",
+    "label" : {
+      "IRI-based" : "hasHypocenter",
+      "ja" : "震源",
+      "en" : "has hypocenter"
+    },
+    "domain" : "81",
+    "attributes" : [ "object" ],
+    "id" : "80"
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#snapshotOf",
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "snapshotOf",
+      "ja" : "スナップショット元データセット",
+      "en" : "snapshot of"
+    },
+    "domain" : "5",
+    "attributes" : [ "object" ],
+    "id" : "83"
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedBy",
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "observedBy",
+      "ja" : "観測した観測点",
+      "en" : "observed by"
+    },
+    "superproperty" : [ "86" ],
+    "domain" : "85",
+    "attributes" : [ "object" ],
+    "id" : "84"
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#detarminatedBy",
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "detarminatedBy",
+      "ja" : "震源決定機関",
+      "en" : "hypocenter determined by"
+    },
+    "superproperty" : [ "88" ],
+    "domain" : "24",
+    "comment" : {
+      "ja" : "震源位置・時刻を決定した機関をURIで示す。決定方法やフラグはjpe:determinatedWayで表す。"
+    },
+    "attributes" : [ "object" ],
+    "id" : "87"
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#faultDistance",
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "range" : "90",
+    "label" : {
+      "IRI-based" : "faultDistance",
+      "ja" : "断層最短距離 (km)"
+    },
+    "domain" : "8",
+    "attributes" : [ "datatype" ],
+    "id" : "89"
+  }, {
+    "iri" : "http://schema.org/identifier",
+    "baseIri" : "http://schema.org",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "identifier"
+    },
+    "domain" : "11",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "91"
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundAccelerationNS",
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "range" : "42",
+    "label" : {
+      "IRI-based" : "peakGroundAccelerationNS",
+      "ja" : "南北成分最大加速度"
+    },
+    "domain" : "8",
+    "attributes" : [ "datatype" ],
+    "id" : "92"
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#instrumentalIntensity",
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "range" : "94",
+    "label" : {
+      "IRI-based" : "instrumentalIntensity",
+      "ja" : "計測震度"
+    },
+    "domain" : "8",
+    "attributes" : [ "datatype" ],
+    "id" : "93"
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#sourceChecksum",
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "sourceChecksum",
+      "ja" : "取得元チェックサム",
+      "en" : "source checksum"
+    },
+    "domain" : "5",
+    "comment" : {
+      "ja" : "取得した原本全体のSHA-256チェックサム。"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "95"
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#samplingFrequency",
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "range" : "21",
+    "label" : {
+      "IRI-based" : "samplingFrequency",
+      "ja" : "サンプリング周波数 (Hz)"
+    },
+    "domain" : "8",
+    "attributes" : [ "datatype" ],
+    "id" : "96"
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#previousSnapshot",
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "previousSnapshot",
+      "ja" : "直前のスナップショット",
+      "en" : "previous snapshot"
+    },
+    "superproperty" : [ "27" ],
+    "domain" : "5",
+    "attributes" : [ "object" ],
+    "id" : "28"
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#shindo",
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "shindo",
+      "ja" : "震度",
+      "en" : "JMA seismic intensity"
+    },
+    "domain" : "11",
+    "attributes" : [ "datatype" ],
+    "id" : "97"
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#afterShock",
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "range" : "24",
+    "label" : {
+      "IRI-based" : "afterShock",
+      "ja" : "余震",
+      "en" : "aftershock"
+    },
+    "domain" : "51",
+    "attributes" : [ "object" ],
+    "id" : "98"
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenterKinds",
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "range" : "102",
+    "label" : {
+      "IRI-based" : "hypocenterKinds",
+      "ja" : "震源レコード種別",
+      "en" : "hypocenter record type"
+    },
+    "domain" : "24",
+    "attributes" : [ "datatype" ],
+    "id" : "101"
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundAccelerationEW",
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "range" : "37",
+    "label" : {
+      "IRI-based" : "peakGroundAccelerationEW",
+      "ja" : "東西成分最大加速度"
+    },
+    "domain" : "8",
+    "attributes" : [ "datatype" ],
+    "id" : "103"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#wasAttributedTo",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "wasAttributedTo"
+    },
+    "domain" : "11",
+    "subproperty" : [ "87" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "88"
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#isHypocenterOf",
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "isHypocenterOf",
+      "ja" : "震源とする地震・観測",
+      "en" : "is hypocenter of"
+    },
+    "domain" : "24",
+    "attributes" : [ "object" ],
+    "id" : "82"
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedStaionNum",
+    "equivalent" : [ "23" ],
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "range" : "72",
+    "label" : {
+      "IRI-based" : "observedStaionNum",
+      "ja" : "観測点数（旧綴り）"
+    },
+    "domain" : "11",
+    "attributes" : [ "deprecated", "datatype" ],
+    "id" : "26"
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#sampleCount",
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "sampleCount",
+      "ja" : "サンプル数"
+    },
+    "domain" : "8",
+    "attributes" : [ "datatype" ],
+    "id" : "104"
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#detarminatedWay",
+    "equivalent" : [ "31" ],
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "range" : "74",
+    "label" : {
+      "IRI-based" : "detarminatedWay",
+      "ja" : "震源決定方法（旧綴り）"
+    },
+    "domain" : "11",
+    "attributes" : [ "deprecated", "datatype" ],
+    "id" : "33"
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#catalog",
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "range" : "100",
+    "label" : {
+      "IRI-based" : "catalog",
+      "ja" : "カタログ",
+      "en" : "catalog"
+    },
+    "domain" : "24",
+    "comment" : {
+      "ja" : "震源情報を提供した地震カタログまたは機関。"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "105"
+  }, {
+    "iri" : "http://schema.org/value",
+    "baseIri" : "http://schema.org",
+    "range" : "73",
+    "label" : {
+      "IRI-based" : "value"
+    },
+    "domain" : "11",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "106"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/madeBySensor",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "madeBySensor"
+    },
+    "domain" : "11",
+    "subproperty" : [ "84" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "86"
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#withTravelTimeTable",
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "withTravelTimeTable",
+      "ja" : "使用走時表",
+      "en" : "travel-time table used"
+    },
+    "domain" : "24",
+    "attributes" : [ "datatype" ],
+    "id" : "107"
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundAccelerationUD",
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "range" : "41",
+    "label" : {
+      "IRI-based" : "peakGroundAccelerationUD",
+      "ja" : "上下成分最大加速度"
+    },
+    "domain" : "8",
+    "attributes" : [ "datatype" ],
+    "id" : "108"
+  }, {
+    "iri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl#estimatedWith",
+    "baseIri" : "https://seismic.balog.jp/ontology/jp-earthquake.ttl",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "estimatedWith",
+      "ja" : "震源推定に利用した波形"
+    },
+    "domain" : "24",
+    "attributes" : [ "object" ],
+    "id" : "109"
+  } ]
+}

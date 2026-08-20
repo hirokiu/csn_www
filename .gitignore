@@ -34,5 +34,9 @@ data
 data/
 htdocs/data/
 
+# WIDOCO WebVOWL needs these generated JSON files in production.
+!htdocs/ontology/docs/webvowl/data/
+!htdocs/ontology/docs/webvowl/data/*.json
+
 # WIDOCO may leave temporary files while regenerating documentation.
 htdocs/ontology/docs.tmp/
