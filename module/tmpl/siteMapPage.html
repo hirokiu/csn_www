@@ -1,0 +1,71 @@
+<?php include(dirname(__FILE__) . '/common/html_head.html'); ?>
+<body>
+    <div id="container">
+        <?php include(dirname(__FILE__) . '/common/header.html'); ?>
+        <?php include(dirname(__FILE__) . '/common/navi.html'); ?>
+        <header><h1><?php echo $VALUES['common']['page_title']; ?></h1></header>
+
+        <div class="language-switcher" aria-label="Language selection">
+            <a href="/sitemap/?lang=ja" lang="ja" <?php echo $VALUES['common']['lang'] === 'ja' ? 'aria-current="page"' : ''; ?>>日本語</a>
+            <span aria-hidden="true"> / </span>
+            <a href="/sitemap/?lang=en" lang="en" <?php echo $VALUES['common']['lang'] === 'en' ? 'aria-current="page"' : ''; ?>>English</a>
+        </div>
+
+        <?php if ($VALUES['common']['lang'] === 'ja') { ?>
+        <section>
+            <h2>地震データとLOD</h2>
+            <ul class="sitemap-links">
+                <li><a href="/lod/?lang=ja"><strong>データセット・地震LOD</strong><span>提供データ、LODサービス、データ提供元</span></a></li>
+                <li><a href="/lod/stations/"><strong>地域別地震観測データ検索</strong><span>地域、年、震度による観測点と震源の検索</span></a></li>
+                <li><a href="/sparql"><strong>SPARQLエンドポイント</strong><span>公開RDFデータに対するクエリ</span></a></li>
+            </ul>
+        </section>
+        <section>
+            <h2>オントロジーと仕様</h2>
+            <ul class="sitemap-links">
+                <li><a href="/ontology/?lang=ja"><strong>地震オントロジー</strong><span>設計方針、データ提供元、利用例</span></a></li>
+                <li><a href="/ontology/docs/index-ja.html"><strong>WIDOCO仕様書</strong><span>クラス、プロパティ、可視化、来歴</span></a></li>
+                <li><a href="/ontology/jp-earthquake.ttl"><strong>Turtle定義</strong><span>オントロジーの機械可読形式</span></a></li>
+            </ul>
+        </section>
+        <section>
+            <h2>Citizen Seismology Network</h2>
+            <ul class="sitemap-links">
+                <li><a href="/station/"><strong>観測点</strong><span>CSNおよび外部観測網の観測点</span></a></li>
+                <li><a href="/map/"><strong>観測点地図</strong><span>CSN観測点の地図表示</span></a></li>
+                <li><a href="/static/"><strong>過去の観測波形</strong><span>CSN観測データのアーカイブ</span></a></li>
+                <li><a href="/pick/"><strong>観測波形の選択</strong><span>観測データの選択と参照</span></a></li>
+            </ul>
+        </section>
+        <?php } else { ?>
+        <section>
+            <h2>Seismic data and LOD</h2>
+            <ul class="sitemap-links">
+                <li><a href="/lod/?lang=en"><strong>Datasets and Earthquake LOD</strong><span>Published datasets, LOD applications, and data providers</span></a></li>
+                <li><a href="/lod/stations/"><strong>Regional seismic observation search</strong><span>Search stations and hypocenters by region, year, and intensity</span></a></li>
+                <li><a href="/sparql"><strong>SPARQL endpoint</strong><span>Query the published RDF data</span></a></li>
+            </ul>
+        </section>
+        <section>
+            <h2>Ontology and specification</h2>
+            <ul class="sitemap-links">
+                <li><a href="/ontology/?lang=en"><strong>Earthquake Ontology</strong><span>Design policy, data sources, and usage examples</span></a></li>
+                <li><a href="/ontology/docs/index-en.html"><strong>WIDOCO specification</strong><span>Classes, properties, visualization, and provenance</span></a></li>
+                <li><a href="/ontology/jp-earthquake.ttl"><strong>Turtle definition</strong><span>Machine-readable ontology source</span></a></li>
+            </ul>
+        </section>
+        <section>
+            <h2>Citizen Seismology Network</h2>
+            <ul class="sitemap-links">
+                <li><a href="/station/"><strong>Observation stations</strong><span>Stations from CSN and external networks</span></a></li>
+                <li><a href="/map/"><strong>Station map</strong><span>Map of CSN observation stations</span></a></li>
+                <li><a href="/static/"><strong>Archived waveforms</strong><span>Archive of CSN observations</span></a></li>
+                <li><a href="/pick/"><strong>Waveform selection</strong><span>Select and browse observations</span></a></li>
+            </ul>
+        </section>
+        <?php } ?>
+
+        <?php include(dirname(__FILE__) . '/common/footer.html'); ?>
+    </div>
+</body>
+</html>

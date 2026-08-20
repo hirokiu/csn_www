@@ -13,7 +13,11 @@
 
             // DBインスタンス生成　
             try {
-                $this->dbh = new PDO("mysql:host={$config['dbhost']};dbname={$config['dbname']}", $config['dbuser'], $config['dbpassword']);
+                $dsn = "mysql:host={$config['dbhost']};port={$config['dbport']};dbname={$config['dbname']};charset=utf8mb4";
+                $this->dbh = new PDO($dsn, $config['dbuser'], $config['dbpassword'], array(
+                    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+                    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+                ));
             } catch (Exception $e) {
                 echo json_encode(array('status' => 'NG', 'error' => 'database connect error'));
                 exit;

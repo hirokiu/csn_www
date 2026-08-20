@@ -43,7 +43,10 @@
                 }
 
                 // 震度をPython経由で取得
-                $shindo = exec('/usr/bin/python /home/pi/csn_www/module/tool/res_shindo.py');
+                $legacyIntensityScript = '/home/pi/csn_www/module/tool/res_shindo.py';
+                $shindo = is_file($legacyIntensityScript) && is_executable('/usr/bin/python')
+                    ? exec('/usr/bin/python ' . escapeshellarg($legacyIntensityScript))
+                    : null;
 
                 if($count != 0) {
                     array_push($data, array('diff_x' => $tmp_x_sum/$count,

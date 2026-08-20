@@ -1,3 +1,6 @@
 <footer>
-    <address>&copy; 2017-<?php echo date('Y'); ?> Citizen Seismology Network / Hiroki UEMATSU</address>
+    <div class="footer-content">
+        <address>&copy; 2017-<?php echo date('Y'); ?> Citizen Seismology Network / Hiroki UEMATSU</address>
+        <a href="/sitemap/<?php echo isset($VALUES['common']['lang']) && $VALUES['common']['lang'] === 'en' ? '?lang=en' : '?lang=ja'; ?>"><?php echo isset($VALUES['common']['lang']) && $VALUES['common']['lang'] === 'en' ? 'Sitemap' : 'サイトマップ'; ?></a>
+    </div>
 </footer>

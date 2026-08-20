@@ -10,6 +10,7 @@ php_flag display_errors off
 
 # Rewrite Rule
 RewriteEngine On
+RewriteCond %{HTTP_HOST} !^(localhost|127\.0\.0\.1)(:[0-9]+)?$ [NC]
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 #RewriteRule index.html - [QSA,L]

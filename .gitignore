@@ -23,6 +23,7 @@ node_modules/
 # ignore log files and databases
 *.log
 *.sql
+!docker/db/init/*.sql
 *.sqlite
 
 # ignore author page

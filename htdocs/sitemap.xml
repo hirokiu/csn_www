@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://seismic.balog.jp/</loc><lastmod>2026-08-20</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://seismic.balog.jp/lod/</loc><lastmod>2026-08-20</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://seismic.balog.jp/ontology/</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://seismic.balog.jp/ontology/docs/index-ja.html</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://seismic.balog.jp/ontology/docs/index-en.html</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://seismic.balog.jp/lod/stations/</loc><lastmod>2026-08-20</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://seismic.balog.jp/station/</loc><lastmod>2026-08-20</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://seismic.balog.jp/map/</loc><lastmod>2026-08-20</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://seismic.balog.jp/static/</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://seismic.balog.jp/pick/</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://seismic.balog.jp/sitemap/</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+</urlset>

@@ -1,29 +1,15 @@
 <?php
 ///////////////////////////////////////////////////////////////
 // DB settings
-$host = php_uname('n');
-if($host == 'yui'){
-    // データベースホスト
-    $config['dbhost'] = 'yui';
-    // データベース接続パスワード
-    $config['dbpassword'] = '';
-}
-else{
-    // データベースホスト
-    $config['dbhost'] = 'localhost';
-    // データベース接続パスワード
-    $config['dbpassword'] = '';
-}
-// データベース名
-$config['dbname'] = 'csn';
-// データベース接続ユーザ名
-$config['dbuser'] = 'root';
+$config['dbhost'] = getenv('DB_HOST') ?: 'localhost';
+$config['dbport'] = getenv('DB_PORT') ?: '3306';
+$config['dbpassword'] = getenv('DB_PASSWORD') ?: '';
+$config['dbname'] = getenv('DB_NAME') ?: 'csn';
+$config['dbuser'] = getenv('DB_USER') ?: 'root';
 
-
-$config['base_dir'] = '/data/www/410_seismic_www';
+$config['base_dir'] = getenv('CSN_BASE_DIR') ?: dirname(__DIR__, 2);
 $config['htdocs_dir'] = $config['base_dir'].'/htdocs';
 $config['module_dir'] = $config['base_dir'].'/module';
 $config['template_dir'] = $config['module_dir'].'/tmpl';
 $config['tool_dir'] = $config['module_dir'].'/tool';
-
 

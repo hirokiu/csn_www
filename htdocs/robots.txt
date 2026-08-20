@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://seismic.balog.jp/sitemap.xml

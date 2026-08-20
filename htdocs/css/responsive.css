@@ -1,16 +1,17 @@
 /* CSN academic portal design system (2026). */
 :root {
-    --color-ink: #172033;
-    --color-muted: #58657a;
-    --color-subtle: #748096;
+    --color-ink: #1d2a1e;
+    --color-muted: #556356;
+    --color-subtle: #718073;
     --color-surface: #ffffff;
-    --color-canvas: #f4f7fa;
-    --color-border: #d9e1ea;
-    --color-primary: #075e78;
-    --color-primary-strong: #04475c;
-    --color-primary-soft: #e8f4f7;
-    --color-focus: #f2b84b;
-    --shadow-card: 0 1px 2px rgba(23, 32, 51, 0.06), 0 12px 32px rgba(23, 32, 51, 0.05);
+    --color-canvas: #f3f3f3;
+    --color-border: #dce3d8;
+    --color-primary: #006234;
+    --color-primary-strong: #004b28;
+    --color-primary-soft: #f0f7e8;
+    --color-ycu-green: #8fc231;
+    --color-focus: #8fc231;
+    --shadow-card: 0 1px 2px rgba(29, 42, 30, 0.06), 0 12px 32px rgba(29, 42, 30, 0.05);
     --radius-sm: 0.5rem;
     --radius-md: 0.875rem;
     --content-width: 72rem;
@@ -60,9 +61,10 @@ h3 { margin: 1.5rem 0 0.65rem; font-size: 1.15rem; }
     top: 0;
     padding: 0;
     border: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.16);
-    background: rgba(16, 33, 49, 0.97);
-    box-shadow: 0 2px 16px rgba(8, 20, 31, 0.15);
+    border-top: 0.35rem solid var(--color-ycu-green);
+    border-bottom: 1px solid var(--color-border);
+    background: rgba(255, 255, 255, 0.97);
+    box-shadow: 0 2px 16px rgba(29, 42, 30, 0.08);
     opacity: 1;
     backdrop-filter: blur(16px);
 }
@@ -79,16 +81,17 @@ h3 { margin: 1.5rem 0 0.65rem; font-size: 1.15rem; }
     flex: 0 0 auto;
     align-items: center;
     gap: 0.75rem;
-    color: #fff;
+    color: var(--color-primary);
     text-decoration: none;
 }
 .site-brand-mark {
     display: grid;
     width: 2.35rem;
     height: 2.35rem;
-    border: 1px solid rgba(255, 255, 255, 0.32);
+    border: 1px solid var(--color-ycu-green);
     border-radius: 50%;
-    color: #fff;
+    color: #23410f;
+    background: var(--color-ycu-green);
     font-size: 0.7rem;
     font-weight: 800;
     letter-spacing: 0.05em;
@@ -96,20 +99,20 @@ h3 { margin: 1.5rem 0 0.65rem; font-size: 1.15rem; }
 }
 .site-brand-text { display: grid; line-height: 1.15; }
 .site-brand-text strong { font-size: 1rem; letter-spacing: 0.01em; }
-.site-brand-text small { color: #b8c8d2; font-size: 0.72rem; }
+.site-brand-text small { color: var(--color-muted); font-size: 0.72rem; }
 .site-nav-links { display: flex; margin-left: auto; align-items: center; gap: 0.2rem; }
 .site-nav-link, .site-nav-link:link, .site-nav-link:visited {
     position: relative;
     padding: 0.65rem 0.75rem;
     border-radius: 0.45rem;
-    color: #d9e5eb;
-    font-size: 0.88rem;
+    color: var(--color-primary);
+    font-size: 1rem;
     font-weight: 600;
     line-height: 1.25;
     text-decoration: none;
 }
-.site-nav-link:hover { color: #fff; background: rgba(255, 255, 255, 0.09); }
-.site-nav-link[aria-current="page"] { color: #fff; background: rgba(255, 255, 255, 0.13); }
+.site-nav-link:hover { color: var(--color-primary-strong); background: var(--color-primary-soft); }
+.site-nav-link[aria-current="page"] { color: var(--color-primary-strong); background: #e8f3d8; }
 .site-nav-link[aria-current="page"]::after {
     position: absolute;
     right: 0.75rem;
@@ -117,20 +120,21 @@ h3 { margin: 1.5rem 0 0.65rem; font-size: 1.15rem; }
     left: 0.75rem;
     height: 2px;
     border-radius: 999px;
-    background: #6fc4d8;
+    background: var(--color-ycu-green);
     content: "";
 }
 
 #container > header {
     padding: clamp(2.75rem, 7vw, 5.5rem) max(1rem, calc((100% - var(--content-width)) / 2));
-    color: #fff;
-    background: radial-gradient(circle at 80% 15%, rgba(79, 164, 184, 0.24), transparent 34%), linear-gradient(135deg, #12364a 0%, #075e78 100%);
+    color: var(--color-ink);
+    border-bottom: 1px solid #d7e4c8;
+    background: radial-gradient(circle at 80% 15%, rgba(143, 194, 49, 0.34), transparent 36%), linear-gradient(135deg, #f7faef 0%, #e6f1d6 100%);
 }
-#container > header h1 { max-width: var(--content-width); color: #fff; }
+#container > header h1 { max-width: var(--content-width); color: var(--color-ink); }
 #container > header h1::before {
     display: block;
     margin-bottom: 0.65rem;
-    color: #a9d8e3;
+    color: var(--color-primary);
     content: "SEISMIC DATA & LINKED OPEN DATA";
     font-size: 0.74rem;
     font-weight: 700;
@@ -145,9 +149,22 @@ section {
     background: var(--color-surface);
     box-shadow: var(--shadow-card);
 }
-section > h2:first-child { padding-bottom: 0.8rem; border-bottom: 1px solid var(--color-border); }
+section > h2:first-child {
+    position: relative;
+    margin: -0.25rem 0 1.35rem;
+    padding: 0.75rem 1rem;
+    border: 0;
+    border-left: 0.35rem solid var(--color-primary);
+    border-bottom: 1px solid var(--color-border);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    background: linear-gradient(90deg, var(--color-primary-soft), rgba(238, 246, 231, 0.18));
+}
+section > h3:not(:first-child) {
+    padding-bottom: 0.45rem;
+    border-bottom: 2px solid var(--color-primary-soft);
+}
 .portal-intro { padding-top: clamp(1.75rem, 4vw, 3rem); padding-bottom: clamp(1.75rem, 4vw, 3rem); }
-.portal-intro h2 { max-width: 22ch; border: 0 !important; font-size: clamp(1.65rem, 3vw, 2.35rem); }
+.portal-intro h2 { max-width: 22ch; margin-left: 0; padding-left: 0; border: 0; background: transparent; font-size: clamp(1.65rem, 3vw, 2.35rem); }
 .eyebrow, .card-kicker {
     margin-bottom: 0.55rem;
     color: var(--color-primary);
@@ -155,7 +172,7 @@ section > h2:first-child { padding-bottom: 0.8rem; border-bottom: 1px solid var(
     font-weight: 800;
     letter-spacing: 0.12em;
 }
-.lead { max-width: 66ch; color: #3f4d61; font-size: clamp(1.05rem, 1.7vw, 1.2rem); line-height: 1.8; }
+.lead { max-width: 66ch; color: #425044; font-size: clamp(1.05rem, 1.7vw, 1.2rem); line-height: 1.8; }
 .quick-actions { display: flex; margin-top: 1.5rem; flex-wrap: wrap; gap: 0.75rem; }
 .primary-action, .secondary-action,
 .primary-action:link, .primary-action:visited,
@@ -192,7 +209,7 @@ section > h2:first-child { padding-bottom: 0.8rem; border-bottom: 1px solid var(
 .responsive-table { border: 1px solid var(--color-border); }
 .responsive-table table { width: 100%; min-width: 640px; border-collapse: collapse; }
 .responsive-table th, .responsive-table td { padding: 0.9rem 1rem; border-bottom: 1px solid var(--color-border); text-align: left; vertical-align: top; }
-.responsive-table th { color: #344054; background: #eef3f7; font-size: 0.86rem; letter-spacing: 0.025em; }
+.responsive-table th { color: #344735; background: #f0f5ed; font-size: 0.86rem; letter-spacing: 0.025em; }
 .responsive-table tbody tr:last-child td { border-bottom: 0; }
 .code-scroll { border: 1px solid #26394a; background: #122536; }
 .code-scroll pre { min-width: 680px; margin: 0; padding: 1.25rem; color: #e2edf3; font: 0.9rem/1.65 "SFMono-Regular", Consolas, "Liberation Mono", monospace; }
@@ -212,11 +229,11 @@ section > h2:first-child { padding-bottom: 0.8rem; border-bottom: 1px solid var(
     padding: 1.35rem;
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
-    background: #fbfcfd;
+    background: #fcfdfb;
     flex-direction: column;
     transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
 }
-.service-card:hover { border-color: #9ebac6; box-shadow: 0 10px 24px rgba(23, 32, 51, 0.08); transform: translateY(-2px); }
+.service-card:hover { border-color: #a9c69d; box-shadow: 0 10px 24px rgba(29, 42, 30, 0.08); transform: translateY(-2px); }
 .service-card h3 { margin-top: 0; }
 .service-card p { color: var(--color-muted); }
 .service-status { display: inline-block; width: fit-content; margin: auto 0 0; padding: 0.25rem 0.65rem; border-radius: 999px; font-size: 0.78rem; font-weight: 700; }
@@ -232,6 +249,13 @@ footer {
     text-align: left;
 }
 footer address { margin: 0; font-size: 0.88rem; font-style: normal; }
+.footer-content { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.sitemap-links { display: grid; margin: 0; padding: 0; grid-template-columns: repeat(auto-fit, minmax(min(100%, 270px), 1fr)); gap: 0.75rem; list-style: none; }
+.sitemap-links li { margin: 0; }
+.sitemap-links a { display: grid; height: 100%; padding: 1rem; border: 1px solid var(--color-border); border-radius: var(--radius-sm); gap: 0.25rem; text-decoration: none; }
+.sitemap-links a:hover { border-color: #a9c69d; background: var(--color-primary-soft); }
+.sitemap-links strong { color: var(--color-primary-strong); font-size: 1.02rem; }
+.sitemap-links span { color: var(--color-muted); font-size: 0.9rem; line-height: 1.55; }
 
 @media (max-width: 900px) {
     .site-navigation { padding: 0.75rem 0; flex-wrap: wrap; }
@@ -242,11 +266,12 @@ footer address { margin: 0; font-size: 0.88rem; font-style: normal; }
     .site-navigation { width: min(100% - 1.25rem, var(--content-width)); }
     .site-brand-text small { display: none; }
     .site-nav-links { overflow: visible; flex-wrap: wrap; gap: 0.15rem; }
-    .site-nav-link, .site-nav-link:link, .site-nav-link:visited { padding: 0.55rem 0.65rem; font-size: 0.82rem; }
+    .site-nav-link, .site-nav-link:link, .site-nav-link:visited { padding: 0.55rem 0.65rem; font-size: 0.94rem; }
     #container > header { padding-right: 1rem; padding-left: 1rem; }
     section, .language-switcher, footer { width: calc(100% - 1.25rem); }
     section { margin-top: 0.75rem; margin-bottom: 0.75rem; padding: 1.15rem; border-radius: 0.7rem; }
     .language-switcher { justify-content: flex-start; }
+    .footer-content { align-items: flex-start; flex-direction: column; }
     #map-full { position: relative; margin-top: 0; }
     #map-canvas, .point_list { float: none; width: 100%; max-width: none; }
 }
