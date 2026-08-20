@@ -1,93 +1,145 @@
-<?php
-//DEBUG
-//var_dump($VALUES);
-?>
 <?php include(dirname(__FILE__) . '/common/html_head.html'); ?>
 <body>
-    <div id='container'>
-        <!-- Global header -->
+    <div id="container">
         <?php include(dirname(__FILE__) . '/common/header.html'); ?>
-        <!-- Global Navigation -->
         <?php include(dirname(__FILE__) . '/common/navi.html'); ?>
-        <!-- Sub header-->
         <header>
             <h1><?php echo $VALUES['common']['page_title']; ?></h1>
         </header>
-        <!-- <div id="map-banner"></div> -->
+
+        <div class="language-switcher" aria-label="Language selection">
+            <a href="/lod/?lang=ja" lang="ja" <?php echo $VALUES['common']['lang'] === 'ja' ? 'aria-current="page"' : ''; ?>>日本語</a>
+            <span aria-hidden="true"> / </span>
+            <a href="/lod/?lang=en" lang="en" <?php echo $VALUES['common']['lang'] === 'en' ? 'aria-current="page"' : ''; ?>>English</a>
+        </div>
+
+        <?php if ($VALUES['common']['lang'] === 'ja') { ?>
         <section>
-            <h2>Information</h2>
-            <p>- LOD updates : Added stations and hypocenters from <a href="https://www.fdsn.org/" target="_blank">FDSN</a>.</p>
-            <p>- Got the Oracle Japan Award at the <a href='https://2022.lodc.jp/awardPressRelease2022.html' target='_blank'>LOD Challenge 2022</a>.</p>
-            <p>- Got the Open Science Award at the <a href='https://2022.lodc.jp/awardPressRelease2022.html' target='_blank'>LOD Challenge 2022</a>.</p>
+            <h2>Citizen Seismology Networkのデータセット</h2>
+            <p>
+                Raspberry Piで構築した地震計から集約した観測波形、観測点情報、
+                および過去のデータ表示ページを公開しています。
+            </p>
+            <p class="status-notice">
+                <strong>現在の状態:</strong>
+                Raspberry Pi地震計からのリアルタイム集約機能は現在停止しています。
+                これまでに公開した観測データと表示ページは引き続き参照できます。
+            </p>
+            <ul>
+                <li><a href="/station/">観測点</a></li>
+                <li><a href="/map/">CSN観測点地図</a></li>
+                <li><a href="/static/">過去の観測波形</a></li>
+                <li><a href="/pick/">観測波形の選択</a></li>
+            </ul>
         </section>
         <section>
-            <h3>Abstract</h3>
-            <p>
-                In Japan, information such as waveforms and seismic intensity observed by seismometers installed by the Japan Meteorological Agency, National Research Institute for Earth Science and Disaster Prevention, and local governments, as well as epicenter and magnitude determined from waveforms, are publicly available.
-            </p>
-            <p>
-                However, since observations have been conducted for a long time, there are many data that are difficult to handle for non-specialists, such as fixed-length data following past formats, formats selected to be read by specific software, and information on a single seismic motion recorded in multiple data.
-            </p>
-            <p>
-                For example, when looking for information on a particular earthquake from the Japan Meteorological Agency, epicenter data is obtained from <a href="https://www.data.jma.go.jp/svd/eqev/data/bulletin/index.html" target="_blank">the Earthquake Monthly Report (catalog edition)</a> for past earthquakes.<br>
-                However, the epicenter data only includes data on the hypocenter, and does not describe the observation data of the earthquake at a particular epicenter.<br>
-                Instead, by obtaining the seismic intensity data, information about the observation points is included, but this data does not include the number of observation points used to determine the epicenter.<br>
-                Furthermore, it is not easy to match the observation points included in this data with those included in 、<a href="https://www.data.jma.go.jp/eqev/data/kyoshin/jma-shindo.html" target="_blank">the JMA list of seismic intensity observation stations</a>.
-            </p>
-            <p>
-                Therefore, we will convert each data into LOD and connect the data scattered in multiple files to improve the retrieval of observed waveform data, epicenter data, etc.
-            </p>
-            <p>
-                <h3>Japan Meteological Agency (JMA)</h3>
-                <ul>
-                    <li><a href="https://www.data.jma.go.jp/svd/eqev/data/bulletin/index.html" target="_blank">Monthly earthquake report</a></li>
-                    <li><a href="https://www.data.jma.go.jp/eqev/data/kyoshin/jishin/index.html" target="_blank">Strong motion observation data</a></li>
-                    <li><a href="https://www.data.jma.go.jp/eqev/data/kyoshin/jma-shindo.html" target="_blank">Seismic intensity observation stations (JMA)</a></li>
-                </ul>
-                <h3>National Research Institute for Earth Science and Disaster Resilience (NIED)</h3>
-                <ul>
-                    <li><a href="https://www.bosai.go.jp/activity_special/data/earthquake.html" target="_blank">Earthquake Information</a></li>
-                </ul>
-            </p>
+            <h2>LOD活用サービス</h2>
+            <div class="service-grid">
+                <article class="service-card">
+                    <h3><a href="/lod/stations/">地域別地震観測データ検索</a></h3>
+                    <p>地域、年、震度から観測点と震源を検索し、地図上に表示します。</p>
+                    <p class="service-status service-status-available">公開中</p>
+                </article>
+                <article class="service-card">
+                    <h3><a href="/lod/query-builder/">オントロジー・クエリビルダー</a></h3>
+                    <p>クラスとプロパティをノード・エッジとして可視化し、選択内容からSPARQLを構築するサービスの配置予定地です。</p>
+                    <p class="service-status service-status-planned">準備中</p>
+                </article>
+            </div>
         </section>
         <section>
-            <h3>Earthquake LOD Search</h3>
+            <h2>地震LODデータセット</h2>
             <p>
-                <a href="https://seismic.balog.jp/sparql">SPARQL Endpoint</a>
+                外部機関が公開する地震記録を共通のRDFモデルへ変換し、
+                震源、観測点、観測波形、強震記録を相互に参照できる形で公開します。
             </p>
-            <h4>例</h4>
-            <p>
-                <a href="https://seismic.balog.jp/sparql?default-graph-uri=&query=select+distinct+*+where+%7B+%3Fs+a+%3Chttps%3A%2F%2Fseismic.balog.jp%2Fontology%2Fjp-earthquake.ttl%23hypocenter%3E+.+%0D%0A%3Fs+jpe%3AoriginTime+%3Forigin+.%0D%0A%3Fs+jpe%3Ashindo+%3Fshindo.%0D%0A++++FILTER%28xsd%3AdateTime%28%3Forigin%29+%3E+%222018-01-01T00%3A00%3A00%22%5E%5Exsd%3AdateTime%29%0D%0A+++FILTER+CONTAINS%28xsd%3Astring%28%3Fshindo%29%2C+%27%E9%9C%87%E5%BA%A65%E5%BC%B7%27%29%0D%0A%3Fobs_wave+jpe%3AhasHypocenter+%3Fs+%3B%0D%0A++++jpe%3AobservedBy+%3Fsta+.%0D%0A%3Fsta+rdfs%3Alabal+%3Fname+.%0D%0A%7D+LIMIT+100&format=text%2Fhtml&timeout=0&signal_void=on" target="_blank">Observations of earthquakes of magnitude 5 and above that occurred in 2018</a>
-                <pre>
-                    select distinct * where {
-                        ?s a &lt;https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter&gt; . 
-                        ?s jpe:originTime ?origin .
-                        ?s jpe:shindo ?shindo.
-                            FILTER(xsd:dateTime(?origin) &gt; "2018-01-01T00:00:00"^^xsd:dateTime)
-                           FILTER CONTAINS(xsd:string(?shindo), '震度5強')
-                        ?obs_wave jpe:hasHypocenter ?s ;
-                            jpe:observedBy ?sta .
-                        ?sta rdfs:labal ?name .
-                        } LIMIT 100
-                </pre>
-            </p>
+            <div class="responsive-table"><table>
+                <thead><tr><th>提供元</th><th>内容</th><th>原データ</th></tr></thead>
+                <tbody>
+                    <tr><td>気象庁</td><td>地震カタログ、最新地震、震度観測、観測点</td><td><a href="https://www.data.jma.go.jp/eqev/data/bulletin/index.html">気象庁</a></td></tr>
+                    <tr><td>FDSN</td><td>地震イベント、観測点</td><td><a href="https://www.fdsn.org/webservices/">FDSN Web Services</a></td></tr>
+                    <tr><td>J-SHIS / K-NET / KiK-net</td><td>強震記録、観測点</td><td><a href="https://www.j-shis.bosai.go.jp/labs/ground-motion-flatfile/">強震動フラットファイル</a></td></tr>
+                </tbody>
+            </table></div>
         </section>
         <section>
-            <h3>Dataset</h3>
-            <p>- <a href='/ontology/jp-earthquake.ttl' target="_blank">Earthquake Ontology</a></p>
-            <p>- <a href='/ontology/jma-earthquake-named.ttl' target="_blank">Earthquakes named by JMA</a></p>
-            <p>- <a href='/ontology/jma-observers.ttl' target="_blank">JMA Stations</a></p>
+            <h2>アクセス</h2>
+            <ul>
+                <li><a href="/ontology/?lang=ja">地震オントロジー</a></li>
+                <li><a href="/ontology/docs/index-ja.html">WIDOCO仕様書</a></li>
+                <li><a href="/sparql">SPARQLエンドポイント</a></li>
+            </ul>
+        </section>
+        <?php } else { ?>
+        <section>
+            <h2>Citizen Seismology Network datasets</h2>
+            <p>
+                This project publishes waveforms and station information collected from
+                seismometers built with Raspberry Pi computers, together with archived data viewers.
+            </p>
+            <p class="status-notice">
+                <strong>Current status:</strong>
+                Real-time aggregation from Raspberry Pi seismometers is currently unavailable.
+                Previously published observations and dataset pages remain accessible.
+            </p>
+            <ul>
+                <li><a href="/station/">Observation stations</a></li>
+                <li><a href="/map/">CSN station map</a></li>
+                <li><a href="/static/">Archived waveform viewer</a></li>
+                <li><a href="/pick/">Waveform selection</a></li>
+            </ul>
         </section>
         <section>
-            <script async class="docswell-embed" src="https://www.docswell.com/assets/libs/docswell-embed/docswell-embed.min.js" data-src="https://www.docswell.com/slide/K31PD5/embed" data-aspect="0.75"></script><div class="docswell-link"><a href="https://www.docswell.com/s/hiroki_u/K31PD5-2022-10-27-100934">地震学会秋季大会20222_20221026_発表スライド_uematsu by @hiroki_u</a></div>
+            <h2>LOD applications</h2>
+            <div class="service-grid">
+                <article class="service-card">
+                    <h3><a href="/lod/stations/">Regional seismic observation search</a></h3>
+                    <p>Searches observation stations and hypocenters by region, year, and intensity and displays them on a map.</p>
+                    <p class="service-status service-status-available">Available</p>
+                </article>
+                <article class="service-card">
+                    <h3><a href="/lod/query-builder/">Ontology query builder</a></h3>
+                    <p>A reserved deployment path for visualizing classes and properties as a node-edge graph and building SPARQL from selections.</p>
+                    <p class="service-status service-status-planned">Planned</p>
+                </article>
+            </div>
         </section>
+        <section>
+            <h2>Earthquake LOD datasets</h2>
+            <p>
+                Records published by external organizations are converted to a common RDF model
+                linking hypocenters, observation stations, observed waves, and strong-motion records.
+            </p>
+            <div class="responsive-table"><table>
+                <thead><tr><th>Provider</th><th>Contents</th><th>Source</th></tr></thead>
+                <tbody>
+                    <tr><td>JMA</td><td>Earthquake catalog, recent events, intensity observations, and stations</td><td><a href="https://www.data.jma.go.jp/eqev/data/bulletin/index.html">Japan Meteorological Agency</a></td></tr>
+                    <tr><td>FDSN</td><td>Earthquake events and observation stations</td><td><a href="https://www.fdsn.org/webservices/">FDSN Web Services</a></td></tr>
+                    <tr><td>J-SHIS / K-NET / KiK-net</td><td>Strong-motion records and observation stations</td><td><a href="https://www.j-shis.bosai.go.jp/labs/ground-motion-flatfile/">Ground-motion flatfile</a></td></tr>
+                </tbody>
+            </table></div>
+        </section>
+        <section>
+            <h2>Access</h2>
+            <ul>
+                <li><a href="/ontology/?lang=en">Earthquake Ontology</a></li>
+                <li><a href="/ontology/docs/index-en.html">WIDOCO ontology documentation</a></li>
+                <li><a href="/sparql">SPARQL endpoint</a></li>
+            </ul>
+        </section>
+        <?php } ?>
+
+        <section>
+            <h2><?php echo $VALUES['common']['lang'] === 'ja' ? '受賞' : 'Awards'; ?></h2>
+            <p>
+                <?php echo $VALUES['common']['lang'] === 'ja'
+                    ? '地震LODはLOD Challenge 2022で、日本オラクル賞とオープンサイエンス賞を受賞しました。'
+                    : 'The Earthquake LOD received the Oracle Japan Award and the Open Science Award at LOD Challenge 2022.'; ?>
+                <a href="https://2022.lodc.jp/awardPressRelease2022.html">LOD Challenge 2022</a>
+            </p>
+        </section>
+
         <?php include(dirname(__FILE__) . '/common/footer.html'); ?>
-    </div><!-- /container -->
-    
+    </div>
 </body>
-
-<head>
-<meta http-equiv="Cache-Control" content="no-cache">
-</head>
-
 </html>

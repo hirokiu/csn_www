@@ -16,6 +16,9 @@ wp-content/themes/twenty*/
 
 # ignore node dependency directories
 node_modules/
+.env
+.env.*
+!.env.example
 
 # ignore log files and databases
 *.log
@@ -29,3 +32,6 @@ author/
 data
 data/
 htdocs/data/
+
+# WIDOCO may leave temporary files while regenerating documentation.
+htdocs/ontology/docs.tmp/

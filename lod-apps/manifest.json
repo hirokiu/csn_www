@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "applications": [
+    {
+      "id": "station-search",
+      "name": {"ja": "地域別地震観測データ検索", "en": "Regional seismic observation search"},
+      "status": "available",
+      "publicPath": "/lod/stations/",
+      "deploymentDirectory": "htdocs/lod/stations",
+      "type": "standalone-web-app",
+      "uses": ["SPARQL", "Earthquake Ontology", "Google Maps JavaScript API"]
+    },
+    {
+      "id": "ontology-query-builder",
+      "name": {"ja": "オントロジー・クエリビルダー", "en": "Ontology query builder"},
+      "status": "planned",
+      "publicPath": "/lod/query-builder/",
+      "deploymentDirectory": "htdocs/lod/query-builder",
+      "sourceRepository": "https://github.com/hirokiu/QuokkaGraph",
+      "type": "future-external-application",
+      "uses": ["RDF/OWL", "SPARQL", "node-edge graph visualization"]
+    }
+  ]
+}

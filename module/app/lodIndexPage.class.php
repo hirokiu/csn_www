@@ -19,7 +19,9 @@
             // $this->db = new dbBase();
 
             // ページ設定
-            $this->values['common']['page_title'] = "Earthquake LOD";
+            $lang = isset($_GET['lang']) && $_GET['lang'] === 'ja' ? 'ja' : 'en';
+            $this->values['common']['lang'] = $lang;
+            $this->values['common']['page_title'] = $lang === 'ja' ? "データセット・地震LOD" : "Datasets and Earthquake LOD";
 
             // データ取得
             try {

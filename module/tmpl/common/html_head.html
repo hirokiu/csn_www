@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="<?php echo isset($VALUES['common']['lang']) ? $VALUES['common']['lang'] : 'en'; ?>">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="Cache-Control" content="no-cache">
@@ -21,7 +21,10 @@
     <link href="/css/schemes.css" rel="stylesheet" type="text/css" media="all">
 
     <link rel="stylesheet" href="/css/styles-site.css" type="text/css">
+    <link rel="stylesheet" href="/css/responsive.css" type="text/css">
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="//maps.googleapis.com/maps/api/js?key=<?php echo $VALUES['common']['gmap_api_key'];?>"></script>
+    <?php if ($VALUES['common']['gmap_api_key'] !== '') { ?>
+    <script src="https://maps.googleapis.com/maps/api/js?key=<?php echo rawurlencode($VALUES['common']['gmap_api_key']); ?>"></script>
+    <?php } ?>
 </head>

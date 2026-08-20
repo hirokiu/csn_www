@@ -1,0 +1,510 @@
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#> <http://purl.org/dc/terms/creator> _:genid1 .
+_:genid1 <http://xmlns.com/foaf/0.1/name> "hiroki_u" .
+_:genid1 <http://xmlns.com/foaf/0.1/homepage> <https://seismic.balog.jp/> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#> <http://purl.org/dc/terms/issued> "2022-10-16"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#> <http://purl.org/dc/terms/modified> "2026-08-19"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#> <http://www.w3.org/2000/01/rdf-schema#label> "Earthquake Ontology for Seismic Datasets"@en .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#> <http://www.w3.org/2000/01/rdf-schema#label> "地震オントロジー"@ja .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#> <http://www.w3.org/2002/07/owl#versionInfo> "2026-08-19" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://xmlns.com/foaf/0.1/homepage
+<http://xmlns.com/foaf/0.1/homepage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#observationNetwork
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#observationNetwork> <http://www.w3.org/2000/01/rdf-schema#label> "observation network"@en .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#observationNetwork> <http://www.w3.org/2000/01/rdf-schema#label> "観測網"@ja .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#observationNetwork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#observationNetwork> <http://www.w3.org/2000/01/rdf-schema#domain> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#observer> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/ns/prov#wasAttributedTo
+<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.w3.org/ns/prov#wasRevisionOf
+<http://www.w3.org/ns/prov#wasRevisionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.w3.org/ns/sosa/madeBySensor
+<http://www.w3.org/ns/sosa/madeBySensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#afterShock
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#afterShock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#afterShock> <http://www.w3.org/2000/01/rdf-schema#domain> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#earthquake> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#afterShock> <http://www.w3.org/2000/01/rdf-schema#range> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#afterShock> <http://www.w3.org/2000/01/rdf-schema#label> "aftershock"@en .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#afterShock> <http://www.w3.org/2000/01/rdf-schema#label> "余震"@ja .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#detarminatedBy
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#detarminatedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#detarminatedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#wasAttributedTo> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#detarminatedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#detarminatedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/prov#Agent> .
+<http://www.w3.org/ns/prov#Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#detarminatedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "震源位置・時刻を決定した機関をURIで示す。決定方法やフラグはjpe:determinatedWayで表す。"@ja .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#detarminatedBy> <http://www.w3.org/2000/01/rdf-schema#label> "hypocenter determined by"@en .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#detarminatedBy> <http://www.w3.org/2000/01/rdf-schema#label> "震源決定機関"@ja .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#detarminatedWith
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#detarminatedWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#detarminatedWith> <http://www.w3.org/2000/01/rdf-schema#domain> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#detarminatedWith> <http://www.w3.org/2000/01/rdf-schema#range> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedWave> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#detarminatedWith> <http://www.w3.org/2000/01/rdf-schema#label> "震源決定に利用した波形"@ja .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#estimatedWith
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#estimatedWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#estimatedWith> <http://www.w3.org/2000/01/rdf-schema#domain> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#estimatedWith> <http://www.w3.org/2000/01/rdf-schema#range> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedWave> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#estimatedWith> <http://www.w3.org/2000/01/rdf-schema#label> "震源推定に利用した波形"@ja .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#foreShock
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#foreShock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#foreShock> <http://www.w3.org/2002/07/owl#equivalentProperty> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#preShock> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#foreShock> <http://www.w3.org/2000/01/rdf-schema#domain> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#earthquake> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#foreShock> <http://www.w3.org/2000/01/rdf-schema#range> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#foreShock> <http://www.w3.org/2000/01/rdf-schema#label> "foreshock"@en .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#foreShock> <http://www.w3.org/2000/01/rdf-schema#label> "前震"@ja .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#hasHypocenter
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#hasHypocenter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#hasHypocenter> <http://www.w3.org/2002/07/owl#inverseOf> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#isHypocenterOf> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#hasHypocenter> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#unionOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedWave> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#earthquake> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#hasHypocenter> <http://www.w3.org/2000/01/rdf-schema#range> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#hasHypocenter> <http://www.w3.org/2000/01/rdf-schema#label> "has hypocenter"@en .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#hasHypocenter> <http://www.w3.org/2000/01/rdf-schema#label> "震源"@ja .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#isHypocenterOf
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#isHypocenterOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#isHypocenterOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#isHypocenterOf> <http://www.w3.org/2000/01/rdf-schema#label> "is hypocenter of"@en .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#isHypocenterOf> <http://www.w3.org/2000/01/rdf-schema#label> "震源とする地震・観測"@ja .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#mainShock
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#mainShock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#mainShock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#mainShock> <http://www.w3.org/2000/01/rdf-schema#domain> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#earthquake> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#mainShock> <http://www.w3.org/2000/01/rdf-schema#range> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#mainShock> <http://www.w3.org/2000/01/rdf-schema#label> "main shock"@en .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#mainShock> <http://www.w3.org/2000/01/rdf-schema#label> "本震"@ja .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedBy
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/sosa/madeBySensor> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedBy> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid6 .
+_:genid6 <http://www.w3.org/2002/07/owl#unionOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedWave> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#observer> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedBy> <http://www.w3.org/2000/01/rdf-schema#label> "observed by"@en .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedBy> <http://www.w3.org/2000/01/rdf-schema#label> "観測した観測点"@ja .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#preShock
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#preShock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#preShock> <http://www.w3.org/2000/01/rdf-schema#label> "前震（旧語彙）"@ja .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#preShock> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#previousSnapshot
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#previousSnapshot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#previousSnapshot> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#wasRevisionOf> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#previousSnapshot> <http://www.w3.org/2000/01/rdf-schema#domain> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#DatasetSnapshot> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#previousSnapshot> <http://www.w3.org/2000/01/rdf-schema#range> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#DatasetSnapshot> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#previousSnapshot> <http://www.w3.org/2000/01/rdf-schema#label> "previous snapshot"@en .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#previousSnapshot> <http://www.w3.org/2000/01/rdf-schema#label> "直前のスナップショット"@ja .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#snapshotOf
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#snapshotOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#snapshotOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#DatasetSnapshot> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#snapshotOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/dcat#Dataset> .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#snapshotOf> <http://www.w3.org/2000/01/rdf-schema#label> "snapshot of"@en .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#snapshotOf> <http://www.w3.org/2000/01/rdf-schema#label> "スナップショット元データセット"@ja .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://schema.org/identifier
+<http://schema.org/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://schema.org/value
+<http://schema.org/value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#calcShindo
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#calcShindo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#calcShindo> <http://www.w3.org/2002/07/owl#equivalentProperty> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#seismicIntensity> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#calcShindo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/value> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#calcShindo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedWave> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#calcShindo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#calcShindo> <http://www.w3.org/2000/01/rdf-schema#label> "instrumental seismic intensity"@en .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#calcShindo> <http://www.w3.org/2000/01/rdf-schema#label> "計測震度"@ja .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#catalog
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#catalog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#catalog> <http://www.w3.org/2000/01/rdf-schema#domain> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#catalog> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#catalog> <http://www.w3.org/2000/01/rdf-schema#comment> "震源情報を提供した地震カタログまたは機関。"@ja .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#catalog> <http://www.w3.org/2000/01/rdf-schema#label> "catalog"@en .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#catalog> <http://www.w3.org/2000/01/rdf-schema#label> "カタログ"@ja .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#depth
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#depth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#depth> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/value> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#depth> <http://www.w3.org/2000/01/rdf-schema#domain> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#depth> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#depth> <http://www.w3.org/2000/01/rdf-schema#comment> "基準面から震源までの深さをメートル単位で表す。提供機関が基準面より上の震源を負値で表す場合は原値を保持する。"@ja .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#depth> <http://www.w3.org/2000/01/rdf-schema#label> "hypocentral depth"@en .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#depth> <http://www.w3.org/2000/01/rdf-schema#label> "震源の深さ"@ja .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#detarminatedWay
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#detarminatedWay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#detarminatedWay> <http://www.w3.org/2002/07/owl#equivalentProperty> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#determinatedWay> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#detarminatedWay> <http://www.w3.org/2000/01/rdf-schema#label> "震源決定方法（旧綴り）"@ja .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#detarminatedWay> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#determinatedWay
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#determinatedWay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#determinatedWay> <http://www.w3.org/2000/01/rdf-schema#domain> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#determinatedWay> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#determinatedWay> <http://www.w3.org/2000/01/rdf-schema#comment> "震源の決定方法または決定フラグ。震源を決定した機関はjpe:detarminatedByで表す。"@ja .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#determinatedWay> <http://www.w3.org/2000/01/rdf-schema#label> "hypocenter determination method"@en .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#determinatedWay> <http://www.w3.org/2000/01/rdf-schema#label> "震源決定方法"@ja .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#faultDistance
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#faultDistance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#faultDistance> <http://www.w3.org/2000/01/rdf-schema#domain> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#faultDistance> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#faultDistance> <http://www.w3.org/2000/01/rdf-schema#label> "断層最短距離 (km)"@ja .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#fileBaseName
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#fileBaseName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#fileBaseName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#fileBaseName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#fileBaseName> <http://www.w3.org/2000/01/rdf-schema#label> "波形ファイルベース名"@ja .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenterKinds
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenterKinds> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenterKinds> <http://www.w3.org/2000/01/rdf-schema#domain> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenterKinds> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenterKinds> <http://www.w3.org/2000/01/rdf-schema#label> "hypocenter record type"@en .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenterKinds> <http://www.w3.org/2000/01/rdf-schema#label> "震源レコード種別"@ja .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#instrumentalIntensity
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#instrumentalIntensity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#instrumentalIntensity> <http://www.w3.org/2000/01/rdf-schema#domain> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#instrumentalIntensity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#instrumentalIntensity> <http://www.w3.org/2000/01/rdf-schema#label> "計測震度"@ja .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#magnitude
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#magnitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#magnitude> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/value> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#magnitude> <http://www.w3.org/2000/01/rdf-schema#domain> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#magnitude> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#magnitude> <http://www.w3.org/2000/01/rdf-schema#label> "magnitude"@en .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#magnitude> <http://www.w3.org/2000/01/rdf-schema#label> "マグニチュード"@ja .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#magnitudeType
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#magnitudeType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#magnitudeType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#magnitudeType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#magnitudeType> <http://www.w3.org/2000/01/rdf-schema#label> "magnitude type"@en .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#magnitudeType> <http://www.w3.org/2000/01/rdf-schema#label> "マグニチュード種別"@ja .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedStaionNum
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedStaionNum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedStaionNum> <http://www.w3.org/2002/07/owl#equivalentProperty> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedStationNum> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedStaionNum> <http://www.w3.org/2000/01/rdf-schema#label> "観測点数（旧綴り）"@ja .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedStaionNum> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedStationNum
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedStationNum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedStationNum> <http://www.w3.org/2000/01/rdf-schema#domain> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedStationNum> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedStationNum> <http://www.w3.org/2000/01/rdf-schema#comment> "震度1以上を観測した観測点の数。"@ja .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedStationNum> <http://www.w3.org/2000/01/rdf-schema#label> "number of observation stations"@en .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedStationNum> <http://www.w3.org/2000/01/rdf-schema#label> "観測点数"@ja .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#originTime
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#originTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#originTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#originTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#originTime> <http://www.w3.org/2000/01/rdf-schema#label> "origin time"@en .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#originTime> <http://www.w3.org/2000/01/rdf-schema#label> "オリジンタイム"@ja .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundAccelerationEW
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundAccelerationEW> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundAccelerationEW> <http://www.w3.org/2000/01/rdf-schema#domain> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundAccelerationEW> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundAccelerationEW> <http://www.w3.org/2000/01/rdf-schema#label> "東西成分最大加速度"@ja .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundAccelerationNS
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundAccelerationNS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundAccelerationNS> <http://www.w3.org/2000/01/rdf-schema#domain> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundAccelerationNS> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundAccelerationNS> <http://www.w3.org/2000/01/rdf-schema#label> "南北成分最大加速度"@ja .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundAccelerationUD
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundAccelerationUD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundAccelerationUD> <http://www.w3.org/2000/01/rdf-schema#domain> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundAccelerationUD> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundAccelerationUD> <http://www.w3.org/2000/01/rdf-schema#label> "上下成分最大加速度"@ja .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundVelocityEW
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundVelocityEW> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundVelocityEW> <http://www.w3.org/2000/01/rdf-schema#domain> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundVelocityEW> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundVelocityEW> <http://www.w3.org/2000/01/rdf-schema#label> "東西成分最大速度"@ja .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundVelocityNS
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundVelocityNS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundVelocityNS> <http://www.w3.org/2000/01/rdf-schema#domain> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundVelocityNS> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundVelocityNS> <http://www.w3.org/2000/01/rdf-schema#label> "南北成分最大速度"@ja .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundVelocityUD
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundVelocityUD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundVelocityUD> <http://www.w3.org/2000/01/rdf-schema#domain> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundVelocityUD> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundVelocityUD> <http://www.w3.org/2000/01/rdf-schema#label> "上下成分最大速度"@ja .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#recordIdentifier
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#recordIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#recordIdentifier> <http://www.w3.org/2000/01/rdf-schema#domain> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#recordIdentifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#recordIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "強震記録ID"@ja .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#sampleCount
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#sampleCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#sampleCount> <http://www.w3.org/2000/01/rdf-schema#domain> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#sampleCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#sampleCount> <http://www.w3.org/2000/01/rdf-schema#label> "サンプル数"@ja .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#samplingFrequency
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#samplingFrequency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#samplingFrequency> <http://www.w3.org/2000/01/rdf-schema#domain> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#samplingFrequency> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#samplingFrequency> <http://www.w3.org/2000/01/rdf-schema#label> "サンプリング周波数 (Hz)"@ja .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#seismicIntensity
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#seismicIntensity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#seismicIntensity> <http://www.w3.org/2000/01/rdf-schema#label> "計測震度（旧語彙）"@ja .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#seismicIntensity> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#shindo
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#shindo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#shindo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#sourceChecksum
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#sourceChecksum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#sourceChecksum> <http://www.w3.org/2000/01/rdf-schema#domain> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#DatasetSnapshot> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#sourceChecksum> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#hexBinary> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#sourceChecksum> <http://www.w3.org/2000/01/rdf-schema#comment> "取得した原本全体のSHA-256チェックサム。"@ja .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#sourceChecksum> <http://www.w3.org/2000/01/rdf-schema#label> "source checksum"@en .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#sourceChecksum> <http://www.w3.org/2000/01/rdf-schema#label> "取得元チェックサム"@ja .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#spectrumIntensity
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#spectrumIntensity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#spectrumIntensity> <http://www.w3.org/2000/01/rdf-schema#domain> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#spectrumIntensity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#spectrumIntensity> <http://www.w3.org/2000/01/rdf-schema#label> "SI値"@ja .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#stationIdentifier
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#stationIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#stationIdentifier> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/identifier> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#stationIdentifier> <http://www.w3.org/2000/01/rdf-schema#domain> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#observer> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#stationIdentifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#stationIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "観測機関または観測網が定めた観測点の識別子。"@ja .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#stationIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "station identifier"@en .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#stationIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "観測点番号"@ja .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#withTravelTimeTable
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#withTravelTimeTable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#withTravelTimeTable> <http://www.w3.org/2000/01/rdf-schema#domain> <https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#withTravelTimeTable> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#withTravelTimeTable> <http://www.w3.org/2000/01/rdf-schema#label> "travel-time table used"@en .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#withTravelTimeTable> <http://www.w3.org/2000/01/rdf-schema#label> "使用走時表"@ja .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://schema.org/Event
+<http://schema.org/Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://schema.org/Place
+<http://schema.org/Place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/dcat#Dataset
+# 
+# http://www.w3.org/ns/prov#Agent
+# 
+# http://www.w3.org/ns/prov#Entity
+<http://www.w3.org/ns/prov#Entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/sosa/FeatureOfInterest
+<http://www.w3.org/ns/sosa/FeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/sosa/ObservableProperty
+<http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/sosa/Observation
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/sosa/Sensor
+<http://www.w3.org/ns/sosa/Sensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#DatasetSnapshot
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#DatasetSnapshot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#DatasetSnapshot> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/dcat#Dataset> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#DatasetSnapshot> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#DatasetSnapshot> <http://www.w3.org/2000/01/rdf-schema#comment> "An immutable RDF rendition of an external dataset as retrieved at a specific time. Each rendition is managed as a separate named graph."@en .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#DatasetSnapshot> <http://www.w3.org/2000/01/rdf-schema#comment> "外部機関のデータセットを特定の取得時点でRDFへ変換した、不変の版。各版は独立した名前付きグラフとして管理する。"@ja .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#DatasetSnapshot> <http://www.w3.org/2000/01/rdf-schema#label> "dataset snapshot"@en .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#DatasetSnapshot> <http://www.w3.org/2000/01/rdf-schema#label> "データセット・スナップショット"@ja .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord> <http://www.w3.org/2000/01/rdf-schema#comment> "観測点で得られた強震波形またはそこから算出した主要指標を表す。"@ja .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord> <http://www.w3.org/2000/01/rdf-schema#label> "strong-motion record"@en .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord> <http://www.w3.org/2000/01/rdf-schema#label> "強震記録"@ja .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#earthquake
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#earthquake> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#earthquake> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Event> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#earthquake> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#earthquake> <http://www.w3.org/2000/01/rdf-schema#label> "earthquake"@en .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#earthquake> <http://www.w3.org/2000/01/rdf-schema#label> "地震現象"@ja .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#epicenter
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#epicenter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#epicenter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Place> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#epicenter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#epicenter> <http://www.w3.org/2000/01/rdf-schema#label> "epicenter"@en .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#epicenter> <http://www.w3.org/2000/01/rdf-schema#label> "震央"@ja .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Place> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter> <http://www.w3.org/2000/01/rdf-schema#label> "hypocenter"@en .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter> <http://www.w3.org/2000/01/rdf-schema#label> "震源"@ja .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedWave
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedWave> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedWave> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedWave> <http://www.w3.org/2000/01/rdf-schema#label> "observed wave"@en .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedWave> <http://www.w3.org/2000/01/rdf-schema#label> "観測波形"@ja .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#observer
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#observer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#observer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Sensor> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#observer> <http://www.w3.org/2000/01/rdf-schema#comment> "住所が提供される場合はschema:addressとIMI共通語彙基盤（ic:住所、ic:都道府県、ic:都道府県コード、ic:市区町村、ic:市区町村コード）を併用する。"@ja .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#observer> <http://www.w3.org/2000/01/rdf-schema#label> "observation station"@en .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#observer> <http://www.w3.org/2000/01/rdf-schema#label> "観測点"@ja .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#observer> <http://www.w3.org/2004/02/skos/core#prefLabel> "observation station"@en .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#observer> <http://www.w3.org/2004/02/skos/core#prefLabel> "観測点"@ja .
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#seismicMotion
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#seismicMotion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#seismicMotion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#seismicMotion> <http://www.w3.org/2000/01/rdf-schema#label> "seismic motion"@en .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#seismicMotion> <http://www.w3.org/2000/01/rdf-schema#label> "地震動"@ja .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://seismic.balog.jp/ontology/jp-earthquake.ttl#shindo
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#shindo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#shindo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#shindo> <http://www.w3.org/2000/01/rdf-schema#label> "JMA seismic intensity"@en .
+<https://seismic.balog.jp/ontology/jp-earthquake.ttl#shindo> <http://www.w3.org/2000/01/rdf-schema#label> "震度"@ja .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

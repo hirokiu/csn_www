@@ -1,0 +1,892 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://seismic.balog.jp/ontology/jp-earthquake.ttl#"
+     xml:base="https://seismic.balog.jp/ontology/jp-earthquake.ttl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:jp-earthquake="https://seismic.balog.jp/ontology/jp-earthquake.ttl#">
+    <owl:Ontology rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#">
+        <terms:creator rdf:nodeID="genid1"/>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-10-16</terms:issued>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-08-19</terms:modified>
+        <rdfs:label xml:lang="en">Earthquake Ontology for Seismic Datasets</rdfs:label>
+        <rdfs:label xml:lang="ja">地震オントロジー</rdfs:label>
+        <owl:versionInfo>2026-08-19</owl:versionInfo>
+    </owl:Ontology>
+    <rdf:Description rdf:nodeID="genid1">
+        <foaf:homepage rdf:resource="https://seismic.balog.jp/"/>
+        <foaf:name>hiroki_u</foaf:name>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/homepage -->
+
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/homepage"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#observationNetwork -->
+
+
+    <owl:AnnotationProperty rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#observationNetwork">
+        <rdfs:label xml:lang="en">observation network</rdfs:label>
+        <rdfs:label xml:lang="ja">観測網</rdfs:label>
+        <rdfs:domain rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#observer"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasAttributedTo -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasAttributedTo"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasRevisionOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasRevisionOf"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/madeBySensor -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/madeBySensor"/>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#afterShock -->
+
+
+    <owl:ObjectProperty rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#afterShock">
+        <rdfs:domain rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#earthquake"/>
+        <rdfs:range rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter"/>
+        <rdfs:label xml:lang="en">aftershock</rdfs:label>
+        <rdfs:label xml:lang="ja">余震</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#detarminatedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#detarminatedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasAttributedTo"/>
+        <rdfs:domain rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+        <rdfs:comment xml:lang="ja">震源位置・時刻を決定した機関をURIで示す。決定方法やフラグはjpe:determinatedWayで表す。</rdfs:comment>
+        <rdfs:label xml:lang="en">hypocenter determined by</rdfs:label>
+        <rdfs:label xml:lang="ja">震源決定機関</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#detarminatedWith -->
+
+
+    <owl:ObjectProperty rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#detarminatedWith">
+        <rdfs:domain rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter"/>
+        <rdfs:range rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedWave"/>
+        <rdfs:label xml:lang="ja">震源決定に利用した波形</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#estimatedWith -->
+
+
+    <owl:ObjectProperty rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#estimatedWith">
+        <rdfs:domain rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter"/>
+        <rdfs:range rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedWave"/>
+        <rdfs:label xml:lang="ja">震源推定に利用した波形</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#foreShock -->
+
+
+    <owl:ObjectProperty rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#foreShock">
+        <owl:equivalentProperty rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#preShock"/>
+        <rdfs:domain rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#earthquake"/>
+        <rdfs:range rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter"/>
+        <rdfs:label xml:lang="en">foreshock</rdfs:label>
+        <rdfs:label xml:lang="ja">前震</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#hasHypocenter -->
+
+
+    <owl:ObjectProperty rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#hasHypocenter">
+        <owl:inverseOf rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#isHypocenterOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord"/>
+                    <rdf:Description rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#earthquake"/>
+                    <rdf:Description rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedWave"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter"/>
+        <rdfs:label xml:lang="en">has hypocenter</rdfs:label>
+        <rdfs:label xml:lang="ja">震源</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#isHypocenterOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#isHypocenterOf">
+        <rdfs:domain rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter"/>
+        <rdfs:label xml:lang="en">is hypocenter of</rdfs:label>
+        <rdfs:label xml:lang="ja">震源とする地震・観測</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#mainShock -->
+
+
+    <owl:ObjectProperty rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#mainShock">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#earthquake"/>
+        <rdfs:range rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter"/>
+        <rdfs:label xml:lang="en">main shock</rdfs:label>
+        <rdfs:label xml:lang="ja">本震</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/sosa/madeBySensor"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord"/>
+                    <rdf:Description rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedWave"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#observer"/>
+        <rdfs:label xml:lang="en">observed by</rdfs:label>
+        <rdfs:label xml:lang="ja">観測した観測点</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#preShock -->
+
+
+    <owl:ObjectProperty rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#preShock">
+        <rdfs:label xml:lang="ja">前震（旧語彙）</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#previousSnapshot -->
+
+
+    <owl:ObjectProperty rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#previousSnapshot">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasRevisionOf"/>
+        <rdfs:domain rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#DatasetSnapshot"/>
+        <rdfs:range rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#DatasetSnapshot"/>
+        <rdfs:label xml:lang="en">previous snapshot</rdfs:label>
+        <rdfs:label xml:lang="ja">直前のスナップショット</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#snapshotOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#snapshotOf">
+        <rdfs:domain rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#DatasetSnapshot"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdfs:label xml:lang="en">snapshot of</rdfs:label>
+        <rdfs:label xml:lang="ja">スナップショット元データセット</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://schema.org/identifier -->
+
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/identifier"/>
+    
+
+
+    <!-- http://schema.org/value -->
+
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/value"/>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#calcShindo -->
+
+
+    <owl:DatatypeProperty rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#calcShindo">
+        <owl:equivalentProperty rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#seismicIntensity"/>
+        <rdfs:subPropertyOf rdf:resource="http://schema.org/value"/>
+        <rdfs:domain rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedWave"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="en">instrumental seismic intensity</rdfs:label>
+        <rdfs:label xml:lang="ja">計測震度</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#catalog -->
+
+
+    <owl:DatatypeProperty rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#catalog">
+        <rdfs:domain rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="ja">震源情報を提供した地震カタログまたは機関。</rdfs:comment>
+        <rdfs:label xml:lang="en">catalog</rdfs:label>
+        <rdfs:label xml:lang="ja">カタログ</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#depth -->
+
+
+    <owl:DatatypeProperty rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#depth">
+        <rdfs:subPropertyOf rdf:resource="http://schema.org/value"/>
+        <rdfs:domain rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="ja">基準面から震源までの深さをメートル単位で表す。提供機関が基準面より上の震源を負値で表す場合は原値を保持する。</rdfs:comment>
+        <rdfs:label xml:lang="en">hypocentral depth</rdfs:label>
+        <rdfs:label xml:lang="ja">震源の深さ</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#detarminatedWay -->
+
+
+    <owl:DatatypeProperty rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#detarminatedWay">
+        <owl:equivalentProperty rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#determinatedWay"/>
+        <rdfs:label xml:lang="ja">震源決定方法（旧綴り）</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#determinatedWay -->
+
+
+    <owl:DatatypeProperty rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#determinatedWay">
+        <rdfs:domain rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="ja">震源の決定方法または決定フラグ。震源を決定した機関はjpe:detarminatedByで表す。</rdfs:comment>
+        <rdfs:label xml:lang="en">hypocenter determination method</rdfs:label>
+        <rdfs:label xml:lang="ja">震源決定方法</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#faultDistance -->
+
+
+    <owl:DatatypeProperty rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#faultDistance">
+        <rdfs:domain rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="ja">断層最短距離 (km)</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#fileBaseName -->
+
+
+    <owl:DatatypeProperty rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#fileBaseName">
+        <rdfs:domain rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="ja">波形ファイルベース名</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenterKinds -->
+
+
+    <owl:DatatypeProperty rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenterKinds">
+        <rdfs:domain rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">hypocenter record type</rdfs:label>
+        <rdfs:label xml:lang="ja">震源レコード種別</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#instrumentalIntensity -->
+
+
+    <owl:DatatypeProperty rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#instrumentalIntensity">
+        <rdfs:domain rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="ja">計測震度</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#magnitude -->
+
+
+    <owl:DatatypeProperty rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#magnitude">
+        <rdfs:subPropertyOf rdf:resource="http://schema.org/value"/>
+        <rdfs:domain rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="en">magnitude</rdfs:label>
+        <rdfs:label xml:lang="ja">マグニチュード</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#magnitudeType -->
+
+
+    <owl:DatatypeProperty rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#magnitudeType">
+        <rdfs:domain rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">magnitude type</rdfs:label>
+        <rdfs:label xml:lang="ja">マグニチュード種別</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedStaionNum -->
+
+
+    <owl:DatatypeProperty rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedStaionNum">
+        <owl:equivalentProperty rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedStationNum"/>
+        <rdfs:label xml:lang="ja">観測点数（旧綴り）</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedStationNum -->
+
+
+    <owl:DatatypeProperty rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedStationNum">
+        <rdfs:domain rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment xml:lang="ja">震度1以上を観測した観測点の数。</rdfs:comment>
+        <rdfs:label xml:lang="en">number of observation stations</rdfs:label>
+        <rdfs:label xml:lang="ja">観測点数</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#originTime -->
+
+
+    <owl:DatatypeProperty rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#originTime">
+        <rdfs:domain rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">origin time</rdfs:label>
+        <rdfs:label xml:lang="ja">オリジンタイム</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundAccelerationEW -->
+
+
+    <owl:DatatypeProperty rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundAccelerationEW">
+        <rdfs:domain rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="ja">東西成分最大加速度</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundAccelerationNS -->
+
+
+    <owl:DatatypeProperty rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundAccelerationNS">
+        <rdfs:domain rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="ja">南北成分最大加速度</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundAccelerationUD -->
+
+
+    <owl:DatatypeProperty rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundAccelerationUD">
+        <rdfs:domain rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="ja">上下成分最大加速度</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundVelocityEW -->
+
+
+    <owl:DatatypeProperty rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundVelocityEW">
+        <rdfs:domain rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="ja">東西成分最大速度</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundVelocityNS -->
+
+
+    <owl:DatatypeProperty rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundVelocityNS">
+        <rdfs:domain rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="ja">南北成分最大速度</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundVelocityUD -->
+
+
+    <owl:DatatypeProperty rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundVelocityUD">
+        <rdfs:domain rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="ja">上下成分最大速度</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#recordIdentifier -->
+
+
+    <owl:DatatypeProperty rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#recordIdentifier">
+        <rdfs:domain rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="ja">強震記録ID</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#sampleCount -->
+
+
+    <owl:DatatypeProperty rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#sampleCount">
+        <rdfs:domain rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:label xml:lang="ja">サンプル数</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#samplingFrequency -->
+
+
+    <owl:DatatypeProperty rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#samplingFrequency">
+        <rdfs:domain rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="ja">サンプリング周波数 (Hz)</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#seismicIntensity -->
+
+
+    <owl:DatatypeProperty rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#seismicIntensity">
+        <rdfs:label xml:lang="ja">計測震度（旧語彙）</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#shindo -->
+
+
+    <owl:DatatypeProperty rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#shindo">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#sourceChecksum -->
+
+
+    <owl:DatatypeProperty rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#sourceChecksum">
+        <rdfs:domain rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#DatasetSnapshot"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#hexBinary"/>
+        <rdfs:comment xml:lang="ja">取得した原本全体のSHA-256チェックサム。</rdfs:comment>
+        <rdfs:label xml:lang="en">source checksum</rdfs:label>
+        <rdfs:label xml:lang="ja">取得元チェックサム</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#spectrumIntensity -->
+
+
+    <owl:DatatypeProperty rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#spectrumIntensity">
+        <rdfs:domain rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="ja">SI値</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#stationIdentifier -->
+
+
+    <owl:DatatypeProperty rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#stationIdentifier">
+        <rdfs:subPropertyOf rdf:resource="http://schema.org/identifier"/>
+        <rdfs:domain rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#observer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="ja">観測機関または観測網が定めた観測点の識別子。</rdfs:comment>
+        <rdfs:label xml:lang="en">station identifier</rdfs:label>
+        <rdfs:label xml:lang="ja">観測点番号</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#withTravelTimeTable -->
+
+
+    <owl:DatatypeProperty rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#withTravelTimeTable">
+        <rdfs:domain rdf:resource="https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">travel-time table used</rdfs:label>
+        <rdfs:label xml:lang="ja">使用走時表</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://schema.org/Event -->
+
+
+    <owl:Class rdf:about="http://schema.org/Event"/>
+    
+
+
+    <!-- http://schema.org/Place -->
+
+
+    <owl:Class rdf:about="http://schema.org/Place"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#Dataset -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#Dataset"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Agent -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Agent"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Entity -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Entity"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/FeatureOfInterest -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/ObservableProperty -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Observation -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Observation"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Sensor -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Sensor"/>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#DatasetSnapshot -->
+
+
+    <owl:Class rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#DatasetSnapshot">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:comment xml:lang="en">An immutable RDF rendition of an external dataset as retrieved at a specific time. Each rendition is managed as a separate named graph.</rdfs:comment>
+        <rdfs:comment xml:lang="ja">外部機関のデータセットを特定の取得時点でRDFへ変換した、不変の版。各版は独立した名前付きグラフとして管理する。</rdfs:comment>
+        <rdfs:label xml:lang="en">dataset snapshot</rdfs:label>
+        <rdfs:label xml:lang="ja">データセット・スナップショット</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord -->
+
+
+    <owl:Class rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:comment xml:lang="ja">観測点で得られた強震波形またはそこから算出した主要指標を表す。</rdfs:comment>
+        <rdfs:label xml:lang="en">strong-motion record</rdfs:label>
+        <rdfs:label xml:lang="ja">強震記録</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#earthquake -->
+
+
+    <owl:Class rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#earthquake">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+        <rdfs:label xml:lang="en">earthquake</rdfs:label>
+        <rdfs:label xml:lang="ja">地震現象</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#epicenter -->
+
+
+    <owl:Class rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#epicenter">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Place"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+        <rdfs:label xml:lang="en">epicenter</rdfs:label>
+        <rdfs:label xml:lang="ja">震央</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter -->
+
+
+    <owl:Class rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Place"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+        <rdfs:label xml:lang="en">hypocenter</rdfs:label>
+        <rdfs:label xml:lang="ja">震源</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedWave -->
+
+
+    <owl:Class rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedWave">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:label xml:lang="en">observed wave</rdfs:label>
+        <rdfs:label xml:lang="ja">観測波形</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#observer -->
+
+
+    <owl:Class rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#observer">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:comment xml:lang="ja">住所が提供される場合はschema:addressとIMI共通語彙基盤（ic:住所、ic:都道府県、ic:都道府県コード、ic:市区町村、ic:市区町村コード）を併用する。</rdfs:comment>
+        <rdfs:label xml:lang="en">observation station</rdfs:label>
+        <rdfs:label xml:lang="ja">観測点</rdfs:label>
+        <skos:prefLabel xml:lang="en">observation station</skos:prefLabel>
+        <skos:prefLabel xml:lang="ja">観測点</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#seismicMotion -->
+
+
+    <owl:Class rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#seismicMotion">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:label xml:lang="en">seismic motion</rdfs:label>
+        <rdfs:label xml:lang="ja">地震動</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://seismic.balog.jp/ontology/jp-earthquake.ttl#shindo -->
+
+
+    <owl:NamedIndividual rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#shindo">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="https://seismic.balog.jp/ontology/jp-earthquake.ttl#shindo">
+        <rdfs:label xml:lang="en">JMA seismic intensity</rdfs:label>
+        <rdfs:label xml:lang="ja">震度</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

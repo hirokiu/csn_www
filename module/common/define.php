@@ -1,9 +1,9 @@
 <?php
 define('SITE_TITLE','CSN::Citizen Seismology Network');
 define('META_KEYWORD','Citizen Seismology Network, CSN, Earthquake, Earthquake Ontology, Earthquake LOD, Linked Open Data');
-define('META_DESCRIPTION','');
+define('META_DESCRIPTION','Citizen Seismology Networkの観測波形と、気象庁・FDSN・J-SHIS等の地震LOD、地震オントロジーを公開しています。');
 
-define('GOOGLE_MAP_API_KEY','AIzaSyC9ZM3tuMkHSwolCQmqrtFym2eXHY1aAIY');
+define('GOOGLE_MAP_API_KEY', getenv('GOOGLE_MAPS_BROWSER_API_KEY') ?: '');
 
 $common['css'] = array(
                         '/css/styles-site.css',

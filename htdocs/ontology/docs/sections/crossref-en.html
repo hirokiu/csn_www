@@ -1,0 +1,1236 @@
+<h2 id="crossreference" class="list">Cross-reference for Earthquake Ontology for Seismic Datasets classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Earthquake Ontology for Seismic Datasets.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#DatasetSnapshot" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#DatasetSnapshot">dataset snapshot</a></li>
+  <li><a href="#earthquake" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#earthquake">earthquake</a></li>
+  <li><a href="#epicenter" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#epicenter">epicenter</a></li>
+  <li><a href="#hypocenter" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter">hypocenter</a></li>
+  <li><a href="#observer" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#observer">observation station</a></li>
+  <li><a href="#observedWave" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedWave">observed wave</a></li>
+  <li><a href="#seismicMotion" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#seismicMotion">seismic motion</a></li>
+  <li><a href="#StrongMotionRecord" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord">strong-motion record</a></li>
+ </ul>
+ <div class="entity" id="DatasetSnapshot">
+  <h3>dataset snapshot<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#DatasetSnapshot</p>
+  <div class="comment">
+   <span class="markdown">An immutable RDF rendition of an external dataset as retrieved at a specific time. Each rendition is managed as a separate named graph.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/dcat#Dataset" target="_blank" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>, <a href="http://www.w3.org/ns/prov#Entity" target="_blank" title="http://www.w3.org/ns/prov#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#previousSnapshot" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#previousSnapshot">previous snapshot</a> <sup class="type-op" title="object property">op</sup>, <a href="#snapshotOf" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#snapshotOf">snapshot of</a> <sup class="type-op" title="object property">op</sup>, <a href="#sourceChecksum" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#sourceChecksum">source checksum</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#previousSnapshot" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#previousSnapshot">previous snapshot</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="earthquake">
+  <h3>earthquake<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#earthquake</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://schema.org/Event" target="_blank" title="http://schema.org/Event">Event</a> <sup class="type-c" title="class">c</sup>, <a href="http://www.w3.org/ns/sosa/FeatureOfInterest" target="_blank" title="http://www.w3.org/ns/sosa/FeatureOfInterest">Feature Of Interest</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#afterShock" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#afterShock">aftershock</a> <sup class="type-op" title="object property">op</sup>, <a href="#foreShock" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#foreShock">foreshock</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasHypocenter" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#hasHypocenter">has hypocenter</a> <sup class="type-op" title="object property">op</sup>, <a href="#mainShock" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#mainShock">main shock</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="epicenter">
+  <h3>epicenter<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#epicenter</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/sosa/FeatureOfInterest" target="_blank" title="http://www.w3.org/ns/sosa/FeatureOfInterest">Feature Of Interest</a> <sup class="type-c" title="class">c</sup>, <a href="http://schema.org/Place" target="_blank" title="http://schema.org/Place">Place</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="hypocenter">
+  <h3>hypocenter<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/sosa/FeatureOfInterest" target="_blank" title="http://www.w3.org/ns/sosa/FeatureOfInterest">Feature Of Interest</a> <sup class="type-c" title="class">c</sup>, <a href="http://schema.org/Place" target="_blank" title="http://schema.org/Place">Place</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#catalog" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#catalog">catalog</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#determinatedWay" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#determinatedWay">hypocenter determination method</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#detarminatedBy" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#detarminatedBy">hypocenter determined by</a> <sup class="type-op" title="object property">op</sup>, <a href="#hypocenterKinds" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenterKinds">hypocenter record type</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#depth" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#depth">hypocentral depth</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#isHypocenterOf" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#isHypocenterOf">is hypocenter of</a> <sup class="type-op" title="object property">op</sup>, <a href="#magnitude" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#magnitude">magnitude</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#magnitudeType" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#magnitudeType">magnitude type</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#observedStationNum" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedStationNum">number of observation stations</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#originTime" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#originTime">origin time</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#withTravelTimeTable" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#withTravelTimeTable">travel-time table used</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#estimatedWith" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#estimatedWith">震源推定に利用した波形</a> <sup class="type-op" title="object property">op</sup>, <a href="#detarminatedWith" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#detarminatedWith">震源決定に利用した波形</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#afterShock" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#afterShock">aftershock</a> <sup class="type-op" title="object property">op</sup>, <a href="#foreShock" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#foreShock">foreshock</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasHypocenter" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#hasHypocenter">has hypocenter</a> <sup class="type-op" title="object property">op</sup>, <a href="#mainShock" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#mainShock">main shock</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="observer">
+  <h3>observation station<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#observer</p>
+  <div class="comment">
+   <span class="markdown">住所が提供される場合はschema:addressとIMI共通語彙基盤（ic:住所、ic:都道府県、ic:都道府県コード、ic:市区町村、ic:市区町村コード）を併用する。</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/sosa/Sensor" target="_blank" title="http://www.w3.org/ns/sosa/Sensor">Sensor</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="observationNetwork" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#observationNetwork">observation network</a> <sup class="type-ap" title="annotation property">ap</sup>, <a href="#stationIdentifier" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#stationIdentifier">station identifier</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#observedBy" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedBy">observed by</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="observedWave">
+  <h3>observed wave<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedWave</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/sosa/Observation" target="_blank" title="http://www.w3.org/ns/sosa/Observation">Observation</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasHypocenter" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#hasHypocenter">has hypocenter</a> <sup class="type-op" title="object property">op</sup>, <a href="#calcShindo" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#calcShindo">instrumental seismic intensity</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#observedBy" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedBy">observed by</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#estimatedWith" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#estimatedWith">震源推定に利用した波形</a> <sup class="type-op" title="object property">op</sup>, <a href="#detarminatedWith" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#detarminatedWith">震源決定に利用した波形</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="seismicMotion">
+  <h3>seismic motion<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#seismicMotion</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/sosa/Observation" target="_blank" title="http://www.w3.org/ns/sosa/Observation">Observation</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="StrongMotionRecord">
+  <h3>strong-motion record<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord</p>
+  <div class="comment">
+   <span class="markdown">観測点で得られた強震波形またはそこから算出した主要指標を表す。</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/sosa/Observation" target="_blank" title="http://www.w3.org/ns/sosa/Observation">Observation</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#spectrumIntensity" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#spectrumIntensity">SI値</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasHypocenter" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#hasHypocenter">has hypocenter</a> <sup class="type-op" title="object property">op</sup>, <a href="#observedBy" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedBy">observed by</a> <sup class="type-op" title="object property">op</sup>, <a href="#samplingFrequency" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#samplingFrequency">サンプリング周波数 (Hz)</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#sampleCount" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#sampleCount">サンプル数</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#peakGroundAccelerationUD" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundAccelerationUD">上下成分最大加速度</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#peakGroundVelocityUD" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundVelocityUD">上下成分最大速度</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#peakGroundAccelerationNS" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundAccelerationNS">南北成分最大加速度</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#peakGroundVelocityNS" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundVelocityNS">南北成分最大速度</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#recordIdentifier" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#recordIdentifier">強震記録ID</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#faultDistance" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#faultDistance">断層最短距離 (km)</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#peakGroundAccelerationEW" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundAccelerationEW">東西成分最大加速度</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#peakGroundVelocityEW" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundVelocityEW">東西成分最大速度</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#fileBaseName" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#fileBaseName">波形ファイルベース名</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#instrumentalIntensity" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#instrumentalIntensity">計測震度</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#afterShock" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#afterShock">aftershock</a></li>
+  <li><a href="#foreShock" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#foreShock">foreshock</a></li>
+  <li><a href="#hasHypocenter" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#hasHypocenter">has hypocenter</a></li>
+  <li><a href="#detarminatedBy" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#detarminatedBy">hypocenter determined by</a></li>
+  <li><a href="#isHypocenterOf" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#isHypocenterOf">is hypocenter of</a></li>
+  <li><a href="#mainShock" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#mainShock">main shock</a></li>
+  <li><a href="#observedBy" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedBy">observed by</a></li>
+  <li><a href="#previousSnapshot" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#previousSnapshot">previous snapshot</a></li>
+  <li><a href="#snapshotOf" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#snapshotOf">snapshot of</a></li>
+  <li><a href="#preShock" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#preShock">前震（旧語彙）</a></li>
+  <li><a href="#estimatedWith" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#estimatedWith">震源推定に利用した波形</a></li>
+  <li><a href="#detarminatedWith" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#detarminatedWith">震源決定に利用した波形</a></li>
+ </ul>
+ <div class="entity" id="afterShock">
+  <h3>aftershock<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#afterShock</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#earthquake" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#earthquake">earthquake</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#hypocenter" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter">hypocenter</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="foreShock">
+  <h3>foreshock<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#foreShock</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has equivalent properties
+    </dt>
+    <dd>
+     <a href="#preShock" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#preShock">前震（旧語彙）</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#earthquake" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#earthquake">earthquake</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#hypocenter" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter">hypocenter</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasHypocenter">
+  <h3>has hypocenter<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#hasHypocenter</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#StrongMotionRecord" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord">strong-motion record</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#earthquake" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#earthquake">earthquake</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#observedWave" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedWave">observed wave</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#hypocenter" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter">hypocenter</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#isHypocenterOf" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#isHypocenterOf">is hypocenter of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="detarminatedBy">
+  <h3>hypocenter determined by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#detarminatedBy</p>
+  <div class="comment">
+   <span class="markdown">震源位置・時刻を決定した機関をURIで示す。決定方法やフラグはjpe:determinatedWayで表す。</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/prov#wasAttributedTo" target="_blank" title="http://www.w3.org/ns/prov#wasAttributedTo">was Attributed To</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#hypocenter" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter">hypocenter</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/prov#Agent" target="_blank" title="http://www.w3.org/ns/prov#Agent">Agent</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isHypocenterOf">
+  <h3>is hypocenter of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#isHypocenterOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#hypocenter" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter">hypocenter</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#hasHypocenter" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#hasHypocenter">has hypocenter</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="mainShock">
+  <h3>main shock<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#mainShock</p>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#earthquake" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#earthquake">earthquake</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#hypocenter" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter">hypocenter</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="observedBy">
+  <h3>observed by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedBy</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/sosa/madeBySensor" target="_blank" title="http://www.w3.org/ns/sosa/madeBySensor">made By Sensor</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#StrongMotionRecord" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord">strong-motion record</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#observedWave" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedWave">observed wave</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#observer" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#observer">observation station</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="previousSnapshot">
+  <h3>previous snapshot<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#previousSnapshot</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/prov#wasRevisionOf" target="_blank" title="http://www.w3.org/ns/prov#wasRevisionOf">was Revision Of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#DatasetSnapshot" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#DatasetSnapshot">dataset snapshot</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#DatasetSnapshot" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#DatasetSnapshot">dataset snapshot</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="snapshotOf">
+  <h3>snapshot of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#snapshotOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#DatasetSnapshot" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#DatasetSnapshot">dataset snapshot</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/dcat#Dataset" target="_blank" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="preShock">
+  <h3>前震（旧語彙）<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#preShock</p>
+  <dl>
+   <dt>
+    Is deprecated
+   </dt>
+   <dd>
+    true
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has equivalent properties
+    </dt>
+    <dd>
+     <a href="#foreShock" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#foreShock">foreshock</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="estimatedWith">
+  <h3>震源推定に利用した波形<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#estimatedWith</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#hypocenter" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter">hypocenter</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#observedWave" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedWave">observed wave</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="detarminatedWith">
+  <h3>震源決定に利用した波形<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#detarminatedWith</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#hypocenter" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter">hypocenter</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#observedWave" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedWave">observed wave</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#catalog" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#catalog">catalog</a></li>
+  <li><a href="#determinatedWay" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#determinatedWay">hypocenter determination method</a></li>
+  <li><a href="#hypocenterKinds" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenterKinds">hypocenter record type</a></li>
+  <li><a href="#depth" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#depth">hypocentral depth</a></li>
+  <li><a href="#calcShindo" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#calcShindo">instrumental seismic intensity</a></li>
+  <li><a href="#shindo" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#shindo"> <span>JMA seismic intensity</span> </a></li>
+  <li><a href="#magnitude" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#magnitude">magnitude</a></li>
+  <li><a href="#magnitudeType" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#magnitudeType">magnitude type</a></li>
+  <li><a href="#observedStationNum" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedStationNum">number of observation stations</a></li>
+  <li><a href="#originTime" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#originTime">origin time</a></li>
+  <li><a href="#spectrumIntensity" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#spectrumIntensity">SI値</a></li>
+  <li><a href="#sourceChecksum" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#sourceChecksum">source checksum</a></li>
+  <li><a href="#stationIdentifier" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#stationIdentifier">station identifier</a></li>
+  <li><a href="#withTravelTimeTable" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#withTravelTimeTable">travel-time table used</a></li>
+  <li><a href="#samplingFrequency" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#samplingFrequency">サンプリング周波数 (Hz)</a></li>
+  <li><a href="#sampleCount" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#sampleCount">サンプル数</a></li>
+  <li><a href="#peakGroundAccelerationUD" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundAccelerationUD">上下成分最大加速度</a></li>
+  <li><a href="#peakGroundVelocityUD" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundVelocityUD">上下成分最大速度</a></li>
+  <li><a href="#peakGroundAccelerationNS" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundAccelerationNS">南北成分最大加速度</a></li>
+  <li><a href="#peakGroundVelocityNS" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundVelocityNS">南北成分最大速度</a></li>
+  <li><a href="#recordIdentifier" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#recordIdentifier">強震記録ID</a></li>
+  <li><a href="#faultDistance" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#faultDistance">断層最短距離 (km)</a></li>
+  <li><a href="#peakGroundAccelerationEW" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundAccelerationEW">東西成分最大加速度</a></li>
+  <li><a href="#peakGroundVelocityEW" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundVelocityEW">東西成分最大速度</a></li>
+  <li><a href="#fileBaseName" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#fileBaseName">波形ファイルベース名</a></li>
+  <li><a href="#observedStaionNum" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedStaionNum">観測点数（旧綴り）</a></li>
+  <li><a href="#instrumentalIntensity" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#instrumentalIntensity">計測震度</a></li>
+  <li><a href="#seismicIntensity" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#seismicIntensity">計測震度（旧語彙）</a></li>
+  <li><a href="#detarminatedWay" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#detarminatedWay">震源決定方法（旧綴り）</a></li>
+ </ul>
+ <div class="entity" id="catalog">
+  <h3>catalog<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#catalog</p>
+  <div class="comment">
+   <span class="markdown">震源情報を提供した地震カタログまたは機関。</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#hypocenter" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter">hypocenter</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="determinatedWay">
+  <h3>hypocenter determination method<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#determinatedWay</p>
+  <div class="comment">
+   <span class="markdown">震源の決定方法または決定フラグ。震源を決定した機関はjpe:detarminatedByで表す。</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has equivalent properties
+    </dt>
+    <dd>
+     <a href="#detarminatedWay" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#detarminatedWay">震源決定方法（旧綴り）</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#hypocenter" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter">hypocenter</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hypocenterKinds">
+  <h3>hypocenter record type<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenterKinds</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#hypocenter" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter">hypocenter</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="depth">
+  <h3>hypocentral depth<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#depth</p>
+  <div class="comment">
+   <span class="markdown">基準面から震源までの深さをメートル単位で表す。提供機関が基準面より上の震源を負値で表す場合は原値を保持する。</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://schema.org/value" target="_blank" title="http://schema.org/value">value</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#hypocenter" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter">hypocenter</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="calcShindo">
+  <h3>instrumental seismic intensity<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#calcShindo</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has equivalent properties
+    </dt>
+    <dd>
+     <a href="#seismicIntensity" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#seismicIntensity">計測震度（旧語彙）</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://schema.org/value" target="_blank" title="http://schema.org/value">value</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#observedWave" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedWave">observed wave</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="shindo">
+  <h3>JMA seismic intensity<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#shindo</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2000/01/rdf-schema#Literal" target="_blank" title="http://www.w3.org/2000/01/rdf-schema#Literal">Literal</a>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#shindo">named individual</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="magnitude">
+  <h3>magnitude<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#magnitude</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://schema.org/value" target="_blank" title="http://schema.org/value">value</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#hypocenter" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter">hypocenter</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="magnitudeType">
+  <h3>magnitude type<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#magnitudeType</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#hypocenter" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter">hypocenter</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="observedStationNum">
+  <h3>number of observation stations<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedStationNum</p>
+  <div class="comment">
+   <span class="markdown">震度1以上を観測した観測点の数。</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has equivalent properties
+    </dt>
+    <dd>
+     <a href="#observedStaionNum" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedStaionNum">観測点数（旧綴り）</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#hypocenter" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter">hypocenter</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#nonNegativeInteger" target="_blank" title="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">non Negative Integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="originTime">
+  <h3>origin time<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#originTime</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#hypocenter" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter">hypocenter</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="spectrumIntensity">
+  <h3>SI値<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#spectrumIntensity</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#StrongMotionRecord" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord">strong-motion record</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="sourceChecksum">
+  <h3>source checksum<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#sourceChecksum</p>
+  <div class="comment">
+   <span class="markdown">取得した原本全体のSHA-256チェックサム。</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#DatasetSnapshot" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#DatasetSnapshot">dataset snapshot</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#hexBinary" target="_blank" title="http://www.w3.org/2001/XMLSchema#hexBinary">hex Binary</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="stationIdentifier">
+  <h3>station identifier<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#stationIdentifier</p>
+  <div class="comment">
+   <span class="markdown">観測機関または観測網が定めた観測点の識別子。</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://schema.org/identifier" target="_blank" title="http://schema.org/identifier">identifier</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#observer" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#observer">observation station</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="withTravelTimeTable">
+  <h3>travel-time table used<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#withTravelTimeTable</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#hypocenter" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#hypocenter">hypocenter</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="samplingFrequency">
+  <h3>サンプリング周波数 (Hz)<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#samplingFrequency</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#StrongMotionRecord" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord">strong-motion record</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="sampleCount">
+  <h3>サンプル数<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#sampleCount</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#StrongMotionRecord" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord">strong-motion record</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#nonNegativeInteger" target="_blank" title="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">non Negative Integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="peakGroundAccelerationUD">
+  <h3>上下成分最大加速度<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundAccelerationUD</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#StrongMotionRecord" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord">strong-motion record</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="peakGroundVelocityUD">
+  <h3>上下成分最大速度<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundVelocityUD</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#StrongMotionRecord" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord">strong-motion record</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="peakGroundAccelerationNS">
+  <h3>南北成分最大加速度<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundAccelerationNS</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#StrongMotionRecord" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord">strong-motion record</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="peakGroundVelocityNS">
+  <h3>南北成分最大速度<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundVelocityNS</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#StrongMotionRecord" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord">strong-motion record</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="recordIdentifier">
+  <h3>強震記録ID<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#recordIdentifier</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#StrongMotionRecord" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord">strong-motion record</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="faultDistance">
+  <h3>断層最短距離 (km)<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#faultDistance</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#StrongMotionRecord" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord">strong-motion record</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="peakGroundAccelerationEW">
+  <h3>東西成分最大加速度<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundAccelerationEW</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#StrongMotionRecord" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord">strong-motion record</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="peakGroundVelocityEW">
+  <h3>東西成分最大速度<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#peakGroundVelocityEW</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#StrongMotionRecord" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord">strong-motion record</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="fileBaseName">
+  <h3>波形ファイルベース名<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#fileBaseName</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#StrongMotionRecord" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord">strong-motion record</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="observedStaionNum">
+  <h3>観測点数（旧綴り）<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedStaionNum</p>
+  <dl>
+   <dt>
+    Is deprecated
+   </dt>
+   <dd>
+    true
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has equivalent properties
+    </dt>
+    <dd>
+     <a href="#observedStationNum" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedStationNum">number of observation stations</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="instrumentalIntensity">
+  <h3>計測震度<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#instrumentalIntensity</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#StrongMotionRecord" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#StrongMotionRecord">strong-motion record</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="seismicIntensity">
+  <h3>計測震度（旧語彙）<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#seismicIntensity</p>
+  <dl>
+   <dt>
+    Is deprecated
+   </dt>
+   <dd>
+    true
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has equivalent properties
+    </dt>
+    <dd>
+     <a href="#calcShindo" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#calcShindo">instrumental seismic intensity</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="detarminatedWay">
+  <h3>震源決定方法（旧綴り）<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#detarminatedWay</p>
+  <dl>
+   <dt>
+    Is deprecated
+   </dt>
+   <dd>
+    true
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has equivalent properties
+    </dt>
+    <dd>
+     <a href="#determinatedWay" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#determinatedWay">hypocenter determination method</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="annotationproperties">
+ <h3 id="annotationproperties" class="list">Annotation Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator"> <span>creator</span> </a></li>
+  <li><a href="#http://xmlns.com/foaf/0.1/homepage" title="http://xmlns.com/foaf/0.1/homepage"> <span>homepage</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/issued" title="http://purl.org/dc/terms/issued"> <span>issued</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license"> <span>license</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/modified" title="http://purl.org/dc/terms/modified"> <span>modified</span> </a></li>
+  <li><a href="#http://xmlns.com/foaf/0.1/name" title="http://xmlns.com/foaf/0.1/name"> <span>name</span> </a></li>
+  <li><a href="#observationNetwork" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#observationNetwork">observation network</a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#prefLabel" title="http://www.w3.org/2004/02/skos/core#prefLabel"> <span>pref Label</span> </a></li>
+ </ul>
+ <div class="entity" id="http://purl.org/dc/terms/creator">
+  <h3>creator<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/creator</p>
+ </div>
+ <div class="entity" id="http://xmlns.com/foaf/0.1/homepage">
+  <h3>homepage<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://xmlns.com/foaf/0.1/homepage</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/issued">
+  <h3>issued<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/issued</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/license">
+  <h3>license<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/license</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/modified">
+  <h3>modified<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/modified</p>
+ </div>
+ <div class="entity" id="http://xmlns.com/foaf/0.1/name">
+  <h3>name<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://xmlns.com/foaf/0.1/name</p>
+ </div>
+ <div class="entity" id="observationNetwork">
+  <h3>observation network<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#observationNetwork</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#observer" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#observer">observation station</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#prefLabel">
+  <h3>pref Label<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#prefLabel</p>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+ <h3 id="namedindividuals" class="list">Named Individuals</h3>
+ <ul class="hlist">
+  <li><a href="#shindo" title="https://seismic.balog.jp/ontology/jp-earthquake.ttl#shindo"> <span>JMA seismic intensity</span> </a></li>
+ </ul>
+ <div class="entity" id="shindo">
+  <h3>JMA seismic intensity<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://seismic.balog.jp/ontology/jp-earthquake.ttl#shindo</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/sosa/ObservableProperty" target="_blank" title="http://www.w3.org/ns/sosa/ObservableProperty">Observable Property</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#shindo">data property</a>
+   </dd>
+  </dl>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals <br/>
+</div>
+</div>

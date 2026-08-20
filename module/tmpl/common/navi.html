@@ -1,11 +1,13 @@
-<nav class="site-header sticky-top py-1">
-    <div class="container d-flex flex-column flex-md-row justify-content-between">
-        <!--<a class="py-2" href="#"><img src="/img/common/logo_glil.png" height="30"></a>-->
-        <a class="py-2 d-none d-md-inline-block" href="/">TOP</a>
-        <a class="py-2 d-none d-md-inline-block" href="/ontology/">Earthquake Ontology</a>
-        <!-- <a class="py-2 d-none d-md-inline-block" href="/waveforms/">waveforms</a> -->
-        <a class="py-2 d-none d-md-inline-block" href="/station/">stations</a>
-        <a class="py-2 d-none d-md-inline-block" href="/map/">CSN Map</a>
-        <!-- <a class="py-2 d-none d-md-inline-block" href="#">About us</a> -->
+<nav class="site-header sticky-top py-1" aria-label="Global navigation">
+    <div class="container site-navigation">
+        <a class="py-2" href="/">TOP</a>
+        <a class="py-2" href="/lod/<?php echo isset($VALUES['common']['lang']) && $VALUES['common']['lang'] === 'ja' ? '?lang=ja' : ''; ?>">
+            <?php echo isset($VALUES['common']['lang']) && $VALUES['common']['lang'] === 'ja' ? 'データセット・LOD' : 'Datasets / LOD'; ?>
+        </a>
+        <a class="py-2" href="/ontology/<?php echo isset($VALUES['common']['lang']) && $VALUES['common']['lang'] === 'ja' ? '?lang=ja' : ''; ?>">
+            <?php echo isset($VALUES['common']['lang']) && $VALUES['common']['lang'] === 'ja' ? '地震オントロジー' : 'Earthquake Ontology'; ?>
+        </a>
+        <a class="py-2" href="/station/"><?php echo isset($VALUES['common']['lang']) && $VALUES['common']['lang'] === 'ja' ? '観測点' : 'Stations'; ?></a>
+        <a class="py-2" href="/map/"><?php echo isset($VALUES['common']['lang']) && $VALUES['common']['lang'] === 'ja' ? 'CSN観測点地図' : 'CSN Map'; ?></a>
     </div>
 </nav>

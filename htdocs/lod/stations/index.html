@@ -20,7 +20,10 @@
 
     <script src="https://maps.gsi.go.jp/js/muni.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9ZM3tuMkHSwolCQmqrtFym2eXHY1aAIY"></script>
+    <?php $googleMapsKey = getenv('GOOGLE_MAPS_BROWSER_API_KEY') ?: ''; ?>
+    <?php if ($googleMapsKey !== '') { ?>
+    <script src="https://maps.googleapis.com/maps/api/js?key=<?php echo rawurlencode($googleMapsKey); ?>"></script>
+    <?php } ?>
     <style>
         body { font-family: Arial, sans-serif; }
         #app { max-width: 100%; margin: auto; padding: 20px; }
