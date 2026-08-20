@@ -1,59 +1,96 @@
-<?php
-//DEBUG
-//var_dump($VALUES);
-?>
 <?php include(dirname(__FILE__) . '/common/html_head.html'); ?>
 <body>
-    <div id='container'>
-    <!-- Global header -->
-    <?php include(dirname(__FILE__) . '/common/header.html'); ?>
-    <!-- Global Navigation -->
-    <?php include(dirname(__FILE__) . '/common/navi.html'); ?>
-    <!-- Sub header-->
-    <header>
-        <h1>CSN::<?php echo $VALUES['common']['page_title']; ?></h1>
-    </header>
-        <section>
-            <h2>Information</h2>
-            <p><strong>Current status:</strong> Raspberry Pi地震計からのリアルタイム集約機能は現在停止しています。過去の観測データ、観測点情報、データセットは引き続き公開しています。</p>
-            <p>- <a href="/lod/">CSN and Earthquake LOD datasets</a></p>
-            <p>- Got the Oracle Japan Award at the <a href='https://2022.lodc.jp/awardPressRelease2022.html' target='_blank'>LOD Challenge 2022</a>.</p>
-            <p>- Got the Open Science Award at the <a href='https://2022.lodc.jp/awardPressRelease2022.html' target='_blank'>LOD Challenge 2022</a>.</p>
-            <p>- <a href="/ontology/">Earthquake Ontology</a> are released.</p>
-            <p>- Renewal for CSN(Citizen Seismology Network) works.</p>
+    <div id="container">
+        <?php include(dirname(__FILE__) . '/common/header.html'); ?>
+        <?php include(dirname(__FILE__) . '/common/navi.html'); ?>
+        <header>
+            <h1><?php echo $VALUES['common']['page_title']; ?></h1>
+        </header>
+
+        <div class="language-switcher" aria-label="Language selection">
+            <a href="/?lang=ja" lang="ja" <?php echo $VALUES['common']['lang'] === 'ja' ? 'aria-current="page"' : ''; ?>>日本語</a>
+            <span aria-hidden="true"> / </span>
+            <a href="/?lang=en" lang="en" <?php echo $VALUES['common']['lang'] === 'en' ? 'aria-current="page"' : ''; ?>>English</a>
+        </div>
+
+        <?php if ($VALUES['common']['lang'] === 'ja') { ?>
+        <section class="portal-intro">
+            <p class="eyebrow">CITIZEN SEISMOLOGY NETWORK</p>
+            <h2>観測データを、研究と教育にひらく</h2>
+            <p class="lead">
+                Raspberry Pi地震計による市民地震観測の成果と、気象庁・FDSN・J-SHISなどの
+                公開データを統合した地震LOD、共通語彙となる地震オントロジーを公開しています。
+            </p>
+            <div class="quick-actions" aria-label="主要な入口">
+                <a class="primary-action" href="/lod/?lang=ja">データセットを見る <span aria-hidden="true">→</span></a>
+                <a class="secondary-action" href="/sparql">SPARQLで検索する <span aria-hidden="true">↗</span></a>
+            </div>
         </section>
+
         <section>
-            <h2>Newest seismic waveform from CSN</h2>
-            <ul>
-                <li>Device ID : <span id="device_id"></span></li>
-                <li>Observed Time : <span id="result_time"></span></li>
-                <li>Intensity : <span id="result_shindo"></span></li>
-            </ul>
-            <div class="reset"></div>
-            <h2>Observed waveform</h2>
-            <h3>EW</h3>
-                <div id="result"><div id="result_x"></div></div>
-            <h3>NS</h3>
-                <div id="result"><div id="result_y"></div></div>
-            <h3>UD</h3>
-                <div id="result"><div id="result_z"></div></div>
-            <h2>Download waveform</h2>
-            <ul>
-                <li><a href="/data/earthquake/">CSV</a></li>
-                <li><a href="/data/earthquake/">JSON</a></li>
-            </ul>
-            <h2>Hypocenter</h2>
-            <h3>Place</h3>
-            <div class="" name=""></div>
+            <h2>研究資源</h2>
+            <div class="service-grid">
+                <article class="service-card">
+                    <p class="card-kicker">DATA</p>
+                    <h3><a href="/lod/?lang=ja">地震LOD・データセット</a></h3>
+                    <p>異なる観測網の震源、観測点、観測波形、強震記録を共通のRDFモデルから参照できます。</p>
+                </article>
+                <article class="service-card">
+                    <p class="card-kicker">VOCABULARY</p>
+                    <h3><a href="/ontology/?lang=ja">地震オントロジー</a></h3>
+                    <p>データの意味と関係を定義した語彙、WIDOCO仕様書、Turtle形式の定義を公開しています。</p>
+                </article>
+                <article class="service-card">
+                    <p class="card-kicker">OBSERVATION</p>
+                    <h3><a href="/station/">観測点とCSNアーカイブ</a></h3>
+                    <p>Citizen Seismology Networkの観測点情報と、これまでに収集した観測データを参照できます。</p>
+                </article>
+            </div>
         </section>
+
+        <section>
+            <h2>運用状況</h2>
+            <p class="status-notice"><strong>アーカイブ公開中:</strong> Raspberry Pi地震計からのリアルタイム集約機能は現在停止しています。過去の観測データ、観測点情報、データセットおよびLODサービスは引き続き利用できます。</p>
+        </section>
+
+        <section>
+            <h2>プロジェクトについて</h2>
+            <p>Citizen Seismology Networkは、小型地震計による観測とオープンデータを通して、地震学の研究・教育・市民科学を支援するプロジェクトです。</p>
+            <p>地震LODは<a href="https://2022.lodc.jp/awardPressRelease2022.html">LOD Challenge 2022</a>において、日本オラクル賞とオープンサイエンス賞を受賞しました。</p>
+        </section>
+        <?php } else { ?>
+        <section class="portal-intro">
+            <p class="eyebrow">CITIZEN SEISMOLOGY NETWORK</p>
+            <h2>Opening seismic observations for research and education</h2>
+            <p class="lead">Explore citizen-seismology observations, Earthquake LOD integrating public records from JMA, FDSN, and J-SHIS, and the shared ontology that connects them.</p>
+            <div class="quick-actions" aria-label="Primary destinations">
+                <a class="primary-action" href="/lod/?lang=en">Explore datasets <span aria-hidden="true">→</span></a>
+                <a class="secondary-action" href="/sparql">Search with SPARQL <span aria-hidden="true">↗</span></a>
+            </div>
+        </section>
+
+        <section>
+            <h2>Research resources</h2>
+            <div class="service-grid">
+                <article class="service-card"><p class="card-kicker">DATA</p><h3><a href="/lod/?lang=en">Earthquake LOD and datasets</a></h3><p>Discover hypocenters, stations, observed waves, and strong-motion records from multiple networks through a common RDF model.</p></article>
+                <article class="service-card"><p class="card-kicker">VOCABULARY</p><h3><a href="/ontology/?lang=en">Earthquake Ontology</a></h3><p>Access the shared vocabulary, WIDOCO specification, and Turtle source describing the meaning and relationships of the data.</p></article>
+                <article class="service-card"><p class="card-kicker">OBSERVATION</p><h3><a href="/station/">Stations and CSN archive</a></h3><p>Browse Citizen Seismology Network station information and previously collected observations.</p></article>
+            </div>
+        </section>
+
+        <section>
+            <h2>Service status</h2>
+            <p class="status-notice"><strong>Archive available:</strong> Real-time aggregation from Raspberry Pi seismometers is currently unavailable. Archived observations, station information, datasets, and LOD services remain accessible.</p>
+        </section>
+
+        <section>
+            <h2>About the project</h2>
+            <p>Citizen Seismology Network supports seismology research, education, and citizen science through compact instruments and open data.</p>
+            <p>Earthquake LOD received the Oracle Japan Award and Open Science Award at <a href="https://2022.lodc.jp/awardPressRelease2022.html">LOD Challenge 2022</a>.</p>
+        </section>
+        <?php } ?>
+
         <?php include(dirname(__FILE__) . '/common/footer.html'); ?>
-    </div><!-- /container -->
-    <script src="/js/static/draw.js"></script>
-
+    </div>
 </body>
-
-<head>
-    <meta http-equiv="Cache-Control" content="no-cache">
-</head>
-
 </html>

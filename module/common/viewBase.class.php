@@ -35,7 +35,9 @@
         private function activePage($_request_uri){
             $this->values['activePage'] = "top";
 
-            if( preg_match('/\/([^\/]+)/', $_request_uri, $_dir_name) ){
+            $requestPath = parse_url($_request_uri, PHP_URL_PATH);
+
+            if( preg_match('/\/([^\/]+)/', $requestPath, $_dir_name) ){
                 if( $_dir_name[1] != 'index.html' ){
                     $this->values['activePage'] = $_dir_name[1];
                 }

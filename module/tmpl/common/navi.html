@@ -1,13 +1,19 @@
 <nav class="site-header sticky-top py-1" aria-label="Global navigation">
     <div class="container site-navigation">
-        <a class="py-2" href="/">TOP</a>
-        <a class="py-2" href="/lod/<?php echo isset($VALUES['common']['lang']) && $VALUES['common']['lang'] === 'ja' ? '?lang=ja' : ''; ?>">
+        <a class="site-brand" href="/" aria-label="Citizen Seismology Network home">
+            <span class="site-brand-mark" aria-hidden="true">CSN</span>
+            <span class="site-brand-text"><strong>Seismic Data Portal</strong><small>Citizen Seismology Network</small></span>
+        </a>
+        <div class="site-nav-links">
+        <a class="site-nav-link" href="/" <?php echo $VALUES['activePage'] === 'top' ? 'aria-current="page"' : ''; ?>><?php echo isset($VALUES['common']['lang']) && $VALUES['common']['lang'] === 'ja' ? 'ホーム' : 'Home'; ?></a>
+        <a class="site-nav-link" href="/lod/<?php echo isset($VALUES['common']['lang']) && $VALUES['common']['lang'] === 'ja' ? '?lang=ja' : ''; ?>" <?php echo $VALUES['activePage'] === 'lod' ? 'aria-current="page"' : ''; ?>>
             <?php echo isset($VALUES['common']['lang']) && $VALUES['common']['lang'] === 'ja' ? 'データセット・LOD' : 'Datasets / LOD'; ?>
         </a>
-        <a class="py-2" href="/ontology/<?php echo isset($VALUES['common']['lang']) && $VALUES['common']['lang'] === 'ja' ? '?lang=ja' : ''; ?>">
+        <a class="site-nav-link" href="/ontology/<?php echo isset($VALUES['common']['lang']) && $VALUES['common']['lang'] === 'ja' ? '?lang=ja' : ''; ?>" <?php echo $VALUES['activePage'] === 'ontology' ? 'aria-current="page"' : ''; ?>>
             <?php echo isset($VALUES['common']['lang']) && $VALUES['common']['lang'] === 'ja' ? '地震オントロジー' : 'Earthquake Ontology'; ?>
         </a>
-        <a class="py-2" href="/station/"><?php echo isset($VALUES['common']['lang']) && $VALUES['common']['lang'] === 'ja' ? '観測点' : 'Stations'; ?></a>
-        <a class="py-2" href="/map/"><?php echo isset($VALUES['common']['lang']) && $VALUES['common']['lang'] === 'ja' ? 'CSN観測点地図' : 'CSN Map'; ?></a>
+        <a class="site-nav-link" href="/station/" <?php echo $VALUES['activePage'] === 'station' ? 'aria-current="page"' : ''; ?>><?php echo isset($VALUES['common']['lang']) && $VALUES['common']['lang'] === 'ja' ? '観測点' : 'Stations'; ?></a>
+        <a class="site-nav-link" href="/map/" <?php echo $VALUES['activePage'] === 'map' ? 'aria-current="page"' : ''; ?>><?php echo isset($VALUES['common']['lang']) && $VALUES['common']['lang'] === 'ja' ? '観測点地図' : 'Station Map'; ?></a>
+        </div>
     </div>
 </nav>

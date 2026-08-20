@@ -19,7 +19,9 @@
             // $this->db = new dbBase();
 
             // ページ設定
-            $this->values['common']['page_title'] = "TOP";
+            $lang = isset($_GET['lang']) && $_GET['lang'] === 'en' ? 'en' : 'ja';
+            $this->values['common']['lang'] = $lang;
+            $this->values['common']['page_title'] = $lang === 'ja' ? "地震データポータル" : "Seismic Data Portal";
 
             // データ取得
             try {
